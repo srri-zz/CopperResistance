@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 	<head>
@@ -17,12 +16,9 @@
     		<script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
     	<![endif]-->
     	<style>
-			html {
-			    position: relative;
-			    min-height: 100%;
-			}
-			body {
-			    margin: 0 0 100px; /* bottom = footer height */
+    		body, html {
+			    height: 100%;
+			    overflow: hidden;
 			}
 			
 			footer {
@@ -93,6 +89,29 @@
 				border-right: solid 1px rgb(216, 216, 216);
 				display: block;
 			}
+
+			.navbar-toggle {
+				border: none;
+			}
+
+			.main-content {
+				padding-top: 50px;
+				height: 100%;
+				max-width: 100%;
+				margin-left: 0;
+			}
+
+			.scroll-con {
+				height: 100%;
+				overflow-y: scroll;
+  				-webkit-overflow-scrolling: touch;
+				overflow-x: hidden;
+			}
+
+			.list-story img {
+				display: none;
+			}
+
 	    </style>
 	</head>
 	<body>
@@ -116,13 +135,13 @@
 		    		<li><a href="#">Sports</a></li>
 		    		<li><a href="#">Science</a></li>
 		    	</ul>
-		    	<form class="navbar-form navbar-right" role="search">
+		    	<form class="navbar-form navbar-right hidden-sm hidden-xs" role="search">
 		    		<div class="form-group">
 		    			<input type="text" class="form-control" placeholder="Search">
 		    		</div>
 		    		<button type="submit" class="btn btn-default">Submit</button>
 		    	</form>
-		    	<ul class="nav navbar-nav navbar-right">
+		    	<ul class="nav navbar-nav navbar-right hidden-sm hidden-xs">
 		    		<li class="dropdown">
 		    			<a href="#" class="dropdown-toggle" data-toggle="dropdown">Order by <b class="caret"></b></a>
 		    			<ul class="dropdown-menu">
@@ -146,23 +165,30 @@
 		    	</ul>
 		    </div>
 	    </nav>
-	    <div class="content" style="margin-top: 50px;">
-			<div class="row">
-				<div class="col-lg-6">
-			  		<div class="list-group">			  
-			  		<?php
-				  		function shorten($string, $limit = 100) {
-					  		// Return early if the string is already shorter than the limit
-					  		if(strlen($string) < $limit) {return $string;}
-				
-					  		$regex = "/(.{1,$limit})\b/";
-					  		preg_match($regex, $string, $matches);
-					  		return $matches[1] . '...';
-					  	}	
+			<div class="main-content row">
+				<div class="col-lg-6 scroll-con" style="padding-left: 0; padding-right: 0;">
+			  		<div>			  
+			  		<?php	
+
+					  	function shorten($string, $limit, $break=" ", $pad="...") {
+							// return with no change if string is shorter than $limit
+							if(strlen($string) <= $limit) return $string;
+
+							// is $break present between $limit and the end of the string?
+							if(false !== ($breakpoint = strpos($string, $break, $limit))) {
+								if($breakpoint < strlen($string) - 1) {
+								$string = substr($string, 0, $breakpoint) . $pad;
+							}
+						}
+
+							return $string;
+						}
 
 					  	$feed_url = "http://ubyssey.ca/feed/"; 
 				
 					  	require_once('../php/autoloader.php');
+
+					  	require_once('../php/class.html2text.inc');
 								 
 					  	$feed_urls = array("http://ubyssey.ca/feed/", "http://mix.chimpfeedr.com/7df33-Main-Wire");
 				 
@@ -171,22 +197,30 @@
 					  	foreach($feed_urls as $feed_url):
 					
 						  	$feed->set_feed_url($feed_url);
-						  	$feed->strip_htmltags();
 				
 						  	$feed->init();
 				 
 						  	$feed->handle_content_type();
 													 
 				
-						  	foreach ($feed->get_items() as $item):?>
+						  	foreach ($feed->get_items() as $item):
 
+							  	$h2t = new html2text($item->get_description());
+
+								$description = $h2t->get_text();
+
+							?>
 						<div class="list-story" style="background-color: rgba(39, 168, 101, <?php echo rand(50, 100) / 100; ?>)">
-					        <div style="width: 15px; float: left;"></div>
-							<div style="margin-left: 15px; background-color: #FFF; border-bottom: 1px solid rgb(216, 216, 216);">
+					        <div style="width: 18px; float: left;"></div>
+							<div style="margin-left: 18px; background-color: #FFF; border-bottom: 1px solid rgb(216, 216, 216); ">
 								<div style="padding: 20px 15px;">
 									<h4 class="list-group-item-heading"><?php echo $item->get_title();?></h4>
 									<p class="text-muted"><?php echo $item->get_date('j M Y | g:i a'); ?> - The Ubyssey</p>
-									<p class="list-group-item-text"><?php echo strip_tags(shorten($item->get_description(), 200)); ?></p>
+									<p class="list-group-item-text"><?php echo shorten($description, 150); ?></p>
+									<br/>
+									<span class="label label-default">Default</span>
+									<span class="label label-primary">Primary</span>
+									<span class="label label-success">Success</span>
 								</div>
 							</div>
 				        	
@@ -198,8 +232,8 @@
 			  
 					</div>
 				</div>
-				<div class="col-lg-6 visible-lg">
-					<div style="position:fixed; padding-right: 20px;">
+				<div class="col-lg-6 scroll-con visible-lg">
+					<div style="padding-right: 30px;">
 						<h2>Campus RCMP seek help finding missing senior</h2>
 						<h4 class="text-muted">The Ubyssey</h4>
 						<p>Police are looking for a 78-year-old man who disappeared from the UBC Purdy Pavilion yesterday.</p>
@@ -211,9 +245,24 @@
 						<p>According to police, Grant has dementia and can be aggressive if confronted. He is also diabetic but not dependent on insulin.</p>
 
 						<p>RCMP have asked anyone with information on Grant’s whereabouts to contact them at 604-224-1322 or Crime Stoppers at 1-800-222-TIPS.</p>
+						
+						<hr/>
+				  		<h4>
+				    		<span class="label label-default">Default</span>
+							<span class="label label-primary">Primary</span>
+							<span class="label label-success">Success</span>
+				  		</h4>
+				  		<br/>
+
+						<div class="panel panel-default">
+						  	<div class="panel-body">
+						  		<a href="#"><span class="glyphicon glyphicon-edit"></span> Edit</a> &nbsp;
+						  		<a href="#"><span class="glyphicon glyphicon-star"></span> Favourite</a> &nbsp;
+						  		<a href="#"><span class="glyphicon glyphicon-flag"></span> Flag</a>
+						  	</div>
+						</div>
 					</div>
 				</div>
-			</div>
 		</div>
 
 
