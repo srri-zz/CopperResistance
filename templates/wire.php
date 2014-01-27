@@ -9,9 +9,25 @@
 
     	<title>CopperResistance</title>
 
-    	<link href="../bs/css/bootstrap.css" rel="stylesheet">
+		<!-- styles needed by jScrollPane -->
+		<link type="text/css" href="scripts/jquery.jscrollpane.css" rel="stylesheet" media="all" />
+		
 
-    	<!--[if lt IE 9]>
+		<!-- the mousewheel plugin - optional to provide mousewheel support -->
+		<script type="text/javascript" src="scripts/jquery.mousewheel.js"></script>
+
+		<!-- the jScrollPane script -->
+		<script type="text/javascript" src="script/jquery.jscrollpane.min.js"></script>
+    	<link href="../bs/css/bootstrap.css" rel="stylesheet">
+		<script src="https://code.jquery.com/jquery-1.10.2.min.js"></script>
+		<script type="text/javascript" id="sourcecode">
+								$(function()
+								{
+									$('.scroll-pane').jScrollPane();
+								});
+		</script>
+    	
+	    <!--[if lt IE 9]>
     		<script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
     		<script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
     	<![endif]-->
@@ -107,7 +123,7 @@
 				margin-left: 0;
 			}
 
-			.scroll-con {
+			.scroll-pane {
 				height: 100%;
 				overflow: auto;
   				-webkit-overflow-scrolling: touch;
@@ -116,9 +132,13 @@
 			.list-story img {
 				display: none;
 			}
+<<<<<<< HEAD
 
 
 
+=======
+			
+>>>>>>> a17956b16f15e4f5c65bbb5649619b8fd671e83a
 	    </style>
 
 	    <script type="text/javascript" id="sourcecode">
@@ -128,6 +148,7 @@
 			});
 		</script>
 	</head>
+	
 	<body>
 		<nav class="navbar navbar-default navbar-fixed-top" role="navigation">
 			<!-- Brand and toggle get grouped for better mobile display -->
@@ -180,7 +201,7 @@
 		    </div>
 	    </nav>
 			<div class="main-content row">
-				<div class="col-lg-6 scroll-con" style="padding-left: 0; padding-right: 0;">
+				<div class="col-lg-6 scroll-pane" style="padding-left: 0; padding-right: 0;">
 			  		<div>			  
 			  		<?php	
 
@@ -246,7 +267,7 @@
 			  
 					</div>
 				</div>
-				<div class="col-lg-6 scroll-con visible-lg">
+				<div class="col-lg-6 scroll-pane visible-lg">
 					<div style="padding-right: 30px;">
 						<h2>Campus RCMP seek help finding missing senior</h2>
 						<h4 class="text-muted">The Ubyssey</h4>
@@ -282,6 +303,10 @@
 	<script>
     <!-- Bootstrap core JavaScript
     ================================================== -->
+<<<<<<< HEAD
+=======
+   
+>>>>>>> a17956b16f15e4f5c65bbb5649619b8fd671e83a
     <script src="../bs/js/bootstrap.min.js"></script>
   </body>
 </html>
