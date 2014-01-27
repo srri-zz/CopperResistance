@@ -187,66 +187,37 @@
 			  		<div>			  
 			  		<?php	
 
-					  	function shorten($string, $limit, $break=" ", $pad="...") {
-							// return with no change if string is shorter than $limit
-							if(strlen($string) <= $limit) return $string;
+			  		 	$user = 'psiemens';
+					  	$pass = 'portland22';
 
-							// is $break present between $limit and the end of the string?
-							if(false !== ($breakpoint = strpos($string, $break, $limit))) {
-								if($breakpoint < strlen($string) - 1) {
-								$string = substr($string, 0, $breakpoint) . $pad;
-							}
-						}
+						$dbh = new PDO('mysql:host=nuwire.petersiemens.com;dbname=nuwire', $user, $pass);
 
-							return $string;
-						}
-
-					  	$feed_url = "http://ubyssey.ca/feed/"; 
-				
-					  	require_once('../php/autoloader.php');
-
-					  	require_once('../php/class.html2text.inc');
-								 
-					  	$feed_urls = array("http://ubyssey.ca/feed/", "http://mix.chimpfeedr.com/7df33-Main-Wire");
-				 
-					  	$feed = new SimplePie();
-				
-					  	foreach($feed_urls as $feed_url):
-					
-						  	$feed->set_feed_url($feed_url);
-				
-						  	$feed->init();
-				 
-						  	$feed->handle_content_type();
-													 
-				
-						  	foreach ($feed->get_items() as $item):
-
-							  	$h2t = new html2text($item->get_description());
-
-								$description = $h2t->get_text();
-
+						$stmt = $dbh->query('SELECT * from stories ORDER BY date desc');  
+						  
+						$stmt->setFetchMode(PDO::FETCH_OBJ);  
+						  
+						while($item = $stmt->fetch()) {  
 							?>
-						<div class="list-story" style="background-color: rgba(39, 168, 101, <?php echo rand(50, 100) / 100; ?>)">
+						    <div class="list-story" style="background-color: rgba(39, 168, 101, <?php echo rand(50, 100) / 100; ?>)">
 					        <div style="width: 18px; float: left;"></div>
 							<div style="margin-left: 18px; background-color: #FFF; border-bottom: 1px solid rgb(216, 216, 216); ">
 								<div style="padding: 20px 15px;">
-									<h4 class="list-group-item-heading"><?php echo $item->get_title();?></h4>
-									<p class="text-muted"><?php echo $item->get_date('j M Y | g:i a'); ?> - The Ubyssey</p>
-									<p class="list-group-item-text"><?php echo shorten($description, 150); ?></p>
+									<h4 class="list-group-item-heading"><?php echo $item->title;?></h4>
+									<p class="text-muted"><?php echo date("M n Y | g:h a", strtotime($item->date)); ?> - <?php echo $item->source; ?></p>
+									<p class="list-group-item-text"><?php echo $item->description; ?></p>
+									<!-- <span class="label label-default">Default</span>
 									<br/>
-									<span class="label label-default">Default</span>
 									<span class="label label-primary">Primary</span>
 									<span class="label label-success">Success</span>
-								</div>
+ 									-->	
+ 								</div>
 							</div>
-				        	
-						</div>
-					<?php
-							endforeach;
-						endforeach;
-					?>
-			  
+							</div>
+						<?php
+						}  
+						$dbh = null;
+						?>
+
 					</div>
 				</div>
 				<div class="col-lg-6 scroll-con visible-lg">

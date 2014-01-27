@@ -19,8 +19,18 @@
   	require_once('class.html2text.inc');
 			 
   	$sources = array(
-  		array("source"=>"The Ubyssey", "url"=>"http://ubyssey.ca/feed/"), 
-  		array("source"=>"Main Wire", "url"=>"http://mix.chimpfeedr.com/7df33-Main-Wire"));
+  		array("source"=>"The Ubyssey", "url"=>"http://ubyssey.ca/feed/?post_type=news&news_category=nuw"), 
+  		array("source"=>"The Ubyssey", "url"=>"http://ubyssey.ca/feed/?post_type=features&feature_category=nuw"),
+  		array("source"=>"The Ubyssey", "url"=>"http://ubyssey.ca/feed/?post_type=culture&culture_category=nuw"),
+  		array("source"=>"The Ubyssey", "url"=>"http://ubyssey.ca/feed/?post_type=sports&sports_category=nuw"),
+  		array("source"=>"The Ubyssey", "url"=>"http://ubyssey.ca/feed/?post_type=opinions&opinion_category=nuw"),
+
+  		array("source"=>"The Dalhousie Gazette", "url"=>"http://dalgazette.com/tag/nuw/feed"),
+  		array("source"=>"The McGill Daily", "url"=>"http://www.mcgilldaily.com/tag/nuw/feed"),
+  		array("source"=>"The McGill Daily", "url"=>"http://www.mcgilldaily.com/tag/nuw/feed"),
+  		array("source"=>"The Varsity", "url"=>"http://thevarsity.ca/tag/nuw/feed/"),
+
+  		array("source"=>"The Western Gazette", "url"=>"http://www.westerngazette.ca/tag/NUW/feed/"));
 
   	$feed = new SimplePie();
 
@@ -45,17 +55,18 @@
 	  		$title = $item->get_title();
 
 		  	$h2t = new html2text($item->get_description());
-		  	$desc = $h2t->get_text();
+		  	$desc = shorten($h2t->get_text(), 150);
 
 		  	$date = $item->get_date('Y-m-d H:i:s');
-		  	$content = "";
+		  	$content = $item->get_content();
 
 		  	echo $title.'<br/>';
-		  	echo $date.'<br/><br/>';
+		  	echo $date.'<br/>';
+		  	echo $desc.'<br/><br/>';
 
-			$data = array($title, $date);  
-  
-			$stmt = $dbh->prepare("INSERT INTO stories (title, date) VALUES (?, ?)");  
+			$data = array($title, $date, $source_name, $desc, $content);  
+  			
+			$stmt = $dbh->prepare("INSERT INTO stories (title, date, source, description, content) VALUES (?, ?, ?, ?, ?)");  
 			$stmt->execute($data); 
 
 		endforeach;
