@@ -136,20 +136,6 @@
 	</head>
 	
 	<body>
-		<div class="modal hide fade" id="myModal">
-						  <div class="modal-header">
-						    <a class="close" data-dismiss="modal">×</a>
-						    <h3>Modal header</h3>
-						  </div>
-						  <div class="modal-body">
-						    <p>One fine body…</p>
-						  </div>
-						  <div class="modal-footer">
-						    <a href="#" class="btn">Close</a>
-						    <a href="#" class="btn btn-primary">Save changes</a>
-						  </div>
-		</div>
-		
 		<nav class="navbar navbar-default navbar-fixed-top" role="navigation">
 			<!-- Brand and toggle get grouped for better mobile display -->
 			<div class="navbar-header">
@@ -197,7 +183,6 @@
 			    			<li><a href="#">Separated link</a></li>
 			    		</ul>
 		    		</li>
-					<a class="btn" data-toggle="modal" href="#myModal" >Launch Modal</a>
 		    	</ul>
 		    </div>
 	    </nav>
