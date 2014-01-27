@@ -11,10 +11,7 @@
 
 		<!-- styles needed by jScrollPane -->
 		<link type="text/css" href="scripts/jquery.jscrollpane.css" rel="stylesheet" media="all" />
-
-		<!-- latest jQuery direct from google's CDN -->
-		<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js">
-		</script>
+		
 
 		<!-- the mousewheel plugin - optional to provide mousewheel support -->
 		<script type="text/javascript" src="scripts/jquery.mousewheel.js"></script>
@@ -22,7 +19,7 @@
 		<!-- the jScrollPane script -->
 		<script type="text/javascript" src="script/jquery.jscrollpane.min.js"></script>
     	<link href="../bs/css/bootstrap.css" rel="stylesheet">
-
+		<script src="https://code.jquery.com/jquery-1.10.2.min.js"></script>
 		<script type="text/javascript" id="sourcecode">
 								$(function()
 								{
@@ -132,6 +129,7 @@
 			
 	    </style>
 	</head>
+	
 	<body>
 		<nav class="navbar navbar-default navbar-fixed-top" role="navigation">
 			<!-- Brand and toggle get grouped for better mobile display -->
@@ -286,7 +284,7 @@
 
     <!-- Bootstrap core JavaScript
     ================================================== -->
-    <script src="https://code.jquery.com/jquery-1.10.2.min.js"></script>
+   
     <script src="../bs/js/bootstrap.min.js"></script>
   </body>
 </html>
