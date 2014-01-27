@@ -121,6 +121,10 @@
 				display: none;
 			}
 
+			.media-object {
+				width: 180px;
+			}
+
 	    </style>
 
 	    <script type="text/javascript" id="sourcecode">
@@ -221,9 +225,17 @@
 					</div>
 				</div>
 				<div class="col-lg-6 scroll-con visible-lg">
-					<div style="padding-right: 30px;">
-						<h2>Campus RCMP seek help finding missing senior</h2>
-						<h4 class="text-muted">The Ubyssey</h4>
+					<div style="padding-top: 20px; padding-right: 30px;">
+						<div class="media">
+						  <a class="pull-left" href="#">
+						    <img class="media-object" src="http://ubyssey.ca/wp-content/uploads/2014/01/Winnie_20140119__Steven-Richards-499x295.jpg" alt="...">
+						  </a>
+						  <div class="media-body">
+						    <h2 class="media-heading">Campus RCMP seek help finding missing senior</h2>
+						    <h4 class="text-muted">The Ubyssey</h4>
+						  </div>
+						</div>
+						<br/>
 						<p>Police are looking for a 78-year-old man who disappeared from the UBC Purdy Pavilion yesterday.</p>
 
 						<p>According to police, Edward Grant was last seen at the Purdy Pavilion around 9 a.m. on Jan. 21.</p>
