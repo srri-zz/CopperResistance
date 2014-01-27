@@ -147,10 +147,7 @@
 		    <!-- Collect the nav links, forms, and other content for toggling -->
 		    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 		    	<ul class="nav navbar-nav">
-		    		<li class="active"><a href="#">All</a></li>
-		    		<li><a href="#">News</a></li>
-		    		<li><a href="#">Sports</a></li>
-		    		<li><a href="#">Science</a></li>
+		    		<li class="active"><a href="#">Add Feed</a></li>
 		    	</ul>
 		    	<form class="navbar-form navbar-right hidden-sm hidden-xs" role="search">
 		    		<div class="form-group">
