@@ -120,14 +120,19 @@
 			.list-story img {
 				display: none;
 			}
+			
+			.content {
+				display:none;
+			}
 
 	    </style>
 
 	    <script type="text/javascript" id="sourcecode">
 			$(function()
 			{
-				$('.scroll-pane').jScrollPane();
+				$('.expander').simpleexpand();
 			});
+			
 		</script>
 	</head>
 	
@@ -161,9 +166,11 @@
 		    </div>
 	    </nav>
 			<div class="main-content row">
-				
-				
-		</div>
+				<button type="button" class="btn btn-group-lg navbar-btn expander">Sign in</button>
+				<div class="content">
+				    content to hide.
+				</div>
+		   </div>
 
 	<script>
     <!-- Bootstrap core JavaScript -->
