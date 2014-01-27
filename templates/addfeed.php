@@ -166,15 +166,16 @@
 		    </div>
 	    </nav>
 			<div class="main-content row">
-				<button type="button" class="btn btn-group-lg navbar-btn expander">Add Feed</button>
+				
 				<div class="input-group">
 				  <span class="input-group-addon">Feed Name</span>
-				  <input type="text" class="form-control" placeholder="Ex: The Ubyssey">
+				  <input type="text" class="form-control" placeholder="Ex: The Ubyssey" style="width:250px;">
 				</div>
 				<div class="input-group">
 				  <span class="input-group-addon">Feed Source</span>
-				  <input type="text" class="form-control" placeholder="Ex: http://ubyssey.ca/feed">
+				  <input type="text" class="form-control" placeholder="Ex: http://ubyssey.ca/feed" style="width:250px;">
 				</div>
+				<button type="button" class="btn btn-group-lg navbar-btn expander">Add Feed</button>
 		   </div>
 
 	<script>
