@@ -1,0 +1,359 @@
+
+<!-- IE into quirks mode -->
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title> stu nicholls | CSS PLaY | cross browser fixed header/footer multi-column layout </title>
+<style type="text/css">
+html {
+height:100%; 
+max-height:100%; 
+padding:0; 
+margin:0; 
+border:0; 
+background:#fff; 
+font-size:76%; 
+font-family:georgia, palatino linotype, times new roman, serif;
+/* hide overflow:hidden from IE5/Mac */ 
+/* \*/ 
+overflow: hidden; 
+/* */ 
+}
+
+body {height:100%; max-height:100%; overflow:hidden; padding:0; margin:0; border:0;}
+
+#head {position:absolute; margin:0; top:0; left:0; display:block; width:100%; height:100px; background:url(fish.jpg) rgb(233,238,242); background-repeat:no-repeat; font-size:4em; z-index:5; color:#fff;}
+#foot {position:absolute; margin:0; bottom:0; left:0; display:block; width:100%; height:50px; background:rgb(233,238,242); font-size:0.8em; z-index:5; text-align:right; color:rgb(157,78,84);}
+
+#left1, #left2, #left3, #left4 {position:absolute; left:0; top:100px; bottom:50px; width:25%; font-size:1em; z-index:4; overflow:auto;}
+* html #left1, * html #left2, * html #left3, * html #left4 {height:100%; top:0; bottom:0; border-top:100px solid #fff; border-bottom:50px solid #fff;}
+#left1 {left:0; background:rgb(237,228,214);}
+#left2 {left:25%; background:rgb(243,217,188);}
+#left3 {left:50%; background:rgb(223,191,196);}
+#left4 {left:75%; background:rgb(229,218,212);}
+
+.inner {display:block; padding:0 10px 10px 10px;}
+.bold {font-size:1.5em; font-weight:bold;}
+</style>
+</head>
+
+<body>
+
+<div id="left1">
+<div class="inner">
+<h3>Hot Potato</h3>
+<p>This one works in IE5.01, IE5.5, IE6, Opera 7.23 Mozilla and Firefox</p>
+<p>NN7 displays correctly but the absolutely positioned div in the content area stays 'fixed' as the content scrolls.</p>
+<p><a href="http://www.cssplay.co.uk/comments/comments.php?comment_id=fixit layout 4" title="Your comments">Comments</a></p>
+
+<p>
+Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit
+  lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure
+  dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore
+  eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim
+  qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla
+  facilisi. Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam
+  nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.
+</p>
+
+
+<p>
+Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh
+  euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim
+  ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl
+  ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit
+  in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla
+  facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent
+  luptatum zzril delenit augue duis dolore te feugait nulla facilisi.
+</p>
+<p>
+Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit
+  lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure
+  dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore
+  eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim
+  qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla
+  facilisi. Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam
+  nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.
+</p>
+<p>
+Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh
+  euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim
+  ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl
+  ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit
+  in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla
+  facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent
+  luptatum zzril delenit augue duis dolore te feugait nulla facilisi.
+</p>
+<p>
+Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit
+  lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure
+  dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore
+  eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim
+  qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla
+  facilisi. Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam
+  nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.
+</p>
+<p>
+Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh
+  euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim
+  ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl
+  ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit
+  in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla
+  facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent
+  luptatum zzril delenit augue duis dolore te feugait nulla facilisi.
+</p>
+<p>
+Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit
+  lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure
+  dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore
+  eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim
+  qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla
+  facilisi. Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam
+  nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.
+</p>
+<p>&copy; 2004-2008 Stuart Nicholls</p>
+</div>
+</div>
+
+
+<div id="left2">
+<div class="inner">
+<h3>A Taste of Honey</h3>
+<p>This one works in IE5.01, IE5.5, IE6, Opera 7.23 Mozilla and Firefox</p>
+<p>NN7 displays correctly but the absolutely positioned div in the content area stays 'fixed' as the content scrolls.</p>
+<p><a href="http://www.cssplay.co.uk/comments/comments.php?comment_id=fixit layout 4" title="Your comments">Comments</a></p>
+
+<p>
+Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit
+  lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure
+  dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore
+  eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim
+  qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla
+  facilisi. Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam
+  nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.
+</p>
+
+
+<p>
+Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh
+  euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim
+  ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl
+  ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit
+  in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla
+  facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent
+  luptatum zzril delenit augue duis dolore te feugait nulla facilisi.
+</p>
+<p>
+Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit
+  lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure
+  dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore
+  eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim
+  qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla
+  facilisi. Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam
+  nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.
+</p>
+<p>
+Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh
+  euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim
+  ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl
+  ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit
+  in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla
+  facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent
+  luptatum zzril delenit augue duis dolore te feugait nulla facilisi.
+</p>
+<p>
+Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit
+  lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure
+  dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore
+  eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim
+  qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla
+  facilisi. Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam
+  nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.
+</p>
+<p>
+Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh
+  euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim
+  ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl
+  ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit
+  in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla
+  facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent
+  luptatum zzril delenit augue duis dolore te feugait nulla facilisi.
+</p>
+<p>
+Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit
+  lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure
+  dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore
+  eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim
+  qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla
+  facilisi. Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam
+  nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.
+</p>
+<p>&copy; 2004-2008 Stuart Nicholls</p>
+</div>
+</div>
+
+
+<div id="left3">
+<div class="inner">
+<h3>Grapes of Wrath</h3>
+<p>This one works in IE5.01, IE5.5, IE6, Opera 7.23 Mozilla and Firefox</p>
+<p>NN7 displays correctly but the absolutely positioned div in the content area stays 'fixed' as the content scrolls.</p>
+<p><a href="http://www.cssplay.co.uk/comments/comments.php?comment_id=fixit layout 4" title="Your comments">Comments</a></p>
+
+<p>
+Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit
+  lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure
+  dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore
+  eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim
+  qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla
+  facilisi. Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam
+  nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.
+</p>
+
+
+<p>
+Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh
+  euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim
+  ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl
+  ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit
+  in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla
+  facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent
+  luptatum zzril delenit augue duis dolore te feugait nulla facilisi.
+</p>
+<p>
+Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit
+  lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure
+  dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore
+  eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim
+  qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla
+  facilisi. Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam
+  nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.
+</p>
+<p>
+Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh
+  euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim
+  ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl
+  ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit
+  in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla
+  facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent
+  luptatum zzril delenit augue duis dolore te feugait nulla facilisi.
+</p>
+<p>
+Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit
+  lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure
+  dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore
+  eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim
+  qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla
+  facilisi. Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam
+  nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.
+</p>
+<p>
+Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh
+  euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim
+  ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl
+  ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit
+  in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla
+  facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent
+  luptatum zzril delenit augue duis dolore te feugait nulla facilisi.
+</p>
+<p>
+Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit
+  lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure
+  dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore
+  eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim
+  qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla
+  facilisi. Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam
+  nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.
+</p>
+<p>&copy; 2004-2008 Stuart Nicholls</p>
+</div>
+</div>
+
+<div id="left4">
+<div class="inner">
+<h3>Monkey Nuts</h3>
+<p>This one works in IE5.01, IE5.5, IE6, Opera 7.23 Mozilla and Firefox</p>
+<p>NN7 displays correctly but the absolutely positioned div in the content area stays 'fixed' as the content scrolls.</p>
+<p><a href="http://www.cssplay.co.uk/comments/comments.php?comment_id=fixit layout 4" title="Your comments">Comments</a></p>
+
+<p>
+Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit
+  lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure
+  dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore
+  eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim
+  qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla
+  facilisi. Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam
+  nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.
+</p>
+<p>
+Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh
+  euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim
+  ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl
+  ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit
+  in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla
+  facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent
+  luptatum zzril delenit augue duis dolore te feugait nulla facilisi.
+</p>
+<p>
+Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit
+  lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure
+  dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore
+  eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim
+  qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla
+  facilisi. Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam
+  nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.
+</p>
+<p>
+Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh
+  euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim
+  ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl
+  ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit
+  in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla
+  facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent
+  luptatum zzril delenit augue duis dolore te feugait nulla facilisi.
+</p>
+<p>
+Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit
+  lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure
+  dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore
+  eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim
+  qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla
+  facilisi. Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam
+  nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.
+</p>
+<p>
+Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh
+  euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim
+  ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl
+  ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit
+  in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla
+  facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent
+  luptatum zzril delenit augue duis dolore te feugait nulla facilisi.
+</p>
+<p>
+Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit
+  lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure
+  dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore
+  eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim
+  qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla
+  facilisi. Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam
+  nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.
+</p>
+<p>&copy; 2004-2008 Stuart Nicholls</p>
+
+</div>
+</div>
+
+
+<div id="head">&nbsp;Food for thought....</div>
+<div id="foot"><br />Copyright &copy;2004/5/6 Stuart Nicholls ~ All rights reserved.&nbsp;</div>
+<script src="http://www.google-analytics.com/urchin.js" type="text/javascript">
+</script>
+<script type="text/javascript">
+_uacct = "UA-451410-1";
+urchinTracker();
+</script>
+</body>
+</html>
