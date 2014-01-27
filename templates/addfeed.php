@@ -147,7 +147,7 @@
 		    <!-- Collect the nav links, forms, and other content for toggling -->
 		    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 		    	<ul class="nav navbar-nav">
-		    		<li class="active"><a href="#">Blank-Template></a></li>
+		    		<li class="active"><a href="#">Blank-Template</a></li>
 		    	</ul>
 		    	<form class="navbar-form navbar-right hidden-sm hidden-xs" role="search">
 		    		<div class="form-group">
@@ -161,6 +161,8 @@
 		    </div>
 	    </nav>
 		<div class="main-content">
+				
+				
 				<div class="modal hide fade" id="myModal">
 				  <div class="modal-header">
 				    <a class="close" data-dismiss="modal">×</a>
