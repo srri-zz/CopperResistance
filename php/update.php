@@ -17,6 +17,8 @@
   	require_once('autoloader.php');
 
   	require_once('class.html2text.inc');
+
+  	require_once('htmldom/simple_html_dom.php');
 			 
   	$sources = array(
   		array("source"=>"The Ubyssey", "url"=>"http://ubyssey.ca/feed/?post_type=news&news_category=nuw"), 
@@ -60,13 +62,20 @@
 		  	$date = $item->get_date('Y-m-d H:i:s');
 		  	$content = $item->get_content();
 
+			$html = str_get_html($content);
+			$image_el = $html->find('img', 0);
+			$image = $image_el->src;
+
+			$link = $item->get_link(0);
+       			
 		  	echo $title.'<br/>';
 		  	echo $date.'<br/>';
+		  	echo $link.'<br/>';
 		  	echo $desc.'<br/><br/>';
 
-			$data = array($title, $date, $source_name, $desc, $content);  
+			$data = array($title, $date, $source_name, $desc, $content, $image, $link);  
   			
-			$stmt = $dbh->prepare("INSERT INTO stories (title, date, source, description, content) VALUES (?, ?, ?, ?, ?)");  
+			$stmt = $dbh->prepare("INSERT INTO stories (title, date, source, description, content, image, link) VALUES (?, ?, ?, ?, ?, ?, ?)");  
 			$stmt->execute($data); 
 
 		endforeach;

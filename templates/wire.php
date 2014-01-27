@@ -117,12 +117,31 @@
   				overflow-x: hidden;
 			}
 
-			.list-story img {
+			.media-object {
+				width: 100%;
+			}
+
+			.list-story-content:hover{
+				background-color: rgb(247, 247, 247);
+				cursor: pointer;
+			}
+
+			#current-story-content img {
+				max-width: 100%;
+				height: auto;
+				margin-bottom: 15px;
+			}
+
+			#current-story-content ul {
 				display: none;
 			}
 
-			.media-object {
-				width: 180px;
+			#current-story-content {
+				margin-top: 20px;
+			}
+
+			#current-story {
+				padding: 0 30px 0 15px;
 			}
 
 	    </style>
@@ -132,6 +151,16 @@
 			{
 				$('.scroll-pane').jScrollPane();
 			});
+
+			var storySelect = function(id) {
+				title = $('#story-title-'+id).html();
+				info = $('#story-info-'+id).html();
+				content = $('#story-content-'+id).html();
+				$('#current-story-title').html(title);
+				$('#current-story-info').html(info);
+			    $('#current-story-content').html(content);
+			    $('#current-story-con').scrollTop(0);
+			};
 		</script>
 	</head>
 	
@@ -205,15 +234,27 @@
 						    <div class="list-story" style="background-color: rgba(39, 168, 101, <?php echo rand(50, 100) / 100; ?>)">
 					        <div style="width: 18px; float: left;"></div>
 							<div style="margin-left: 18px; background-color: #FFF; border-bottom: 1px solid rgb(216, 216, 216); ">
-								<div style="padding: 20px 15px;">
-									<h4 class="list-group-item-heading"><?php echo $item->title;?></h4>
-									<p class="text-muted"><?php echo date("M n Y | g:h a", strtotime($item->date)); ?> - <?php echo $item->source; ?></p>
-									<p class="list-group-item-text"><?php echo $item->description; ?></p>
+								<div class="list-story-content" onclick="storySelect('<?php echo $item->id; ?>');"style="padding: 20px 15px;">
+									<div class="media">
+									  <a class="pull-left visible-lg visible-md" href="#">
+									  	<div style="width: 120px; max-height: 120px; overflow: hidden;">
+									    	<img class="media-object" src="<?php echo $item->image; ?>" alt="...">
+									    </div>
+									  </a>
+									  <div class="media-body">
+									    <h4 id="story-title-<?php echo $item->id; ?>"class="media-heading"><?php echo $item->title;?></h4>
+									    <p id="story-info-<?php echo $item->id; ?>" class="text-muted"><?php echo date("M n Y | g:h a", strtotime($item->date)); ?> - <?php echo $item->source; ?></p>
+									  	<p class="list-group-item-text"><?php echo $item->description; ?></p>
+									  </div>
+									</div>
 									<!-- <span class="label label-default">Default</span>
 									<br/>
 									<span class="label label-primary">Primary</span>
 									<span class="label label-success">Success</span>
  									-->	
+ 								</div>
+ 								<div id="story-content-<?php echo $item->id; ?>" style="display: none">
+ 									<?php echo $item->content; ?>
  								</div>
 							</div>
 							</div>
@@ -224,18 +265,13 @@
 
 					</div>
 				</div>
-				<div class="col-lg-6 scroll-con visible-lg">
-					<div style="padding-top: 20px; padding-right: 30px;">
-						<div class="media">
-						  <a class="pull-left" href="#">
-						    <img class="media-object" src="http://ubyssey.ca/wp-content/uploads/2014/01/Winnie_20140119__Steven-Richards-499x295.jpg" alt="...">
-						  </a>
-						  <div class="media-body">
-						    <h2 class="media-heading">Campus RCMP seek help finding missing senior</h2>
-						    <h4 class="text-muted">The Ubyssey</h4>
-						  </div>
-						</div>
-						<br/>
+				<div id="current-story-con" class="col-lg-6 scroll-con visible-lg">
+					<div id="current-story">
+						<h2 id="current-story-title">Campus RCMP seek help finding missing senior</h2>
+						<h4 id="current-story-info" class="text-muted">The Ubyssey</h4>
+						<hr>
+						<div id="current-story-content">
+
 						<p>Police are looking for a 78-year-old man who disappeared from the UBC Purdy Pavilion yesterday.</p>
 
 						<p>According to police, Edward Grant was last seen at the Purdy Pavilion around 9 a.m. on Jan. 21.</p>
@@ -245,7 +281,7 @@
 						<p>According to police, Grant has dementia and can be aggressive if confronted. He is also diabetic but not dependent on insulin.</p>
 
 						<p>RCMP have asked anyone with information on Grant’s whereabouts to contact them at 604-224-1322 or Crime Stoppers at 1-800-222-TIPS.</p>
-						
+						</div>
 						<hr/>
 				  		<h4>
 				    		<span class="label label-default">Default</span>
