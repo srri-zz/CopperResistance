@@ -95,7 +95,6 @@
 			}
 			
 			.list-story {
-				border-right: solid 1px rgb(216, 216, 216);
 				display: block;
 			}
 
@@ -142,6 +141,10 @@
 
 			#current-story {
 				padding: 0 30px 0 15px;
+			}
+
+			#current-story-con {
+				border-left: solid 1px rgb(216, 216, 216);
 			}
 
 	    </style>
@@ -239,7 +242,7 @@
 							<div style="margin-left: 18px; background-color: #FFF; border-bottom: 1px solid rgb(216, 216, 216); ">
 								<div class="list-story-content" onclick="storySelect('<?php echo $item->id; ?>');"style="padding: 20px 15px;">
 									<div class="media">
-									  <a class="pull-left visible-lg visible-md" href="#">
+									  <a class="pull-left visible-sm visible-lg visible-md" href="#">
 									  	<div style="width: 120px; max-height: 120px; overflow: hidden;">
 									    	<img class="media-object" src="<?php echo $item->image; ?>" alt="...">
 									    </div>

@@ -95,7 +95,6 @@
 			}
 			
 			.list-story {
-				border-right: solid 1px rgb(216, 216, 216);
 				display: block;
 			}
 
@@ -142,6 +141,10 @@
 
 			#current-story {
 				padding: 0 30px 0 15px;
+			}
+
+			#current-story-con {
+				border-left: solid 1px rgb(216, 216, 216);
 			}
 
 	    </style>
