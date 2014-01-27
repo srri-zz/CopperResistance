@@ -8,8 +8,7 @@
     	<meta name="author" content="">
 
     	<title>CopperResistance</title>		
-		<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
-		<script src="../bs/js/bootstrap.min.js"></script>
+
     	<link href="../bs/css/bootstrap.css" rel="stylesheet">
 
 	    <!--[if lt IE 9]>
@@ -17,6 +16,8 @@
     		<script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
     	<![endif]-->
     	
+    	<script src="https://code.jquery.com/jquery-1.10.2.min.js"></script>
+
     	<!-- the mousewheel plugin - optional to provide mousewheel support -->
 		<script type="text/javascript" src="js/jquery.mousewheel.js"></script>
 
@@ -119,19 +120,14 @@
 			.list-story img {
 				display: none;
 			}
-			
-			.content {
-				display:none;
-			}
 
 	    </style>
 
 	    <script type="text/javascript" id="sourcecode">
 			$(function()
 			{
-				$('.expander').simpleexpand();
+				$('.scroll-pane').jScrollPane();
 			});
-			
 		</script>
 	</head>
 	
@@ -151,7 +147,7 @@
 		    <!-- Collect the nav links, forms, and other content for toggling -->
 		    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 		    	<ul class="nav navbar-nav">
-		    		<li class="active"><a href="#">Add Feed</a></li>
+		    		<li class="active"><a href="#">Blank-Template></a></li>
 		    	</ul>
 		    	<form class="navbar-form navbar-right hidden-sm hidden-xs" role="search">
 		    		<div class="form-group">
@@ -161,29 +157,33 @@
 		    	</form>
 		    	<ul class="nav navbar-nav navbar-right hidden-sm hidden-xs">
 		    		
-			</ul>
+				    	</ul>
 		    </div>
-		
 	    </nav>
-<div class="main-content">
-		
-		<div class="modal hide fade" id="myModal">
-		  <div class="modal-header">
-		    <a class="close" data-dismiss="modal">×</a>
-		    <h3>Modal header</h3>
-		  </div>
-		  <div class="modal-body">
-		    <p>One fine body…</p>
-		  </div>
-		  <div class="modal-footer">
-		    <a href="#" class="btn">Close</a>
-		    <a href="#" class="btn btn-primary">Save changes</a>
-		  </div>
+		<div class="main-content">
+				<div class="modal hide fade" id="myModal">
+				  <div class="modal-header">
+				    <a class="close" data-dismiss="modal">×</a>
+				    <h3>Modal header</h3>
+				  </div>
+				  <div class="modal-body">
+				    <p>One fine body…</p>
+				  </div>
+				  <div class="modal-footer">
+				    <a href="#" class="btn">Close</a>
+				    <a href="#" class="btn btn-primary">Save changes</a>
+				  </div>
+				</div>
+
+				<a class="btn" data-toggle="modal" href="#myModal" >Launch Modal</a>
+
+
+
+				
 		</div>
 
-		<a class="btn" data-toggle="modal" href="#myModal" >Launch Modal</a>
-		
-</div>
-	
+	<script>
+    <!-- Bootstrap core JavaScript -->
+    <script src="../bs/js/bootstrap.min.js"></script>
   </body>
 </html>
