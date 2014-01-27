@@ -29,12 +29,6 @@
 
 	$dbh = new PDO('mysql:host=nuwire.petersiemens.com;dbname=nuwire', $user, $pass);
 
-  	$stmt = $dbh->prepare("INSERT INTO stories (title, date, source, desc, content) VALUES (:title, :date, :source, :desc, :content)");
-	$stmt->bindParam(':title', $title);
-	$stmt->bindParam(':date', $date);
-	$stmt->bindParam(':source', $source_name);
-	$stmt->bindParam(':desc', $desc);
-	$stmt->bindParam(':content', $content);
 
   	foreach($sources as $source):
 
@@ -58,7 +52,11 @@
 
 		  	echo $title.'<br/><br/>';
 
-			$stmt->execute();
+			$data = array($title);  
+  
+			$stmt = $dbh->prepare("INSERT INTO stories (title) VALUES (?)");  
+			$stmt->execute($data); 
+
 		endforeach;
 	endforeach;
 
