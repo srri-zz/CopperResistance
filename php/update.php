@@ -29,7 +29,7 @@
 
 	$dbh = new PDO('mysql:host=nuwire.petersiemens.com;dbname=nuwire', $user, $pass);
 
-  	$stmt = $dbh->prepare("INSERT INTO stories (title, date, source, description, content) VALUES (:title, :date, :source, :desc, :content)");
+  	$stmt = $dbh->prepare("INSERT INTO stories (title, date, source, desc, content) VALUES (:title, :date, :source, :desc, :content)");
 	$stmt->bindParam(':title', $title);
 	$stmt->bindParam(':date', $date);
 	$stmt->bindParam(':source', $source_name);
@@ -38,7 +38,7 @@
 
   	foreach($sources as $source):
 
-  		$source_name = $source['source']
+  		$source_name = $source['source'];
 
 	  	$feed->set_feed_url($source['url']);
 
@@ -54,27 +54,13 @@
 		  	$desc = $h2t->get_text();
 
 		  	$date = $item->get_date('Y-m-d H:i:s');
+		  	$content = "";
+
+		  	echo $title.'<br/><br/>';
 
 			$stmt->execute();
-
-
-?>
-	<div class="list-story" style="background-color: rgba(39, 168, 101, <?php echo rand(50, 100) / 100; ?>)">
-        <div style="width: 18px; float: left;"></div>
-		<div style="margin-left: 18px; background-color: #FFF; border-bottom: 1px solid rgb(216, 216, 216); ">
-			<div style="padding: 20px 15px;">
-				<h4 class="list-group-item-heading"><?php echo $item->get_title();?></h4>
-				<p class="text-muted"><?php echo ; ?> - The Ubyssey</p>
-				<p class="list-group-item-text"><?php echo shorten($description, 150); ?></p>
-				<br/>
-				<span class="label label-default">Default</span>
-				<span class="label label-primary">Primary</span>
-				<span class="label label-success">Success</span>
-			</div>
-		</div>
-    	
-	</div>
-<?php
 		endforeach;
 	endforeach;
+
+	$dbh = null;
 ?>
