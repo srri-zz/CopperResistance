@@ -50,11 +50,12 @@
 		  	$date = $item->get_date('Y-m-d H:i:s');
 		  	$content = "";
 
-		  	echo $title.'<br/><br/>';
+		  	echo $title.'<br/>';
+		  	echo $date.'<br/><br/>';
 
-			$data = array($title);  
+			$data = array($title, $date);  
   
-			$stmt = $dbh->prepare("INSERT INTO stories (title) VALUES (?)");  
+			$stmt = $dbh->prepare("INSERT INTO stories (title, date) VALUES (?, ?)");  
 			$stmt->execute($data); 
 
 		endforeach;
