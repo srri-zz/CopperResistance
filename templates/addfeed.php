@@ -165,7 +165,7 @@
 				    	</ul>
 		    </div>
 	    </nav>
-			<div class="main-content row">
+			
 				<!-- Button trigger modal -->
 				<button class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModal">
 				  Launch demo modal
@@ -189,7 +189,6 @@
 				    </div><!-- /.modal-content -->
 				  </div><!-- /.modal-dialog -->
 				</div><!-- /.modal -->
-		   </div>
 
 	<script>
     <!-- Bootstrap core JavaScript -->
