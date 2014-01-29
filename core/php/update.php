@@ -65,15 +65,17 @@
 			$image = $image_el->src;
 
 			$link = $item->get_link(0);
+
+			$color = 'rgba(66, 139, 202, '. rand(50, 100) / 100 .')';
        			
 		  	echo $title.'<br/>';
 		  	echo $date.'<br/>';
 		  	echo $link.'<br/>';
 		  	echo $desc.'<br/><br/>';
 
-			$data = array($title, $date, $source_name, $desc, $content, $image, $link);  
+			$data = array($title, $date, $source_name, $desc, $content, $image, $link, $color);  
   			
-			$stmt = $dbh->prepare("INSERT INTO stories (title, date, source, description, content, image, link) VALUES (?, ?, ?, ?, ?, ?, ?)");  
+			$stmt = $dbh->prepare("INSERT INTO stories (title, date, source, description, content, image, link, color) VALUES (?, ?, ?, ?, ?, ?, ?, ?)");  
 			$stmt->execute($data); 
 
 		endforeach;

@@ -9,20 +9,13 @@
 
     	<title>CopperResistance</title>		
 
-    	<link href="bs/css/bootstrap.css" rel="stylesheet">
+    	<link href="assets/bs/css/bootstrap.css" rel="stylesheet">
 
 	    <!--[if lt IE 9]>
     		<script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
     		<script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
     	<![endif]-->
-    	
     	<script src="https://code.jquery.com/jquery-1.10.2.min.js"></script>
-
-    	<!-- the mousewheel plugin - optional to provide mousewheel support -->
-		<script type="text/javascript" src="js/jquery.mousewheel.js"></script>
-
-    	<link href="css/jquery.jscrollpane.css" rel="stylesheet">
-    	<script type="text/javascript" src="js/jquery.jscrollpane.min.js"></script>
 
     	<style>
     		body, html {
@@ -57,7 +50,11 @@
 		    	border-radius: 0;
 		    	margin-bottom: 0;
 		    	background-color: #464545;
-		    	border: none;
+		    	border-bottom: solid 1px rgb(65, 65, 65);
+
+			  	-moz-box-shadow:    0px 0px 1px 0px #383838;
+			  	-webkit-box-shadow: 0px 0px 1px 0px #383838;
+			  	box-shadow:         0px 0px 1px 0px #383838;
 	    	}
 	    	
 	    	.navbar-default .navbar-nav > li > a {
@@ -65,7 +62,7 @@
 	    	}
 	    	
 	    	.navbar-default .navbar-nav > li > a:hover {
-		    	color: #37C977;
+		    	color: #428bca;
 	    	}
 	    	
 	    	.navbar-default .navbar-nav > li > a.dropdown-toggle:hover {
@@ -74,7 +71,7 @@
 	    	
 	    	.navbar-default .navbar-nav > .active > a, .navbar-default .navbar-nav > .active > a:hover {
 		    	color: #E9E9E9;
-		    	background-color: #27A865;
+		    	background-color: #428bca;
 	    	}
 	    	
 	    	.navbar-default .navbar-brand {
@@ -104,6 +101,7 @@
 
 			.main-content {
 				padding-top: 50px;
+				padding-bottom: 40px;
 				height: 100%;
 				max-width: 100%;
 				margin-left: 0;
@@ -120,8 +118,12 @@
 				width: 100%;
 			}
 
+			.list-story-content {
+				padding: 20px;
+			}
+
 			.list-story-content:hover{
-				background-color: rgb(247, 247, 247);
+				background-color: rgb(236, 236, 236);
 				cursor: pointer;
 			}
 
@@ -139,12 +141,94 @@
 				margin-top: 20px;
 			}
 
+			#current-story-title {
+				margin-top: 0;
+			}
+
 			#current-story {
-				padding: 0 30px 0 15px;
+				padding: 15px;
 			}
 
 			#current-story-con {
-				border-left: solid 1px rgb(216, 216, 216);
+				border-left: solid 0px rgb(216, 216, 216);
+				padding: 0;
+			}
+
+			.list-story .active{
+				background-color: rgb(236, 236, 236);
+				opacity: 0.45;
+			}
+
+			#current-story-link:hover {
+				text-decoration: none;
+				color: #428bca;
+			}
+
+			#current-story-link {
+				color: #333333;
+			}
+
+			#footer {
+				position: absolute;
+				bottom: 0;
+				width: 100%;
+				border-top: solid 1px rgb(216, 216, 216);
+				height: 40px;
+			}
+
+			.footer-content {
+				padding: 12px;
+			}
+
+			::-webkit-scrollbar {
+			    width: 12px;
+			    border-left: 1px solid rgb(216, 216, 216);
+			}
+			 
+			::-webkit-scrollbar-track {
+				background: rgb(221, 221, 221);
+			}
+			 
+			::-webkit-scrollbar-thumb {
+				background: rgb(240, 240, 240);
+				border: 1px solid rgb(210, 210, 210);
+			}
+
+			#current-bar {
+				position: fixed;
+				width: 100%;
+				height: 55px;
+				background: rgb(240, 240, 240);
+				border-bottom: 1px solid rgb(216, 216, 216);
+
+				-moz-box-shadow:    0px 1px 1px 0px rgba(87, 87, 87, 0.03);
+			  	-webkit-box-shadow: 0px 1px 1px 0px rgba(87, 87, 87, 0.03);
+			  	box-shadow:         0px 1px 1px 0px rgba(87, 87, 87, 0.03);
+			}
+
+			.search-bar {
+				color: #757575;
+				background-color: #333333;
+				border: 1px solid #2B2B2B;
+				border-radius: 0;
+			}
+
+			.search-bar:focus{
+				border: 1px solid #2B2B2B;
+				box-shadow: none;
+				outline: 0 none;
+			}
+
+			.search-button {
+				color: #999999;
+				background-color: #3F3F3F;
+				border: 1px solid #2B2B2B;
+				border-radius: 0;
+			}
+
+			.search-button:hover {
+				background-color: #2C2C2C;
+				border: 1px solid #2B2B2B;
 			}
 
 	    </style>
@@ -153,12 +237,22 @@
 			$(function()
 			{
 				$('.scroll-pane').jScrollPane();
+
 			});
+
+			var lastActive = 0;
 
 			var storySelect = function(id) {
 				title = $('#story-title-'+id).html();
 				info = $('#story-info-'+id).html();
 				content = $('#story-content-'+id).html();
+				link = $('#story-link-'+id).html();
+				$('#story-'+id).addClass("active")
+				if (id != lastActive){
+					$('#story-'+lastActive).removeClass("active")
+				}
+				lastActive = id;
+				$("#current-story-link").attr("href", link);
 				$('#current-story-title').html(title);
 				$('#current-story-info').html(info);
 			    $('#current-story-content').html(content);
@@ -177,22 +271,35 @@
 		    		<span class="icon-bar"></span>
 		    		<span class="icon-bar"></span>
 		    	</button>
-		    	<a class="navbar-brand" href="#">uwire</a>
+		    	<a class="navbar-brand" href="#">nuwire</a>
 		    </div>
 		
 		    <!-- Collect the nav links, forms, and other content for toggling -->
 		    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 		    	<ul class="nav navbar-nav">
 		    		<li class="active"><a href="#">All</a></li>
-		    		<li><a href="#">News</a></li>
-		    		<li><a href="#">Sports</a></li>
+		    		<li><a href="#">National</a></li>
+		    		<li class="dropdown">
+		    			<a href="#" class="dropdown-toggle" data-toggle="dropdown">Regional <b class="caret"></b></a>
+		    			<ul class="dropdown-menu">
+		    				<li><a href="#">British Columbia</a></li>
+		    				<li><a href="#">Alberta</a></li>
+		    				<li><a href="#">Saskatchewan</a></li>
+		    				<li><a href="#">Manitoba</a></li>
+		    				<li><a href="#">Ontario</a></li>
+		    				<li><a href="#">Quebec</a></li>
+		    				<li><a href="#">The Maritimes</a></li>
+		    			</ul>
+		    		</li>
 		    		<li><a href="#">Science</a></li>
 		    	</ul>
 		    	<form class="navbar-form navbar-right hidden-sm hidden-xs" role="search">
-		    		<div class="form-group">
-		    			<input type="text" class="form-control" placeholder="Search">
-		    		</div>
-		    		<button type="submit" class="btn btn-default">Submit</button>
+			    		<div class="input-group" style="width: 300px;">
+			    			<input type="text" class="search-bar form-control">
+			    			<span class="input-group-btn">
+			    				<button type="submit" class="btn btn-default search-button"><span class="glyphicon glyphicon-search"></span></button>
+			    			</span>
+			    	</div>
 		    	</form>
 		    	<ul class="nav navbar-nav navbar-right hidden-sm hidden-xs">
 		    		<li class="dropdown">
@@ -220,36 +327,21 @@
 	    </nav>
 			<div class="main-content row">
 				<div class="col-lg-6 scroll-con" style="padding-left: 0; padding-right: 0;">
-			  		<div>			  
-			  		<?php	
-
-			  		 	$user = 'psiemens';
-					  	$pass = 'portland22';
-
-						$dbh = new PDO('mysql:host=nuwire.petersiemens.com;dbname=nuwire', $user, $pass);
-
-						$stmt = $dbh->query('SELECT * from stories ORDER BY date desc');  
-						  
-						$stmt->setFetchMode(PDO::FETCH_OBJ);  
-						  
-						while($item = $stmt->fetch()) {  
-							?>
+			  		<div>		   
 							{% for story in stories %}
-						        <li>{{ user.username|e }}</li>
-						    {% endfor %}
-						    <div class="list-story" style="background-color: rgba(39, 168, 101, <?php echo rand(50, 100) / 100; ?>)">
+						    <div class="list-story" style="background-color: {{ story.color }};">
 					        <div style="width: 18px; float: left;"></div>
-							<div style="margin-left: 18px; background-color: #FFF; border-bottom: 1px solid rgb(216, 216, 216); ">
-								<div class="list-story-content" onclick="storySelect('<?php echo $item->id; ?>');"style="padding: 20px 15px;">
+							<div style="margin-left: 18px; background-color: rgb(252, 252, 252); border-bottom: 1px solid rgb(216, 216, 216);">
+								<div id="story-{{ story.id }}" class="list-story-content" onclick="storySelect('{{ story.id }}');"style="">
 									<div class="media">
 									  <a class="pull-left visible-sm visible-lg visible-md" href="#">
 									  	<div style="width: 120px; max-height: 120px; overflow: hidden;">
-									    	<img class="media-object" src="<?php echo $item->image; ?>" alt="...">
+									    	<img class="media-object" src="{{ story.image }}" alt="...">
 									    </div>
 									  </a>
 									  <div class="media-body">
-									    <h4 id="story-title-<?php echo $item->id; ?>"class="media-heading">{{ story.title }}</h4>
-									    <p id="story-info-<?php echo $item->id; ?>" class="text-muted">{{ story.date|date("M n Y | g:h a") }} - {{ story.source }}</p>
+									    <h4 id="story-title-{{ story.id }}"class="media-heading">{{ story.title }}</h4>
+									    <p id="story-info-{{ story.id }}" class="text-muted">{{ story.date|date("M n Y | g:h a") }} - {{ story.source }}</p>
 									  	<p class="list-group-item-text">{{ story.description }}</p>
 									  </div>
 									</div>
@@ -259,35 +351,44 @@
 									<span class="label label-success">Success</span>
  									-->	
  								</div>
- 								<div id="story-content-<?php echo $item->id; ?>" style="display: none">
- 									<?php echo $item->content; ?>
+ 								<div id="story-content-{{ story.id }}" style="display: none">
+ 									{{ story.content|raw }}
+ 								</div>
+ 								<div id="story-link-{{ story.id }}" style="display: none">
+ 									{{ story.link }}
  								</div>
 							</div>
 							</div>
-						<?php
-						}  
-						$dbh = null;
-						?>
-
+							{% endfor %}
+					</div>
+					<div style="text-center width: 100%; padding: 15px 0; background: rgb(233, 233, 233);">
+						<a class="text-center" style="width: 100%; height: 100%;">
+							  	Load More
+						</a>
 					</div>
 				</div>
 				<div id="current-story-con" class="col-lg-6 scroll-con visible-lg">
-					<div id="current-story">
-						<h2 id="current-story-title">Campus RCMP seek help finding missing senior</h2>
-						<h4 id="current-story-info" class="text-muted">The Ubyssey</h4>
-						<hr>
-						<div id="current-story-content">
-
-						<p>Police are looking for a 78-year-old man who disappeared from the UBC Purdy Pavilion yesterday.</p>
-
-						<p>According to police, Edward Grant was last seen at the Purdy Pavilion around 9 a.m. on Jan. 21.</p>
-			
-						<p>Police said Grant left the pavilion, which is a part of the UBC Hospital, with a black suitcase. He is described as a black male of Caribbean descent, 5-foot-9 and 150 pounds. He is bald with brown eyes and dark-framed glasses. He was wearing all black and a fedora hat, dress shirt and coat when he was last seen.</p>
-
-						<p>According to police, Grant has dementia and can be aggressive if confronted. He is also diabetic but not dependent on insulin.</p>
-
-						<p>RCMP have asked anyone with information on Grant’s whereabouts to contact them at 604-224-1322 or Crime Stoppers at 1-800-222-TIPS.</p>
+					<div id="current-bar">
+						<div style="padding: 13px 15px;">
+						  	<button class="btn btn-default btn-sm " type="button">
+						  		<span class="glyphicon glyphicon-edit"></span> Edit
+						  	</button>
+						  	<button class="btn btn-default btn-sm " type="button">
+						  		<span class="glyphicon glyphicon-star"></span> Favourite
+						  	</button>
+						  	<button class="btn btn-default btn-sm " type="button">
+						  		<span class="glyphicon glyphicon-flag"></span> Flag
+						  	</button>
+						  	<button class="btn btn-default btn-sm dropdown-toggle" type="button" data-toggle="dropdown">
+    							<span class="glyphicon glyphicon-tag"></span> Add Tag <span class="caret"></span>
+  							</button>
 						</div>
+					</div>
+					<div id="current-story" style="margin-top: 55px;">
+						<a id="current-story-link" href="#"><h3 id="current-story-title"></h3></a>
+						<h4 id="current-story-info" class="text-muted"></h4>
+						<hr>
+						<div id="current-story-content"></div>
 						<hr/>
 				  		<h4>
 				    		<span class="label label-default">Default</span>
@@ -295,20 +396,22 @@
 							<span class="label label-success">Success</span>
 				  		</h4>
 				  		<br/>
-
-						<div class="panel panel-default">
-						  	<div class="panel-body">
-						  		<a href="#"><span class="glyphicon glyphicon-edit"></span> Edit</a> &nbsp;
-						  		<a href="#"><span class="glyphicon glyphicon-star"></span> Favourite</a> &nbsp;
-						  		<a href="#"><span class="glyphicon glyphicon-flag"></span> Flag</a>
-						  	</div>
-						</div>
 					</div>
 				</div>
 		</div>
+		<div id="footer">
+			<div class="text-center" style="padding: 9px;">
+				<span class="text-muted visible-lg visible-md visible-sm">
+					© The National University Wire
+					&nbsp; &nbsp; 
+					<a href="#">About</a> &nbsp;
+					<a href="#">Contact</a> &nbsp;
+					<a href="#">Report a Bug</a>
+				</span> 
+			</div>
+		</div>
 
-	<script>
     <!-- Bootstrap core JavaScript -->
-    <script src="bs/js/bootstrap.min.js"></script>
+    <script src="assets/bs/js/bootstrap.min.js"></script>
   </body>
 </html>
