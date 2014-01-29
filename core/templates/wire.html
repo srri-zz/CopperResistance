@@ -231,6 +231,10 @@
 				border: 1px solid #2B2B2B;
 			}
 
+			#current-bar .btn-sm {
+				background-color: rgb(243, 243, 243);
+			}
+
 	    </style>
 
 	    <script type="text/javascript" id="sourcecode">
@@ -326,7 +330,7 @@
 		    </div>
 	    </nav>
 			<div class="main-content row">
-				<div class="col-lg-6 scroll-con" style="padding-left: 0; padding-right: 0;">
+				<div class="col-lg-6 scroll-con" style="padding-left: 0; padding-right: 0; background-color: rgb(233, 233, 233);">
 			  		<div>		   
 							{% for story in stories %}
 						    <div class="list-story" style="background-color: {{ story.color }};">
@@ -341,7 +345,9 @@
 									  </a>
 									  <div class="media-body">
 									    <h4 id="story-title-{{ story.id }}"class="media-heading">{{ story.title }}</h4>
-									    <p id="story-info-{{ story.id }}" class="text-muted">{{ story.date|date("M n Y | g:s a") }} - {{ story.source }}</p>
+									    <p id="story-info-{{ story.id }}" class="text-muted">
+									    	{{ story.date|date("M d Y | h:i A") }} - {{ story.source }}
+									    </p>
 									  	<p class="list-group-item-text">{{ story.description }}</p>
 									  </div>
 									</div>
@@ -404,9 +410,9 @@
 				<span class="text-muted visible-lg visible-md visible-sm">
 					© The National University Wire
 					&nbsp; &nbsp; 
-					<a href="#">About</a> &nbsp;
-					<a href="#">Contact</a> &nbsp;
-					<a href="#">Report a Bug</a>
+					About &nbsp;
+					Contact &nbsp;
+					Report a Bug
 				</span> 
 			</div>
 		</div>

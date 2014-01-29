@@ -19,4 +19,33 @@ $stories = $stmt->fetchAll();
 $dbh = null;
 
 echo $twig->render('wire.html', array('stories' => $stories));
+
+class Wire {
+
+	public $category;
+
+	private function __construct(){
+
+		if(isset($_POST['cat'])){
+			$this->set_category($_POST['cat']);
+		} else {
+			$this->set_category("all");
+		}
+	}
+
+	public function set_category($category){
+		$this->category = $category;
+	}
+
+}
+
+class Database {
+
+	private $host;
+	private $dbname;
+	private $user;
+	private $pass;
+
+
+}
 ?>

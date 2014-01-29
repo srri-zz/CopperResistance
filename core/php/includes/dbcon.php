@@ -1,6 +1,6 @@
 <?php
-$user = 'psiemens';
-$pass = 'portland22';
+$user = '';
+$pass = '';
 
-$dbh = new PDO('mysql:host=nuwire.petersiemens.com;dbname=nuwire', $user, $pass);
+$dbh = new PDO('', $user, $pass);
 ?>
