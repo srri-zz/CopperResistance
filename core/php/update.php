@@ -30,6 +30,14 @@
   		array("source"=>"The McGill Daily", "url"=>"http://www.mcgilldaily.com/tag/nuw/feed"),
   		array("source"=>"The Varsity", "url"=>"http://thevarsity.ca/tag/nuw/feed/"),
 
+  		array("source"=>"The Dalhousie Gazette", "url"=>"http://feeds.feedburner.com/dalgazette?format=xml"),
+  		array("source"=>"The Western Gazette", "url"=>"http://www.westerngazette.ca/feed/"),
+  		array("source"=>"The Ubyssey", "url"=>"http://ubyssey.ca/feed/"),
+  		array("source"=>"The McGill Daily", "url"=>"http://www.mcgilldaily.com/feed/"),
+  		array("source"=>"The Varsity", "url"=>"http://thevarsity.ca/feed/"),
+  		array("source"=>"The Link", "url"=>"http://thelinknewspaper.ca/feed"),
+  		array("source"=>"The Martlet", "url"=>"http://www.martlet.ca/feed/"),
+  		
   		array("source"=>"The Western Gazette", "url"=>"http://www.westerngazette.ca/tag/NUW/feed/"));
 
   	$feed = new SimplePie();
