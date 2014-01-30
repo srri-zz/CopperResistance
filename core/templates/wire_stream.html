@@ -1,0 +1,36 @@
+{% for story in stories %}
+<div class="list-story" style="background-color: {{ story.color }};">
+<div style="width: 18px; float: left;"></div>
+<div style="margin-left: 18px; background-color: rgb(252, 252, 252); border-bottom: 1px solid rgb(216, 216, 216);">
+	<div id="story-{{ story.id }}" class="list-story-content" onclick="storySelect('{{ story.id }}');"style="">
+		<div class="media">
+			{% if story.image %}
+			<a class="pull-left visible-sm visible-lg visible-md" href="#">
+		  		<div style="width: 120px; max-height: 120px; overflow: hidden;">
+		    		<img class="media-object" src="{{ story.image }}" alt="...">
+		    	</div>
+		  	</a>
+		  	{% endif %}
+		  	<div class="media-body">
+		   		<h4 id="story-title-{{ story.id }}"class="media-heading">{{ story.title }}</h4>
+		    	<p id="story-info-{{ story.id }}" class="text-muted">
+		    		{{ story.date|date("M d Y | h:i A") }} - {{ story.source }}
+		    	</p>
+		  		<p class="list-group-item-text">{{ story.description }}</p>
+		 	</div>
+		</div>
+		<!-- <span class="label label-default">Default</span>
+		<br/>
+		<span class="label label-primary">Primary</span>
+		<span class="label label-success">Success</span>
+			-->	
+		</div>
+		<div id="story-content-{{ story.id }}" style="display: none">
+			{{ story.content|raw }}
+		</div>
+		<div id="story-link-{{ story.id }}" style="display: none">
+			{{ story.link }}
+		</div>
+</div>
+</div>
+{% endfor %}

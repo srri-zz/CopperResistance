@@ -19,38 +19,38 @@
   	require_once('libraries/htmldom/simple_html_dom.php');
 			 
   	$sources = array(
-  		array("source"=>"The Ubyssey", "url"=>"http://ubyssey.ca/feed/?post_type=news&news_category=nuw"), 
-  		array("source"=>"The Ubyssey", "url"=>"http://ubyssey.ca/feed/?post_type=features&feature_category=nuw"),
-  		array("source"=>"The Ubyssey", "url"=>"http://ubyssey.ca/feed/?post_type=culture&culture_category=nuw"),
-  		array("source"=>"The Ubyssey", "url"=>"http://ubyssey.ca/feed/?post_type=sports&sports_category=nuw"),
-  		array("source"=>"The Ubyssey", "url"=>"http://ubyssey.ca/feed/?post_type=opinions&opinion_category=nuw"),
+  		//array("id" => 1, "source"=>"The Ubyssey", "url"=>"http://ubyssey.ca/feed/?post_type=news&news_category=nuw"), 
+  		//array("id" => 2, "source"=>"The Ubyssey", "url"=>"http://ubyssey.ca/feed/?post_type=features&feature_category=nuw"),
+  		//array("id" => 3, "source"=>"The Ubyssey", "url"=>"http://ubyssey.ca/feed/?post_type=culture&culture_category=nuw"),
+  		//array("id" => 4, "source"=>"The Ubyssey", "url"=>"http://ubyssey.ca/feed/?post_type=sports&sports_category=nuw"),
+  		//array("id" => 5, "source"=>"The Ubyssey", "url"=>"http://ubyssey.ca/feed/?post_type=opinions&opinion_category=nuw"),
 
-  		array("source"=>"The Dalhousie Gazette", "url"=>"http://dalgazette.com/tag/nuw/feed"),
-  		array("source"=>"The McGill Daily", "url"=>"http://www.mcgilldaily.com/tag/nuw/feed"),
-  		array("source"=>"The McGill Daily", "url"=>"http://www.mcgilldaily.com/tag/nuw/feed"),
-  		array("source"=>"The Varsity", "url"=>"http://thevarsity.ca/tag/nuw/feed/"),
+  		//array("id" => 6, "source"=>"The Dalhousie Gazette", "url"=>"http://dalgazette.com/tag/nuw/feed"),
+  		array("id" => 7, "source"=>"The McGill Daily", "url"=>"http://www.mcgilldaily.com/tag/nuw/feed"),
+  		//array("id" => 9, "source"=>"The Varsity", "url"=>"http://thevarsity.ca/tag/nuw/feed/"),
 
-  		array("source"=>"The Dalhousie Gazette", "url"=>"http://feeds.feedburner.com/dalgazette?format=xml"),
-  		array("source"=>"The Western Gazette", "url"=>"http://www.westerngazette.ca/feed/"),
-  		array("source"=>"The Ubyssey", "url"=>"http://ubyssey.ca/feed/"),
-  		array("source"=>"The McGill Daily", "url"=>"http://www.mcgilldaily.com/feed/"),
-  		array("source"=>"The Varsity", "url"=>"http://thevarsity.ca/feed/"),
-  		array("source"=>"The Link", "url"=>"http://thelinknewspaper.ca/feed"),
-  		array("source"=>"The Martlet", "url"=>"http://www.martlet.ca/feed/"),
+  		array("id" => 10, "source"=>"The Dalhousie Gazette", "url"=>"http://feeds.feedburner.com/dalgazette?format=xml"),
+  		array("id" => 11, "source"=>"The Western Gazette", "url"=>"http://www.westerngazette.ca/feed/"),
+  		array("id" => 12, "source"=>"The Ubyssey", "url"=>"http://ubyssey.ca/feed/"),
+  		array("id" => 13, "source"=>"The McGill Daily", "url"=>"http://www.mcgilldaily.com/feed/"),
+  		array("id" => 14, "source"=>"The Varsity", "url"=>"http://thevarsity.ca/feed/"),
+  		array("id" => 15, "source"=>"The Link", "url"=>"http://thelinknewspaper.ca/feed"),
+  		array("id" => 16, "source"=>"The Martlet", "url"=>"http://www.martlet.ca/feed/"),
   		
-  		array("source"=>"The Western Gazette", "url"=>"http://www.westerngazette.ca/tag/NUW/feed/"));
+  		array("id" => 17, "source"=>"The Western Gazette", "url"=>"http://www.westerngazette.ca/tag/NUW/feed/"));
 
-  	$feed = new SimplePie();
 
   	$user = 'psiemens';
   	$pass = 'portland22';
 
 	$dbh = new PDO('mysql:host=nuwire.petersiemens.com;dbname=nuwire', $user, $pass);
 
+  	$feed = new SimplePie();
 
   	foreach($sources as $source):
 
   		$source_name = $source['source'];
+  		$source_id = $source['id'];
 
 	  	$feed->set_feed_url($source['url']);
 
@@ -60,33 +60,64 @@
 								 
 
 	  	foreach ($feed->get_items() as $item):
-	  		$title = $item->get_title();
 
-		  	$h2t = new html2text($item->get_description());
-		  	$desc = shorten($h2t->get_text(), 150);
+			$uid = $item->get_id(true);
 
-		  	$date = $item->get_date('Y-m-d H:i:s');
-		  	$content = $item->get_content();
+			$stmt = $dbh->prepare('SELECT * FROM stories WHERE uid = ?');
+			$stmt->bindParam(1, $uid, PDO::PARAM_INT);
+			$stmt->execute();
+			$row = $stmt->fetch(PDO::FETCH_ASSOC);
 
-			$html = str_get_html($content);
-			$image_el = $html->find('img', 0);
-			$image = $image_el->src;
+			if( ! $row) {
 
-			$link = $item->get_link(0);
+		  		$title = $item->get_title();
 
-			$color = 'rgba(66, 139, 202, '. rand(50, 100) / 100 .')';
-       			
-		  	echo $title.'<br/>';
-		  	echo $date.'<br/>';
-		  	echo $link.'<br/>';
-		  	echo $desc.'<br/><br/>';
+			  	$h2t = new html2text($item->get_description());
+			  	$desc = shorten($h2t->get_text(), 150);
 
-			$data = array($title, $date, $source_name, $desc, $content, $image, $link, $color);  
+			  	$date = $item->get_date('Y-m-d H:i:s');
+			  	$content = $item->get_content();
+
+				$html = str_get_html($content);
+				$image_el = $html->find('img', 0);
+
+				if ($image_el){
+					$image = $image_el->src;
+				} else {
+					$image = "";
+				}
+
+				$link = $item->get_link(0);
+
+				$color = 'rgba(66, 139, 202, '. rand(50, 100) / 100 .')';
+
+				$data = array($uid, $title, $date, $source_name, $source_id, $desc, $content, $image, $link, $color);  
   			
-			$stmt = $dbh->prepare("INSERT INTO stories (title, date, source, description, content, image, link, color) VALUES (?, ?, ?, ?, ?, ?, ?, ?)");  
-			$stmt->execute($data); 
+			  	try
+			    {    
+			    	$stmt = $dbh->prepare("INSERT INTO stories (uid, title, date, source, source_id, description, content, image, link, color) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)");  
+					$stmt->execute($data); 
+			    }
+			    catch (PDOException $e)
+			    {
+			    	return $e->getMessage(); 
+			    }
+						
+				echo $uid.'<br/>';
+				echo '<strong>'.$title.'</strong><br/>';
+		  		echo $date.'<br/>';
+		  		echo $source_name.' ('.strlen($source_name).') <br/>';
+		  		echo $source_id.'<br/>';
+		  		echo $desc.'<br/>';
+		  		echo '<div>';
+		  		echo $image.' ('.strlen($image).') <br/>';
+		  		echo $link.' ('.strlen($link).') <br/>';
+		  		echo $color.'<br/><br/>';
+
+			}
 
 		endforeach;
+
 	endforeach;
 
 	$dbh = null;

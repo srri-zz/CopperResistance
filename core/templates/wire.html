@@ -7,7 +7,7 @@
     	<meta name="description" content="">
     	<meta name="author" content="">
 
-    	<title>CopperResistance</title>		
+    	<title>{{ title }}</title>		
 
     	<link href="assets/bs/css/bootstrap.css" rel="stylesheet">
 
@@ -235,16 +235,28 @@
 				background-color: rgb(243, 243, 243);
 			}
 
+			#load-more {
+				width: 100%; 
+				padding: 15px 0; 
+				background: rgb(233, 233, 233);
+			}
+
+			#load-more:hover {
+				cursor: pointer;
+				background-color: rgba(66, 139, 202, 0.21);
+			}
+
 	    </style>
 
 	    <script type="text/javascript" id="sourcecode">
 			$(function()
 			{
-				$('.scroll-pane').jScrollPane();
-
+				// Load first 15 stories.
+				loadMore(0);
 			});
 
 			var lastActive = 0;
+			var lastStory = 0;
 
 			var storySelect = function(id) {
 				title = $('#story-title-'+id).html();
@@ -262,6 +274,18 @@
 			    $('#current-story-content').html(content);
 			    $('#current-story-con').scrollTop(0);
 			};
+
+			var loadMore = function(){
+				loadStream(lastStory);
+				lastStory = lastStory + 15;
+			}
+
+			var loadStream = function(start){
+				$.get("stream.php?start="+start, function( data ) {
+				  $("#stream").append(data);
+				});
+			}
+
 		</script>
 	</head>
 	
@@ -331,7 +355,7 @@
 	    </nav>
 			<div class="main-content row">
 				<div class="col-lg-6 scroll-con" style="padding-left: 0; padding-right: 0; background-color: rgb(233, 233, 233);">
-			  		<div>		   
+			  		<div id="stream">		   
 							{% for story in stories %}
 						    <div class="list-story" style="background-color: {{ story.color }};">
 					        <div style="width: 18px; float: left;"></div>
@@ -367,10 +391,8 @@
 							</div>
 							{% endfor %}
 					</div>
-					<div style="text-center width: 100%; padding: 15px 0; background: rgb(233, 233, 233);">
-						<a class="text-center" style="width: 100%; height: 100%;">
+					<div id="load-more" class="text-center">
 							  	Load More
-						</a>
 					</div>
 				</div>
 				<div id="current-story-con" class="col-lg-6 scroll-con visible-lg">
@@ -416,6 +438,12 @@
 				</span> 
 			</div>
 		</div>
+
+	<script>
+		$( "#load-more" ).click(function() {
+			loadMore();
+		});
+	</script>
 
     <!-- Bootstrap core JavaScript -->
     <script src="assets/bs/js/bootstrap.min.js"></script>
