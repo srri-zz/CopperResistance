@@ -18,15 +18,23 @@ class Database extends PDO{
 	 *
 	 * @return 
 	 */
-	public function get_table($table, $order = "id", $dir = "desc", $limit = 20, $start = 0){
+	public function get_table($table, $order = "id", $dir = "desc", $limit = 20, $start = 0, $filter, $filter_list){
 
-		$query = "SELECT * from " . $table . " ORDER BY " . $order . " " . $dir . " LIMIT " . $start . ", " . $limit;
-
+		$query = "SELECT * from " . $table . " WHERE " . $filter . " IN (" . $filter_list . ") ORDER BY " . $order . " " . $dir . " LIMIT " . $start . ", " . $limit;
+		
 		$stmt = $this->query($query);  
 
 		$stmt->setFetchMode(PDO::FETCH_ASSOC);  
   
 		return $stmt->fetchAll();
+	}
+
+	public function get_row($table, $col, $val){
+		$STH = $this->prepare('SELECT * FROM ' . $table . ' WHERE ' . $col . ' = ' . $val);
+		$STH->execute();
+
+		$result = $STH->fetchAll(PDO::FETCH_ASSOC);
+		return $result[0];
 	}
 }
 

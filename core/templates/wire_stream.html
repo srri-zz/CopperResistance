@@ -2,7 +2,7 @@
 <div class="list-story" style="background-color: {{ story.color }};">
 <div style="width: 18px; float: left;"></div>
 <div style="margin-left: 18px; background-color: rgb(252, 252, 252); border-bottom: 1px solid rgb(216, 216, 216);">
-	<div id="story-{{ story.id }}" class="list-story-content" onclick="storySelect('{{ story.id }}');"style="">
+	<div id="story-{{ story.id }}" class="list-story-content" onclick="loadStory('{{ story.id }}');"style="">
 		<div class="media">
 			{% if story.image %}
 			<a class="pull-left visible-sm visible-lg visible-md" href="#">
@@ -24,9 +24,6 @@
 		<span class="label label-primary">Primary</span>
 		<span class="label label-success">Success</span>
 			-->	
-		</div>
-		<div id="story-content-{{ story.id }}" style="display: none">
-			{{ story.content|raw }}
 		</div>
 		<div id="story-link-{{ story.id }}" style="display: none">
 			{{ story.link }}

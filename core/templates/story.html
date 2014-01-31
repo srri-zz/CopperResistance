@@ -1,0 +1,22 @@
+<div id="current-bar">
+	<div style="padding: 13px 15px;">
+	  	<button class="btn btn-default btn-sm" type="button">
+	  		<span class="glyphicon glyphicon-edit"></span> Edit
+	  	</button>
+	  	<a href="{{ story.id }}" class="btn btn-default btn-sm">
+	  		<span class="glyphicon glyphicon-star"></span> Favourite
+	  	</a>
+	  	<button class="btn btn-default btn-sm" type="button">
+	  		<span class="glyphicon glyphicon-flag"></span> Flag
+	  	</button>
+	  	<button class="btn btn-default btn-sm dropdown-toggle" type="button" data-toggle="dropdown">
+			<span class="glyphicon glyphicon-tag"></span> Add Tag <span class="caret"></span>
+			</button>
+	</div>
+</div>
+<div id="current-story" style="margin-top: 55px;">
+	<a id="current-story-link" href="#"><h3 id="current-story-title">{{ story.title }}</h3></a>
+	<h4 id="current-story-info" class="text-muted">{{ story.date }} | {{ story.source }}</h4>
+	<hr>
+	<div id="current-story-content">{{ story.content|raw }}</div>
+</div>

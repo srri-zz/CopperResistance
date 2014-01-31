@@ -14,6 +14,14 @@ if(isset($_GET['start'])){
 	$start = 0;
 }
 
+if(isset($_GET['cat'])){
+	$cat = $_GET['cat'];
+} else {
+	$cat = 1;
+}
+
+$wire->set_category($cat);
+
 $stream->bindData("stories", $wire->get_stories($start));
 
 echo $stream->render();

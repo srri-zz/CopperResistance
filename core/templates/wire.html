@@ -10,6 +10,7 @@
     	<title>{{ title }}</title>		
 
     	<link href="assets/bs/css/bootstrap.css" rel="stylesheet">
+    	<link href="assets/css/main.css" rel="stylesheet">
 
 	    <!--[if lt IE 9]>
     		<script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
@@ -17,243 +18,17 @@
     	<![endif]-->
     	<script src="https://code.jquery.com/jquery-1.10.2.min.js"></script>
 
-    	<style>
-    		body, html {
-			    height: 100%;
-			    overflow: hidden;
-			}
-			
-			footer {
-			    position: absolute;
-			    left: 0;
-			    bottom: 0;
-			    height: 100px;
-			    width: 100%;
-			}
-	
-	    	.list-group-item:first-child {
-	    		border-top-width: 0px;
-		    	border-top-right-radius: 0px;
-		    	border-top-left-radius: 0px;
-	    	}    
-	    	
-	    	.list-group-item:last-child {
-		    	border-bottom-right-radius: 0px;
-		    	border-bottom-left-radius: 0px;
-	    	}   
-	    	
-	    	.list-group-item {
-		    	padding: 20px 15px;
-	    	}
-	    	
-	    	.navbar {
-		    	border-radius: 0;
-		    	margin-bottom: 0;
-		    	background-color: #464545;
-		    	border-bottom: solid 1px rgb(65, 65, 65);
-
-			  	-moz-box-shadow:    0px 0px 1px 0px #383838;
-			  	-webkit-box-shadow: 0px 0px 1px 0px #383838;
-			  	box-shadow:         0px 0px 1px 0px #383838;
-	    	}
-	    	
-	    	.navbar-default .navbar-nav > li > a {
-		    	color: #C9C7C7;
-	    	}
-	    	
-	    	.navbar-default .navbar-nav > li > a:hover {
-		    	color: #428bca;
-	    	}
-	    	
-	    	.navbar-default .navbar-nav > li > a.dropdown-toggle:hover {
-		    	color: #9E9B9B;
-	    	}
-	    	
-	    	.navbar-default .navbar-nav > .active > a, .navbar-default .navbar-nav > .active > a:hover {
-		    	color: #E9E9E9;
-		    	background-color: #428bca;
-	    	}
-	    	
-	    	.navbar-default .navbar-brand {
-		    	color: #FFFFFF;
-	    	}
-	    	
-	    	.navbar-default .navbar-nav > .open > a, .navbar-default .navbar-nav > .open > a:hover, .navbar-default .navbar-nav > .open > a:focus {
-	    		color: #9E9B9B;
-	    		background-color: #313131;
-	    	}
-	    	
-	    	.navbar-default .navbar-collapse, .navbar-default .navbar-form {
-				border-color: #313131;
-			}
-			
-			.list-group-item {
-				padding: 0px;
-			}
-			
-			.list-story {
-				display: block;
-			}
-
-			.navbar-toggle {
-				border: none;
-			}
-
-			.main-content {
-				padding-top: 50px;
-				padding-bottom: 40px;
-				height: 100%;
-				max-width: 100%;
-				margin-left: 0;
-			}
-
-			.scroll-con {
-				height: 100%;
-				overflow-y: scroll;
-  				-webkit-overflow-scrolling: touch;
-  				overflow-x: hidden;
-			}
-
-			.media-object {
-				width: 100%;
-			}
-
-			.list-story-content {
-				padding: 20px;
-			}
-
-			.list-story-content:hover{
-				background-color: rgb(236, 236, 236);
-				cursor: pointer;
-			}
-
-			#current-story-content img {
-				max-width: 100%;
-				height: auto;
-				margin-bottom: 15px;
-			}
-
-			#current-story-content ul {
-				display: none;
-			}
-
-			#current-story-content {
-				margin-top: 20px;
-			}
-
-			#current-story-title {
-				margin-top: 0;
-			}
-
-			#current-story {
-				padding: 15px;
-			}
-
-			#current-story-con {
-				border-left: solid 0px rgb(216, 216, 216);
-				padding: 0;
-			}
-
-			.list-story .active{
-				background-color: rgb(236, 236, 236);
-				opacity: 0.45;
-			}
-
-			#current-story-link:hover {
-				text-decoration: none;
-				color: #428bca;
-			}
-
-			#current-story-link {
-				color: #333333;
-			}
-
-			#footer {
-				position: absolute;
-				bottom: 0;
-				width: 100%;
-				border-top: solid 1px rgb(216, 216, 216);
-				height: 40px;
-			}
-
-			.footer-content {
-				padding: 12px;
-			}
-
-			::-webkit-scrollbar {
-			    width: 12px;
-			    border-left: 1px solid rgb(216, 216, 216);
-			}
-			 
-			::-webkit-scrollbar-track {
-				background: rgb(221, 221, 221);
-			}
-			 
-			::-webkit-scrollbar-thumb {
-				background: rgb(240, 240, 240);
-				border: 1px solid rgb(210, 210, 210);
-			}
-
-			#current-bar {
-				position: fixed;
-				width: 100%;
-				height: 55px;
-				background: rgb(240, 240, 240);
-				border-bottom: 1px solid rgb(216, 216, 216);
-
-				-moz-box-shadow:    0px 1px 1px 0px rgba(87, 87, 87, 0.03);
-			  	-webkit-box-shadow: 0px 1px 1px 0px rgba(87, 87, 87, 0.03);
-			  	box-shadow:         0px 1px 1px 0px rgba(87, 87, 87, 0.03);
-			}
-
-			.search-bar {
-				color: #757575;
-				background-color: #333333;
-				border: 1px solid #2B2B2B;
-				border-radius: 0;
-			}
-
-			.search-bar:focus{
-				border: 1px solid #2B2B2B;
-				box-shadow: none;
-				outline: 0 none;
-			}
-
-			.search-button {
-				color: #999999;
-				background-color: #3F3F3F;
-				border: 1px solid #2B2B2B;
-				border-radius: 0;
-			}
-
-			.search-button:hover {
-				background-color: #2C2C2C;
-				border: 1px solid #2B2B2B;
-			}
-
-			#current-bar .btn-sm {
-				background-color: rgb(243, 243, 243);
-			}
-
-			#load-more {
-				width: 100%; 
-				padding: 15px 0; 
-				background: rgb(233, 233, 233);
-			}
-
-			#load-more:hover {
-				cursor: pointer;
-				background-color: rgba(66, 139, 202, 0.21);
-			}
-
-	    </style>
-
 	    <script type="text/javascript" id="sourcecode">
 			$(function()
 			{
 				// Load first 15 stories.
+				//var target = $("#stream");
+				//var spinner = new Spinner().spin(target);
+
 				loadMore(0);
 			});
+
+			var cat = 1;
 
 			var lastActive = 0;
 			var lastStory = 0;
@@ -263,11 +38,7 @@
 				info = $('#story-info-'+id).html();
 				content = $('#story-content-'+id).html();
 				link = $('#story-link-'+id).html();
-				$('#story-'+id).addClass("active")
-				if (id != lastActive){
-					$('#story-'+lastActive).removeClass("active")
-				}
-				lastActive = id;
+
 				$("#current-story-link").attr("href", link);
 				$('#current-story-title').html(title);
 				$('#current-story-info').html(info);
@@ -275,13 +46,31 @@
 			    $('#current-story-con').scrollTop(0);
 			};
 
+			var loadStory = function(id){
+
+				$('#story-'+id).addClass("active")
+				if (id != lastActive){
+					$('#story-'+lastActive).removeClass("active")
+				}
+				lastActive = id;
+
+				$.getJSON("story.php?id="+id, function( data ) {
+					$("#current-story-title").html(data.title);
+					$("#current-story-date").html(data.date);
+					$("#current-story-link").attr("href", data.link)
+					$("#current-story-source").html(data.source);
+					$("#current-story-content").html(data.content);
+					$('#current-story-con').scrollTop(0);
+				});
+			}
+
 			var loadMore = function(){
-				loadStream(lastStory);
+				loadStream(lastStory, cat);
 				lastStory = lastStory + 15;
 			}
 
-			var loadStream = function(start){
-				$.get("stream.php?start="+start, function( data ) {
+			var loadStream = function(start, cat){
+				$.get("stream.php?start="+start+"&cat="+cat, function( data ) {
 				  $("#stream").append(data);
 				});
 			}
@@ -398,32 +187,25 @@
 				<div id="current-story-con" class="col-lg-6 scroll-con visible-lg">
 					<div id="current-bar">
 						<div style="padding: 13px 15px;">
-						  	<button class="btn btn-default btn-sm " type="button">
+						  	<button class="btn btn-default btn-sm" type="button">
 						  		<span class="glyphicon glyphicon-edit"></span> Edit
 						  	</button>
-						  	<button class="btn btn-default btn-sm " type="button">
+						  	<a href="{{ story.id }}" class="btn btn-default btn-sm">
 						  		<span class="glyphicon glyphicon-star"></span> Favourite
-						  	</button>
-						  	<button class="btn btn-default btn-sm " type="button">
+						  	</a>
+						  	<button class="btn btn-default btn-sm" type="button">
 						  		<span class="glyphicon glyphicon-flag"></span> Flag
 						  	</button>
 						  	<button class="btn btn-default btn-sm dropdown-toggle" type="button" data-toggle="dropdown">
-    							<span class="glyphicon glyphicon-tag"></span> Add Tag <span class="caret"></span>
-  							</button>
+								<span class="glyphicon glyphicon-tag"></span> Add Tag <span class="caret"></span>
+								</button>
 						</div>
 					</div>
 					<div id="current-story" style="margin-top: 55px;">
 						<a id="current-story-link" href="#"><h3 id="current-story-title"></h3></a>
-						<h4 id="current-story-info" class="text-muted"></h4>
+						<h4 id="current-story-info" class="text-muted"><span id="current-story-date"></span> | <span id="current-story-source"></span></h4>
 						<hr>
 						<div id="current-story-content"></div>
-						<hr/>
-				  		<h4>
-				    		<span class="label label-default">Default</span>
-							<span class="label label-primary">Primary</span>
-							<span class="label label-success">Success</span>
-				  		</h4>
-				  		<br/>
 					</div>
 				</div>
 		</div>
