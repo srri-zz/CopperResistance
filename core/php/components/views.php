@@ -2,9 +2,9 @@
 
 class Page extends View {
 
-	public function __construct($model, $controller){
+	public function __construct($model){
 
-		parent::__construct($model, $controller);
+		parent::__construct($model);
 
 		$this->bindData("title", $this->model->get_title());
 	}
@@ -18,13 +18,11 @@ class Chunk extends View {
 class View {
 
 	public $model;
-	public $controller;
 
 	public $data = array();
 
-	public function __construct($model, $controller){
+	public function __construct($model){
 		$this->model = $model;
-		$this->controller = $controller;
 	}
 
 	public function bindData($key, $value){

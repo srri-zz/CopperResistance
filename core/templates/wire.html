@@ -18,62 +18,16 @@
     	<![endif]-->
     	<script src="https://code.jquery.com/jquery-1.10.2.min.js"></script>
 
-	    <script type="text/javascript" id="sourcecode">
-			$(function()
-			{
-				// Load first 15 stories.
-				//var target = $("#stream");
-				//var spinner = new Spinner().spin(target);
+		<script src="assets/js/wire.js"></script>
 
-				loadMore(0);
+		<script>
+
+		var wire;
+
+			$(function(){
+				wire = new Wire(1, "#stream", "#current-story");
+				wire.loadStream(); 
 			});
-
-			var cat = 1;
-
-			var lastActive = 0;
-			var lastStory = 0;
-
-			var storySelect = function(id) {
-				title = $('#story-title-'+id).html();
-				info = $('#story-info-'+id).html();
-				content = $('#story-content-'+id).html();
-				link = $('#story-link-'+id).html();
-
-				$("#current-story-link").attr("href", link);
-				$('#current-story-title').html(title);
-				$('#current-story-info').html(info);
-			    $('#current-story-content').html(content);
-			    $('#current-story-con').scrollTop(0);
-			};
-
-			var loadStory = function(id){
-
-				$('#story-'+id).addClass("active")
-				if (id != lastActive){
-					$('#story-'+lastActive).removeClass("active")
-				}
-				lastActive = id;
-
-				$.getJSON("story.php?id="+id, function( data ) {
-					$("#current-story-title").html(data.title);
-					$("#current-story-date").html(data.date);
-					$("#current-story-link").attr("href", data.link)
-					$("#current-story-source").html(data.source);
-					$("#current-story-content").html(data.content);
-					$('#current-story-con').scrollTop(0);
-				});
-			}
-
-			var loadMore = function(){
-				loadStream(lastStory, cat);
-				lastStory = lastStory + 15;
-			}
-
-			var loadStream = function(start, cat){
-				$.get("stream.php?start="+start+"&cat="+cat, function( data ) {
-				  $("#stream").append(data);
-				});
-			}
 
 		</script>
 	</head>
@@ -149,7 +103,7 @@
 						    <div class="list-story" style="background-color: {{ story.color }};">
 					        <div style="width: 18px; float: left;"></div>
 							<div style="margin-left: 18px; background-color: rgb(252, 252, 252); border-bottom: 1px solid rgb(216, 216, 216);">
-								<div id="story-{{ story.id }}" class="list-story-content" onclick="storySelect('{{ story.id }}');"style="">
+								<div id="story-{{ story.id }}" class="list-story-content" onclick="wire.changeStory('{{ story.id }}');"style="">
 									<div class="media">
 									  <a class="pull-left visible-sm visible-lg visible-md" href="#">
 									  	<div style="width: 120px; max-height: 120px; overflow: hidden;">
@@ -223,7 +177,7 @@
 
 	<script>
 		$( "#load-more" ).click(function() {
-			loadMore();
+			wire.loadMore();
 		});
 	</script>
 
