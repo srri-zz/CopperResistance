@@ -3,16 +3,19 @@
 require('config.php');
 
 if(isset($_GET['id'])){
-	$id = $_GET['id'];
+    $id = $_GET['id'];
 } else {
-	$id = 1;
+    $id = 1;
 }
 
-$wire = new Wire();
+if(isset($_GET['action'])){
+    $action = $_GET['action'];
+} else {
+    $action = 'display';
+}
 
-$story = $wire->get_story($id);
+$story = new Story($id);
+$story->$action();
 
-header('Content-Type: application/json');
-echo json_encode($story);
 
 ?>

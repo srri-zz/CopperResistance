@@ -3,8 +3,7 @@
 require('config.php');
 
 $model = new ChunkModel(1);
-$controller = new Controller($model);
-$stream = new Chunk($model, $controller);
+$stream = new Chunk($model);
 
 $wire = new Wire();
 

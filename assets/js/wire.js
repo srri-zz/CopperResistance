@@ -26,7 +26,6 @@ Wire.prototype.loadStream = function(){
 	$.get("stream.php?start="+this.start+"&cat="+this.cat, function( data ) {
 	  $("#stream").append(data);
 	});
-
 }
 Wire.prototype.loadMore = function(){
 	this.start = this.start + 15;
