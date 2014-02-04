@@ -9,7 +9,9 @@ function Wire(category, streamDiv, storyDiv){
 
 }
 
-Wire.prototype.changeCategory = function(){}
+Wire.prototype.changeCategory = function(id){
+    this.cat = id;
+}
 Wire.prototype.changeStory = function(id){
 
 	$('#story-'+id).addClass("active")
@@ -30,6 +32,15 @@ Wire.prototype.loadStream = function(){
 Wire.prototype.loadMore = function(){
 	this.start = this.start + 15;
 	this.loadStream();
+}
+Wire.prototype.clearStream = function(){
+    $("#stream").empty();
+}
+
+Wire.prototype.updateCategory = function(id){
+    this.changeCategory(id);
+    this.clearStream();
+    this.loadStream();
 }
 
 // Story class

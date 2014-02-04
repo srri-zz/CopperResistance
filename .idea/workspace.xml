@@ -2,612 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="3e681748-cf24-468c-bf15-9121710eefb1" name="Default" comment="">
-      <change type="DELETED" beforePath="D:\Dev\repos\CopperResistance\core\php\components\controller.php" afterPath="" />
-      <change type="DELETED" beforePath="D:\Dev\repos\CopperResistance\core\php\components\template.php" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/assets/js/wire.js" afterPath="$PROJECT_DIR$/assets/js/wire.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/config.php" afterPath="$PROJECT_DIR$/config.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/story.php" afterPath="$PROJECT_DIR$/story.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/stream.php" afterPath="$PROJECT_DIR$/stream.php" />
-      <change type="MOVED" beforePath="D:\Dev\repos\CopperResistance\core\php\cache\04a2bc89282bcf1ebda1eb33395b305e.spc" afterPath="$PROJECT_DIR$/core/cache/04a2bc89282bcf1ebda1eb33395b305e.spc" />
-      <change type="MOVED" beforePath="D:\Dev\repos\CopperResistance\core\php\cache\231b0c7b3713edf6b6101558ebb04b51.spc" afterPath="$PROJECT_DIR$/core/cache/231b0c7b3713edf6b6101558ebb04b51.spc" />
-      <change type="MOVED" beforePath="D:\Dev\repos\CopperResistance\core\php\components\classes\story.class.php" afterPath="$PROJECT_DIR$/core/components/classes/story.class.php" />
-      <change type="MOVED" beforePath="D:\Dev\repos\CopperResistance\core\php\components\classes\wire.class.php" afterPath="$PROJECT_DIR$/core/components/classes/wire.class.php" />
-      <change type="MOVED" beforePath="D:\Dev\repos\CopperResistance\core\php\components\database.php" afterPath="$PROJECT_DIR$/core/components/database.php" />
-      <change type="MOVED" beforePath="D:\Dev\repos\CopperResistance\core\php\components\views.php" afterPath="$PROJECT_DIR$/core/components/views.php" />
-      <change type="MOVED" beforePath="D:\Dev\repos\CopperResistance\core\php\libraries\class.html2text.inc" afterPath="$PROJECT_DIR$/core/libraries/class.html2text.inc" />
-      <change type="MOVED" beforePath="D:\Dev\repos\CopperResistance\core\php\libraries\htmldom\simple_html_dom.php" afterPath="$PROJECT_DIR$/core/libraries/htmldom/simple_html_dom.php" />
-      <change type="MOVED" beforePath="D:\Dev\repos\CopperResistance\core\php\libraries\simplepie\autoloader.php" afterPath="$PROJECT_DIR$/core/libraries/simplepie/autoloader.php" />
-      <change type="MOVED" beforePath="D:\Dev\repos\CopperResistance\core\php\libraries\simplepie\library\SimplePie.php" afterPath="$PROJECT_DIR$/core/libraries/simplepie/library/SimplePie.php" />
-      <change type="MOVED" beforePath="D:\Dev\repos\CopperResistance\core\php\libraries\simplepie\library\SimplePie\Author.php" afterPath="$PROJECT_DIR$/core/libraries/simplepie/library/SimplePie/Author.php" />
-      <change type="MOVED" beforePath="D:\Dev\repos\CopperResistance\core\php\libraries\simplepie\library\SimplePie\Cache.php" afterPath="$PROJECT_DIR$/core/libraries/simplepie/library/SimplePie/Cache.php" />
-      <change type="MOVED" beforePath="D:\Dev\repos\CopperResistance\core\php\libraries\simplepie\library\SimplePie\Cache\Base.php" afterPath="$PROJECT_DIR$/core/libraries/simplepie/library/SimplePie/Cache/Base.php" />
-      <change type="MOVED" beforePath="D:\Dev\repos\CopperResistance\core\php\libraries\simplepie\library\SimplePie\Cache\DB.php" afterPath="$PROJECT_DIR$/core/libraries/simplepie/library/SimplePie/Cache/DB.php" />
-      <change type="MOVED" beforePath="D:\Dev\repos\CopperResistance\core\php\libraries\simplepie\library\SimplePie\Cache\File.php" afterPath="$PROJECT_DIR$/core/libraries/simplepie/library/SimplePie/Cache/File.php" />
-      <change type="MOVED" beforePath="D:\Dev\repos\CopperResistance\core\php\libraries\simplepie\library\SimplePie\Cache\Memcache.php" afterPath="$PROJECT_DIR$/core/libraries/simplepie/library/SimplePie/Cache/Memcache.php" />
-      <change type="MOVED" beforePath="D:\Dev\repos\CopperResistance\core\php\libraries\simplepie\library\SimplePie\Cache\MySQL.php" afterPath="$PROJECT_DIR$/core/libraries/simplepie/library/SimplePie/Cache/MySQL.php" />
-      <change type="MOVED" beforePath="D:\Dev\repos\CopperResistance\core\php\libraries\simplepie\library\SimplePie\Caption.php" afterPath="$PROJECT_DIR$/core/libraries/simplepie/library/SimplePie/Caption.php" />
-      <change type="MOVED" beforePath="D:\Dev\repos\CopperResistance\core\php\libraries\simplepie\library\SimplePie\Category.php" afterPath="$PROJECT_DIR$/core/libraries/simplepie/library/SimplePie/Category.php" />
-      <change type="MOVED" beforePath="D:\Dev\repos\CopperResistance\core\php\libraries\simplepie\library\SimplePie\Content\Type\Sniffer.php" afterPath="$PROJECT_DIR$/core/libraries/simplepie/library/SimplePie/Content/Type/Sniffer.php" />
-      <change type="MOVED" beforePath="D:\Dev\repos\CopperResistance\core\php\libraries\simplepie\library\SimplePie\Copyright.php" afterPath="$PROJECT_DIR$/core/libraries/simplepie/library/SimplePie/Copyright.php" />
-      <change type="MOVED" beforePath="D:\Dev\repos\CopperResistance\core\php\libraries\simplepie\library\SimplePie\Core.php" afterPath="$PROJECT_DIR$/core/libraries/simplepie/library/SimplePie/Core.php" />
-      <change type="MOVED" beforePath="D:\Dev\repos\CopperResistance\core\php\libraries\simplepie\library\SimplePie\Credit.php" afterPath="$PROJECT_DIR$/core/libraries/simplepie/library/SimplePie/Credit.php" />
-      <change type="MOVED" beforePath="D:\Dev\repos\CopperResistance\core\php\libraries\simplepie\library\SimplePie\Decode\HTML\Entities.php" afterPath="$PROJECT_DIR$/core/libraries/simplepie/library/SimplePie/Decode/HTML/Entities.php" />
-      <change type="MOVED" beforePath="D:\Dev\repos\CopperResistance\core\php\libraries\simplepie\library\SimplePie\Enclosure.php" afterPath="$PROJECT_DIR$/core/libraries/simplepie/library/SimplePie/Enclosure.php" />
-      <change type="MOVED" beforePath="D:\Dev\repos\CopperResistance\core\php\libraries\simplepie\library\SimplePie\Exception.php" afterPath="$PROJECT_DIR$/core/libraries/simplepie/library/SimplePie/Exception.php" />
-      <change type="MOVED" beforePath="D:\Dev\repos\CopperResistance\core\php\libraries\simplepie\library\SimplePie\File.php" afterPath="$PROJECT_DIR$/core/libraries/simplepie/library/SimplePie/File.php" />
-      <change type="MOVED" beforePath="D:\Dev\repos\CopperResistance\core\php\libraries\simplepie\library\SimplePie\HTTP\Parser.php" afterPath="$PROJECT_DIR$/core/libraries/simplepie/library/SimplePie/HTTP/Parser.php" />
-      <change type="MOVED" beforePath="D:\Dev\repos\CopperResistance\core\php\libraries\simplepie\library\SimplePie\IRI.php" afterPath="$PROJECT_DIR$/core/libraries/simplepie/library/SimplePie/IRI.php" />
-      <change type="MOVED" beforePath="D:\Dev\repos\CopperResistance\core\php\libraries\simplepie\library\SimplePie\Item.php" afterPath="$PROJECT_DIR$/core/libraries/simplepie/library/SimplePie/Item.php" />
-      <change type="MOVED" beforePath="D:\Dev\repos\CopperResistance\core\php\libraries\simplepie\library\SimplePie\Locator.php" afterPath="$PROJECT_DIR$/core/libraries/simplepie/library/SimplePie/Locator.php" />
-      <change type="MOVED" beforePath="D:\Dev\repos\CopperResistance\core\php\libraries\simplepie\library\SimplePie\Misc.php" afterPath="$PROJECT_DIR$/core/libraries/simplepie/library/SimplePie/Misc.php" />
-      <change type="MOVED" beforePath="D:\Dev\repos\CopperResistance\core\php\libraries\simplepie\library\SimplePie\Net\IPv6.php" afterPath="$PROJECT_DIR$/core/libraries/simplepie/library/SimplePie/Net/IPv6.php" />
-      <change type="MOVED" beforePath="D:\Dev\repos\CopperResistance\core\php\libraries\simplepie\library\SimplePie\Parse\Date.php" afterPath="$PROJECT_DIR$/core/libraries/simplepie/library/SimplePie/Parse/Date.php" />
-      <change type="MOVED" beforePath="D:\Dev\repos\CopperResistance\core\php\libraries\simplepie\library\SimplePie\Parser.php" afterPath="$PROJECT_DIR$/core/libraries/simplepie/library/SimplePie/Parser.php" />
-      <change type="MOVED" beforePath="D:\Dev\repos\CopperResistance\core\php\libraries\simplepie\library\SimplePie\Rating.php" afterPath="$PROJECT_DIR$/core/libraries/simplepie/library/SimplePie/Rating.php" />
-      <change type="MOVED" beforePath="D:\Dev\repos\CopperResistance\core\php\libraries\simplepie\library\SimplePie\Registry.php" afterPath="$PROJECT_DIR$/core/libraries/simplepie/library/SimplePie/Registry.php" />
-      <change type="MOVED" beforePath="D:\Dev\repos\CopperResistance\core\php\libraries\simplepie\library\SimplePie\Restriction.php" afterPath="$PROJECT_DIR$/core/libraries/simplepie/library/SimplePie/Restriction.php" />
-      <change type="MOVED" beforePath="D:\Dev\repos\CopperResistance\core\php\libraries\simplepie\library\SimplePie\Sanitize.php" afterPath="$PROJECT_DIR$/core/libraries/simplepie/library/SimplePie/Sanitize.php" />
-      <change type="MOVED" beforePath="D:\Dev\repos\CopperResistance\core\php\libraries\simplepie\library\SimplePie\Source.php" afterPath="$PROJECT_DIR$/core/libraries/simplepie/library/SimplePie/Source.php" />
-      <change type="MOVED" beforePath="D:\Dev\repos\CopperResistance\core\php\libraries\simplepie\library\SimplePie\XML\Declaration\Parser.php" afterPath="$PROJECT_DIR$/core/libraries/simplepie/library/SimplePie/XML/Declaration/Parser.php" />
-      <change type="MOVED" beforePath="D:\Dev\repos\CopperResistance\core\php\libraries\simplepie\library\SimplePie\gzdecode.php" afterPath="$PROJECT_DIR$/core/libraries/simplepie/library/SimplePie/gzdecode.php" />
-      <change type="MOVED" beforePath="D:\Dev\repos\CopperResistance\core\php\libraries\twig\.editorconfig" afterPath="$PROJECT_DIR$/core/libraries/twig/.editorconfig" />
-      <change type="MOVED" beforePath="D:\Dev\repos\CopperResistance\core\php\libraries\twig\.gitignore" afterPath="$PROJECT_DIR$/core/libraries/twig/.gitignore" />
-      <change type="MOVED" beforePath="D:\Dev\repos\CopperResistance\core\php\libraries\twig\.travis.yml" afterPath="$PROJECT_DIR$/core/libraries/twig/.travis.yml" />
-      <change type="MOVED" beforePath="D:\Dev\repos\CopperResistance\core\php\libraries\twig\AUTHORS" afterPath="$PROJECT_DIR$/core/libraries/twig/AUTHORS" />
-      <change type="MOVED" beforePath="D:\Dev\repos\CopperResistance\core\php\libraries\twig\CHANGELOG" afterPath="$PROJECT_DIR$/core/libraries/twig/CHANGELOG" />
-      <change type="MOVED" beforePath="D:\Dev\repos\CopperResistance\core\php\libraries\twig\LICENSE" afterPath="$PROJECT_DIR$/core/libraries/twig/LICENSE" />
-      <change type="MOVED" beforePath="D:\Dev\repos\CopperResistance\core\php\libraries\twig\README.rst" afterPath="$PROJECT_DIR$/core/libraries/twig/README.rst" />
-      <change type="MOVED" beforePath="D:\Dev\repos\CopperResistance\core\php\libraries\twig\composer.json" afterPath="$PROJECT_DIR$/core/libraries/twig/composer.json" />
-      <change type="MOVED" beforePath="D:\Dev\repos\CopperResistance\core\php\libraries\twig\doc\advanced.rst" afterPath="$PROJECT_DIR$/core/libraries/twig/doc/advanced.rst" />
-      <change type="MOVED" beforePath="D:\Dev\repos\CopperResistance\core\php\libraries\twig\doc\advanced_legacy.rst" afterPath="$PROJECT_DIR$/core/libraries/twig/doc/advanced_legacy.rst" />
-      <change type="MOVED" beforePath="D:\Dev\repos\CopperResistance\core\php\libraries\twig\doc\api.rst" afterPath="$PROJECT_DIR$/core/libraries/twig/doc/api.rst" />
-      <change type="MOVED" beforePath="D:\Dev\repos\CopperResistance\core\php\libraries\twig\doc\coding_standards.rst" afterPath="$PROJECT_DIR$/core/libraries/twig/doc/coding_standards.rst" />
-      <change type="MOVED" beforePath="D:\Dev\repos\CopperResistance\core\php\libraries\twig\doc\deprecated.rst" afterPath="$PROJECT_DIR$/core/libraries/twig/doc/deprecated.rst" />
-      <change type="MOVED" beforePath="D:\Dev\repos\CopperResistance\core\php\libraries\twig\doc\filters\abs.rst" afterPath="$PROJECT_DIR$/core/libraries/twig/doc/filters/abs.rst" />
-      <change type="MOVED" beforePath="D:\Dev\repos\CopperResistance\core\php\libraries\twig\doc\filters\batch.rst" afterPath="$PROJECT_DIR$/core/libraries/twig/doc/filters/batch.rst" />
-      <change type="MOVED" beforePath="D:\Dev\repos\CopperResistance\core\php\libraries\twig\doc\filters\capitalize.rst" afterPath="$PROJECT_DIR$/core/libraries/twig/doc/filters/capitalize.rst" />
-      <change type="MOVED" beforePath="D:\Dev\repos\CopperResistance\core\php\libraries\twig\doc\filters\convert_encoding.rst" afterPath="$PROJECT_DIR$/core/libraries/twig/doc/filters/convert_encoding.rst" />
-      <change type="MOVED" beforePath="D:\Dev\repos\CopperResistance\core\php\libraries\twig\doc\filters\date.rst" afterPath="$PROJECT_DIR$/core/libraries/twig/doc/filters/date.rst" />
-      <change type="MOVED" beforePath="D:\Dev\repos\CopperResistance\core\php\libraries\twig\doc\filters\date_modify.rst" afterPath="$PROJECT_DIR$/core/libraries/twig/doc/filters/date_modify.rst" />
-      <change type="MOVED" beforePath="D:\Dev\repos\CopperResistance\core\php\libraries\twig\doc\filters\default.rst" afterPath="$PROJECT_DIR$/core/libraries/twig/doc/filters/default.rst" />
-      <change type="MOVED" beforePath="D:\Dev\repos\CopperResistance\core\php\libraries\twig\doc\filters\escape.rst" afterPath="$PROJECT_DIR$/core/libraries/twig/doc/filters/escape.rst" />
-      <change type="MOVED" beforePath="D:\Dev\repos\CopperResistance\core\php\libraries\twig\doc\filters\first.rst" afterPath="$PROJECT_DIR$/core/libraries/twig/doc/filters/first.rst" />
-      <change type="MOVED" beforePath="D:\Dev\repos\CopperResistance\core\php\libraries\twig\doc\filters\format.rst" afterPath="$PROJECT_DIR$/core/libraries/twig/doc/filters/format.rst" />
-      <change type="MOVED" beforePath="D:\Dev\repos\CopperResistance\core\php\libraries\twig\doc\filters\index.rst" afterPath="$PROJECT_DIR$/core/libraries/twig/doc/filters/index.rst" />
-      <change type="MOVED" beforePath="D:\Dev\repos\CopperResistance\core\php\libraries\twig\doc\filters\join.rst" afterPath="$PROJECT_DIR$/core/libraries/twig/doc/filters/join.rst" />
-      <change type="MOVED" beforePath="D:\Dev\repos\CopperResistance\core\php\libraries\twig\doc\filters\json_encode.rst" afterPath="$PROJECT_DIR$/core/libraries/twig/doc/filters/json_encode.rst" />
-      <change type="MOVED" beforePath="D:\Dev\repos\CopperResistance\core\php\libraries\twig\doc\filters\keys.rst" afterPath="$PROJECT_DIR$/core/libraries/twig/doc/filters/keys.rst" />
-      <change type="MOVED" beforePath="D:\Dev\repos\CopperResistance\core\php\libraries\twig\doc\filters\last.rst" afterPath="$PROJECT_DIR$/core/libraries/twig/doc/filters/last.rst" />
-      <change type="MOVED" beforePath="D:\Dev\repos\CopperResistance\core\php\libraries\twig\doc\filters\length.rst" afterPath="$PROJECT_DIR$/core/libraries/twig/doc/filters/length.rst" />
-      <change type="MOVED" beforePath="D:\Dev\repos\CopperResistance\core\php\libraries\twig\doc\filters\lower.rst" afterPath="$PROJECT_DIR$/core/libraries/twig/doc/filters/lower.rst" />
-      <change type="MOVED" beforePath="D:\Dev\repos\CopperResistance\core\php\libraries\twig\doc\filters\merge.rst" afterPath="$PROJECT_DIR$/core/libraries/twig/doc/filters/merge.rst" />
-      <change type="MOVED" beforePath="D:\Dev\repos\CopperResistance\core\php\libraries\twig\doc\filters\nl2br.rst" afterPath="$PROJECT_DIR$/core/libraries/twig/doc/filters/nl2br.rst" />
-      <change type="MOVED" beforePath="D:\Dev\repos\CopperResistance\core\php\libraries\twig\doc\filters\number_format.rst" afterPath="$PROJECT_DIR$/core/libraries/twig/doc/filters/number_format.rst" />
-      <change type="MOVED" beforePath="D:\Dev\repos\CopperResistance\core\php\libraries\twig\doc\filters\raw.rst" afterPath="$PROJECT_DIR$/core/libraries/twig/doc/filters/raw.rst" />
-      <change type="MOVED" beforePath="D:\Dev\repos\CopperResistance\core\php\libraries\twig\doc\filters\replace.rst" afterPath="$PROJECT_DIR$/core/libraries/twig/doc/filters/replace.rst" />
-      <change type="MOVED" beforePath="D:\Dev\repos\CopperResistance\core\php\libraries\twig\doc\filters\reverse.rst" afterPath="$PROJECT_DIR$/core/libraries/twig/doc/filters/reverse.rst" />
-      <change type="MOVED" beforePath="D:\Dev\repos\CopperResistance\core\php\libraries\twig\doc\filters\round.rst" afterPath="$PROJECT_DIR$/core/libraries/twig/doc/filters/round.rst" />
-      <change type="MOVED" beforePath="D:\Dev\repos\CopperResistance\core\php\libraries\twig\doc\filters\slice.rst" afterPath="$PROJECT_DIR$/core/libraries/twig/doc/filters/slice.rst" />
-      <change type="MOVED" beforePath="D:\Dev\repos\CopperResistance\core\php\libraries\twig\doc\filters\sort.rst" afterPath="$PROJECT_DIR$/core/libraries/twig/doc/filters/sort.rst" />
-      <change type="MOVED" beforePath="D:\Dev\repos\CopperResistance\core\php\libraries\twig\doc\filters\split.rst" afterPath="$PROJECT_DIR$/core/libraries/twig/doc/filters/split.rst" />
-      <change type="MOVED" beforePath="D:\Dev\repos\CopperResistance\core\php\libraries\twig\doc\filters\striptags.rst" afterPath="$PROJECT_DIR$/core/libraries/twig/doc/filters/striptags.rst" />
-      <change type="MOVED" beforePath="D:\Dev\repos\CopperResistance\core\php\libraries\twig\doc\filters\title.rst" afterPath="$PROJECT_DIR$/core/libraries/twig/doc/filters/title.rst" />
-      <change type="MOVED" beforePath="D:\Dev\repos\CopperResistance\core\php\libraries\twig\doc\filters\trim.rst" afterPath="$PROJECT_DIR$/core/libraries/twig/doc/filters/trim.rst" />
-      <change type="MOVED" beforePath="D:\Dev\repos\CopperResistance\core\php\libraries\twig\doc\filters\upper.rst" afterPath="$PROJECT_DIR$/core/libraries/twig/doc/filters/upper.rst" />
-      <change type="MOVED" beforePath="D:\Dev\repos\CopperResistance\core\php\libraries\twig\doc\filters\url_encode.rst" afterPath="$PROJECT_DIR$/core/libraries/twig/doc/filters/url_encode.rst" />
-      <change type="MOVED" beforePath="D:\Dev\repos\CopperResistance\core\php\libraries\twig\doc\functions\attribute.rst" afterPath="$PROJECT_DIR$/core/libraries/twig/doc/functions/attribute.rst" />
-      <change type="MOVED" beforePath="D:\Dev\repos\CopperResistance\core\php\libraries\twig\doc\functions\block.rst" afterPath="$PROJECT_DIR$/core/libraries/twig/doc/functions/block.rst" />
-      <change type="MOVED" beforePath="D:\Dev\repos\CopperResistance\core\php\libraries\twig\doc\functions\constant.rst" afterPath="$PROJECT_DIR$/core/libraries/twig/doc/functions/constant.rst" />
-      <change type="MOVED" beforePath="D:\Dev\repos\CopperResistance\core\php\libraries\twig\doc\functions\cycle.rst" afterPath="$PROJECT_DIR$/core/libraries/twig/doc/functions/cycle.rst" />
-      <change type="MOVED" beforePath="D:\Dev\repos\CopperResistance\core\php\libraries\twig\doc\functions\date.rst" afterPath="$PROJECT_DIR$/core/libraries/twig/doc/functions/date.rst" />
-      <change type="MOVED" beforePath="D:\Dev\repos\CopperResistance\core\php\libraries\twig\doc\functions\dump.rst" afterPath="$PROJECT_DIR$/core/libraries/twig/doc/functions/dump.rst" />
-      <change type="MOVED" beforePath="D:\Dev\repos\CopperResistance\core\php\libraries\twig\doc\functions\include.rst" afterPath="$PROJECT_DIR$/core/libraries/twig/doc/functions/include.rst" />
-      <change type="MOVED" beforePath="D:\Dev\repos\CopperResistance\core\php\libraries\twig\doc\functions\index.rst" afterPath="$PROJECT_DIR$/core/libraries/twig/doc/functions/index.rst" />
-      <change type="MOVED" beforePath="D:\Dev\repos\CopperResistance\core\php\libraries\twig\doc\functions\max.rst" afterPath="$PROJECT_DIR$/core/libraries/twig/doc/functions/max.rst" />
-      <change type="MOVED" beforePath="D:\Dev\repos\CopperResistance\core\php\libraries\twig\doc\functions\min.rst" afterPath="$PROJECT_DIR$/core/libraries/twig/doc/functions/min.rst" />
-      <change type="MOVED" beforePath="D:\Dev\repos\CopperResistance\core\php\libraries\twig\doc\functions\parent.rst" afterPath="$PROJECT_DIR$/core/libraries/twig/doc/functions/parent.rst" />
-      <change type="MOVED" beforePath="D:\Dev\repos\CopperResistance\core\php\libraries\twig\doc\functions\random.rst" afterPath="$PROJECT_DIR$/core/libraries/twig/doc/functions/random.rst" />
-      <change type="MOVED" beforePath="D:\Dev\repos\CopperResistance\core\php\libraries\twig\doc\functions\range.rst" afterPath="$PROJECT_DIR$/core/libraries/twig/doc/functions/range.rst" />
-      <change type="MOVED" beforePath="D:\Dev\repos\CopperResistance\core\php\libraries\twig\doc\functions\source.rst" afterPath="$PROJECT_DIR$/core/libraries/twig/doc/functions/source.rst" />
-      <change type="MOVED" beforePath="D:\Dev\repos\CopperResistance\core\php\libraries\twig\doc\functions\template_from_string.rst" afterPath="$PROJECT_DIR$/core/libraries/twig/doc/functions/template_from_string.rst" />
-      <change type="MOVED" beforePath="D:\Dev\repos\CopperResistance\core\php\libraries\twig\doc\index.rst" afterPath="$PROJECT_DIR$/core/libraries/twig/doc/index.rst" />
-      <change type="MOVED" beforePath="D:\Dev\repos\CopperResistance\core\php\libraries\twig\doc\installation.rst" afterPath="$PROJECT_DIR$/core/libraries/twig/doc/installation.rst" />
-      <change type="MOVED" beforePath="D:\Dev\repos\CopperResistance\core\php\libraries\twig\doc\internals.rst" afterPath="$PROJECT_DIR$/core/libraries/twig/doc/internals.rst" />
-      <change type="MOVED" beforePath="D:\Dev\repos\CopperResistance\core\php\libraries\twig\doc\intro.rst" afterPath="$PROJECT_DIR$/core/libraries/twig/doc/intro.rst" />
-      <change type="MOVED" beforePath="D:\Dev\repos\CopperResistance\core\php\libraries\twig\doc\recipes.rst" afterPath="$PROJECT_DIR$/core/libraries/twig/doc/recipes.rst" />
-      <change type="MOVED" beforePath="D:\Dev\repos\CopperResistance\core\php\libraries\twig\doc\tags\autoescape.rst" afterPath="$PROJECT_DIR$/core/libraries/twig/doc/tags/autoescape.rst" />
-      <change type="MOVED" beforePath="D:\Dev\repos\CopperResistance\core\php\libraries\twig\doc\tags\block.rst" afterPath="$PROJECT_DIR$/core/libraries/twig/doc/tags/block.rst" />
-      <change type="MOVED" beforePath="D:\Dev\repos\CopperResistance\core\php\libraries\twig\doc\tags\do.rst" afterPath="$PROJECT_DIR$/core/libraries/twig/doc/tags/do.rst" />
-      <change type="MOVED" beforePath="D:\Dev\repos\CopperResistance\core\php\libraries\twig\doc\tags\embed.rst" afterPath="$PROJECT_DIR$/core/libraries/twig/doc/tags/embed.rst" />
-      <change type="MOVED" beforePath="D:\Dev\repos\CopperResistance\core\php\libraries\twig\doc\tags\extends.rst" afterPath="$PROJECT_DIR$/core/libraries/twig/doc/tags/extends.rst" />
-      <change type="MOVED" beforePath="D:\Dev\repos\CopperResistance\core\php\libraries\twig\doc\tags\filter.rst" afterPath="$PROJECT_DIR$/core/libraries/twig/doc/tags/filter.rst" />
-      <change type="MOVED" beforePath="D:\Dev\repos\CopperResistance\core\php\libraries\twig\doc\tags\flush.rst" afterPath="$PROJECT_DIR$/core/libraries/twig/doc/tags/flush.rst" />
-      <change type="MOVED" beforePath="D:\Dev\repos\CopperResistance\core\php\libraries\twig\doc\tags\for.rst" afterPath="$PROJECT_DIR$/core/libraries/twig/doc/tags/for.rst" />
-      <change type="MOVED" beforePath="D:\Dev\repos\CopperResistance\core\php\libraries\twig\doc\tags\from.rst" afterPath="$PROJECT_DIR$/core/libraries/twig/doc/tags/from.rst" />
-      <change type="MOVED" beforePath="D:\Dev\repos\CopperResistance\core\php\libraries\twig\doc\tags\if.rst" afterPath="$PROJECT_DIR$/core/libraries/twig/doc/tags/if.rst" />
-      <change type="MOVED" beforePath="D:\Dev\repos\CopperResistance\core\php\libraries\twig\doc\tags\import.rst" afterPath="$PROJECT_DIR$/core/libraries/twig/doc/tags/import.rst" />
-      <change type="MOVED" beforePath="D:\Dev\repos\CopperResistance\core\php\libraries\twig\doc\tags\include.rst" afterPath="$PROJECT_DIR$/core/libraries/twig/doc/tags/include.rst" />
-      <change type="MOVED" beforePath="D:\Dev\repos\CopperResistance\core\php\libraries\twig\doc\tags\index.rst" afterPath="$PROJECT_DIR$/core/libraries/twig/doc/tags/index.rst" />
-      <change type="MOVED" beforePath="D:\Dev\repos\CopperResistance\core\php\libraries\twig\doc\tags\macro.rst" afterPath="$PROJECT_DIR$/core/libraries/twig/doc/tags/macro.rst" />
-      <change type="MOVED" beforePath="D:\Dev\repos\CopperResistance\core\php\libraries\twig\doc\tags\sandbox.rst" afterPath="$PROJECT_DIR$/core/libraries/twig/doc/tags/sandbox.rst" />
-      <change type="MOVED" beforePath="D:\Dev\repos\CopperResistance\core\php\libraries\twig\doc\tags\set.rst" afterPath="$PROJECT_DIR$/core/libraries/twig/doc/tags/set.rst" />
-      <change type="MOVED" beforePath="D:\Dev\repos\CopperResistance\core\php\libraries\twig\doc\tags\spaceless.rst" afterPath="$PROJECT_DIR$/core/libraries/twig/doc/tags/spaceless.rst" />
-      <change type="MOVED" beforePath="D:\Dev\repos\CopperResistance\core\php\libraries\twig\doc\tags\use.rst" afterPath="$PROJECT_DIR$/core/libraries/twig/doc/tags/use.rst" />
-      <change type="MOVED" beforePath="D:\Dev\repos\CopperResistance\core\php\libraries\twig\doc\tags\verbatim.rst" afterPath="$PROJECT_DIR$/core/libraries/twig/doc/tags/verbatim.rst" />
-      <change type="MOVED" beforePath="D:\Dev\repos\CopperResistance\core\php\libraries\twig\doc\templates.rst" afterPath="$PROJECT_DIR$/core/libraries/twig/doc/templates.rst" />
-      <change type="MOVED" beforePath="D:\Dev\repos\CopperResistance\core\php\libraries\twig\doc\tests\constant.rst" afterPath="$PROJECT_DIR$/core/libraries/twig/doc/tests/constant.rst" />
-      <change type="MOVED" beforePath="D:\Dev\repos\CopperResistance\core\php\libraries\twig\doc\tests\defined.rst" afterPath="$PROJECT_DIR$/core/libraries/twig/doc/tests/defined.rst" />
-      <change type="MOVED" beforePath="D:\Dev\repos\CopperResistance\core\php\libraries\twig\doc\tests\divisibleby.rst" afterPath="$PROJECT_DIR$/core/libraries/twig/doc/tests/divisibleby.rst" />
-      <change type="MOVED" beforePath="D:\Dev\repos\CopperResistance\core\php\libraries\twig\doc\tests\empty.rst" afterPath="$PROJECT_DIR$/core/libraries/twig/doc/tests/empty.rst" />
-      <change type="MOVED" beforePath="D:\Dev\repos\CopperResistance\core\php\libraries\twig\doc\tests\even.rst" afterPath="$PROJECT_DIR$/core/libraries/twig/doc/tests/even.rst" />
-      <change type="MOVED" beforePath="D:\Dev\repos\CopperResistance\core\php\libraries\twig\doc\tests\index.rst" afterPath="$PROJECT_DIR$/core/libraries/twig/doc/tests/index.rst" />
-      <change type="MOVED" beforePath="D:\Dev\repos\CopperResistance\core\php\libraries\twig\doc\tests\iterable.rst" afterPath="$PROJECT_DIR$/core/libraries/twig/doc/tests/iterable.rst" />
-      <change type="MOVED" beforePath="D:\Dev\repos\CopperResistance\core\php\libraries\twig\doc\tests\null.rst" afterPath="$PROJECT_DIR$/core/libraries/twig/doc/tests/null.rst" />
-      <change type="MOVED" beforePath="D:\Dev\repos\CopperResistance\core\php\libraries\twig\doc\tests\odd.rst" afterPath="$PROJECT_DIR$/core/libraries/twig/doc/tests/odd.rst" />
-      <change type="MOVED" beforePath="D:\Dev\repos\CopperResistance\core\php\libraries\twig\doc\tests\sameas.rst" afterPath="$PROJECT_DIR$/core/libraries/twig/doc/tests/sameas.rst" />
-      <change type="MOVED" beforePath="D:\Dev\repos\CopperResistance\core\php\libraries\twig\ext\twig\.gitignore" afterPath="$PROJECT_DIR$/core/libraries/twig/ext/twig/.gitignore" />
-      <change type="MOVED" beforePath="D:\Dev\repos\CopperResistance\core\php\libraries\twig\ext\twig\LICENSE" afterPath="$PROJECT_DIR$/core/libraries/twig/ext/twig/LICENSE" />
-      <change type="MOVED" beforePath="D:\Dev\repos\CopperResistance\core\php\libraries\twig\ext\twig\config.m4" afterPath="$PROJECT_DIR$/core/libraries/twig/ext/twig/config.m4" />
-      <change type="MOVED" beforePath="D:\Dev\repos\CopperResistance\core\php\libraries\twig\ext\twig\config.w32" afterPath="$PROJECT_DIR$/core/libraries/twig/ext/twig/config.w32" />
-      <change type="MOVED" beforePath="D:\Dev\repos\CopperResistance\core\php\libraries\twig\ext\twig\php_twig.h" afterPath="$PROJECT_DIR$/core/libraries/twig/ext/twig/php_twig.h" />
-      <change type="MOVED" beforePath="D:\Dev\repos\CopperResistance\core\php\libraries\twig\ext\twig\twig.c" afterPath="$PROJECT_DIR$/core/libraries/twig/ext/twig/twig.c" />
-      <change type="MOVED" beforePath="D:\Dev\repos\CopperResistance\core\php\libraries\twig\lib\Twig\Autoloader.php" afterPath="$PROJECT_DIR$/core/libraries/twig/lib/Twig/Autoloader.php" />
-      <change type="MOVED" beforePath="D:\Dev\repos\CopperResistance\core\php\libraries\twig\lib\Twig\Compiler.php" afterPath="$PROJECT_DIR$/core/libraries/twig/lib/Twig/Compiler.php" />
-      <change type="MOVED" beforePath="D:\Dev\repos\CopperResistance\core\php\libraries\twig\lib\Twig\CompilerInterface.php" afterPath="$PROJECT_DIR$/core/libraries/twig/lib/Twig/CompilerInterface.php" />
-      <change type="MOVED" beforePath="D:\Dev\repos\CopperResistance\core\php\libraries\twig\lib\Twig\Environment.php" afterPath="$PROJECT_DIR$/core/libraries/twig/lib/Twig/Environment.php" />
-      <change type="MOVED" beforePath="D:\Dev\repos\CopperResistance\core\php\libraries\twig\lib\Twig\Error.php" afterPath="$PROJECT_DIR$/core/libraries/twig/lib/Twig/Error.php" />
-      <change type="MOVED" beforePath="D:\Dev\repos\CopperResistance\core\php\libraries\twig\lib\Twig\Error\Loader.php" afterPath="$PROJECT_DIR$/core/libraries/twig/lib/Twig/Error/Loader.php" />
-      <change type="MOVED" beforePath="D:\Dev\repos\CopperResistance\core\php\libraries\twig\lib\Twig\Error\Runtime.php" afterPath="$PROJECT_DIR$/core/libraries/twig/lib/Twig/Error/Runtime.php" />
-      <change type="MOVED" beforePath="D:\Dev\repos\CopperResistance\core\php\libraries\twig\lib\Twig\Error\Syntax.php" afterPath="$PROJECT_DIR$/core/libraries/twig/lib/Twig/Error/Syntax.php" />
-      <change type="MOVED" beforePath="D:\Dev\repos\CopperResistance\core\php\libraries\twig\lib\Twig\ExistsLoaderInterface.php" afterPath="$PROJECT_DIR$/core/libraries/twig/lib/Twig/ExistsLoaderInterface.php" />
-      <change type="MOVED" beforePath="D:\Dev\repos\CopperResistance\core\php\libraries\twig\lib\Twig\ExpressionParser.php" afterPath="$PROJECT_DIR$/core/libraries/twig/lib/Twig/ExpressionParser.php" />
-      <change type="MOVED" beforePath="D:\Dev\repos\CopperResistance\core\php\libraries\twig\lib\Twig\Extension.php" afterPath="$PROJECT_DIR$/core/libraries/twig/lib/Twig/Extension.php" />
-      <change type="MOVED" beforePath="D:\Dev\repos\CopperResistance\core\php\libraries\twig\lib\Twig\ExtensionInterface.php" afterPath="$PROJECT_DIR$/core/libraries/twig/lib/Twig/ExtensionInterface.php" />
-      <change type="MOVED" beforePath="D:\Dev\repos\CopperResistance\core\php\libraries\twig\lib\Twig\Extension\Core.php" afterPath="$PROJECT_DIR$/core/libraries/twig/lib/Twig/Extension/Core.php" />
-      <change type="MOVED" beforePath="D:\Dev\repos\CopperResistance\core\php\libraries\twig\lib\Twig\Extension\Debug.php" afterPath="$PROJECT_DIR$/core/libraries/twig/lib/Twig/Extension/Debug.php" />
-      <change type="MOVED" beforePath="D:\Dev\repos\CopperResistance\core\php\libraries\twig\lib\Twig\Extension\Escaper.php" afterPath="$PROJECT_DIR$/core/libraries/twig/lib/Twig/Extension/Escaper.php" />
-      <change type="MOVED" beforePath="D:\Dev\repos\CopperResistance\core\php\libraries\twig\lib\Twig\Extension\Optimizer.php" afterPath="$PROJECT_DIR$/core/libraries/twig/lib/Twig/Extension/Optimizer.php" />
-      <change type="MOVED" beforePath="D:\Dev\repos\CopperResistance\core\php\libraries\twig\lib\Twig\Extension\Sandbox.php" afterPath="$PROJECT_DIR$/core/libraries/twig/lib/Twig/Extension/Sandbox.php" />
-      <change type="MOVED" beforePath="D:\Dev\repos\CopperResistance\core\php\libraries\twig\lib\Twig\Extension\Staging.php" afterPath="$PROJECT_DIR$/core/libraries/twig/lib/Twig/Extension/Staging.php" />
-      <change type="MOVED" beforePath="D:\Dev\repos\CopperResistance\core\php\libraries\twig\lib\Twig\Extension\StringLoader.php" afterPath="$PROJECT_DIR$/core/libraries/twig/lib/Twig/Extension/StringLoader.php" />
-      <change type="MOVED" beforePath="D:\Dev\repos\CopperResistance\core\php\libraries\twig\lib\Twig\Filter.php" afterPath="$PROJECT_DIR$/core/libraries/twig/lib/Twig/Filter.php" />
-      <change type="MOVED" beforePath="D:\Dev\repos\CopperResistance\core\php\libraries\twig\lib\Twig\FilterCallableInterface.php" afterPath="$PROJECT_DIR$/core/libraries/twig/lib/Twig/FilterCallableInterface.php" />
-      <change type="MOVED" beforePath="D:\Dev\repos\CopperResistance\core\php\libraries\twig\lib\Twig\FilterInterface.php" afterPath="$PROJECT_DIR$/core/libraries/twig/lib/Twig/FilterInterface.php" />
-      <change type="MOVED" beforePath="D:\Dev\repos\CopperResistance\core\php\libraries\twig\lib\Twig\Filter\Function.php" afterPath="$PROJECT_DIR$/core/libraries/twig/lib/Twig/Filter/Function.php" />
-      <change type="MOVED" beforePath="D:\Dev\repos\CopperResistance\core\php\libraries\twig\lib\Twig\Filter\Method.php" afterPath="$PROJECT_DIR$/core/libraries/twig/lib/Twig/Filter/Method.php" />
-      <change type="MOVED" beforePath="D:\Dev\repos\CopperResistance\core\php\libraries\twig\lib\Twig\Filter\Node.php" afterPath="$PROJECT_DIR$/core/libraries/twig/lib/Twig/Filter/Node.php" />
-      <change type="MOVED" beforePath="D:\Dev\repos\CopperResistance\core\php\libraries\twig\lib\Twig\Function.php" afterPath="$PROJECT_DIR$/core/libraries/twig/lib/Twig/Function.php" />
-      <change type="MOVED" beforePath="D:\Dev\repos\CopperResistance\core\php\libraries\twig\lib\Twig\FunctionCallableInterface.php" afterPath="$PROJECT_DIR$/core/libraries/twig/lib/Twig/FunctionCallableInterface.php" />
-      <change type="MOVED" beforePath="D:\Dev\repos\CopperResistance\core\php\libraries\twig\lib\Twig\FunctionInterface.php" afterPath="$PROJECT_DIR$/core/libraries/twig/lib/Twig/FunctionInterface.php" />
-      <change type="MOVED" beforePath="D:\Dev\repos\CopperResistance\core\php\libraries\twig\lib\Twig\Function\Function.php" afterPath="$PROJECT_DIR$/core/libraries/twig/lib/Twig/Function/Function.php" />
-      <change type="MOVED" beforePath="D:\Dev\repos\CopperResistance\core\php\libraries\twig\lib\Twig\Function\Method.php" afterPath="$PROJECT_DIR$/core/libraries/twig/lib/Twig/Function/Method.php" />
-      <change type="MOVED" beforePath="D:\Dev\repos\CopperResistance\core\php\libraries\twig\lib\Twig\Function\Node.php" afterPath="$PROJECT_DIR$/core/libraries/twig/lib/Twig/Function/Node.php" />
-      <change type="MOVED" beforePath="D:\Dev\repos\CopperResistance\core\php\libraries\twig\lib\Twig\Lexer.php" afterPath="$PROJECT_DIR$/core/libraries/twig/lib/Twig/Lexer.php" />
-      <change type="MOVED" beforePath="D:\Dev\repos\CopperResistance\core\php\libraries\twig\lib\Twig\LexerInterface.php" afterPath="$PROJECT_DIR$/core/libraries/twig/lib/Twig/LexerInterface.php" />
-      <change type="MOVED" beforePath="D:\Dev\repos\CopperResistance\core\php\libraries\twig\lib\Twig\LoaderInterface.php" afterPath="$PROJECT_DIR$/core/libraries/twig/lib/Twig/LoaderInterface.php" />
-      <change type="MOVED" beforePath="D:\Dev\repos\CopperResistance\core\php\libraries\twig\lib\Twig\Loader\Array.php" afterPath="$PROJECT_DIR$/core/libraries/twig/lib/Twig/Loader/Array.php" />
-      <change type="MOVED" beforePath="D:\Dev\repos\CopperResistance\core\php\libraries\twig\lib\Twig\Loader\Chain.php" afterPath="$PROJECT_DIR$/core/libraries/twig/lib/Twig/Loader/Chain.php" />
-      <change type="MOVED" beforePath="D:\Dev\repos\CopperResistance\core\php\libraries\twig\lib\Twig\Loader\Filesystem.php" afterPath="$PROJECT_DIR$/core/libraries/twig/lib/Twig/Loader/Filesystem.php" />
-      <change type="MOVED" beforePath="D:\Dev\repos\CopperResistance\core\php\libraries\twig\lib\Twig\Loader\String.php" afterPath="$PROJECT_DIR$/core/libraries/twig/lib/Twig/Loader/String.php" />
-      <change type="MOVED" beforePath="D:\Dev\repos\CopperResistance\core\php\libraries\twig\lib\Twig\Markup.php" afterPath="$PROJECT_DIR$/core/libraries/twig/lib/Twig/Markup.php" />
-      <change type="MOVED" beforePath="D:\Dev\repos\CopperResistance\core\php\libraries\twig\lib\Twig\Node.php" afterPath="$PROJECT_DIR$/core/libraries/twig/lib/Twig/Node.php" />
-      <change type="MOVED" beforePath="D:\Dev\repos\CopperResistance\core\php\libraries\twig\lib\Twig\NodeInterface.php" afterPath="$PROJECT_DIR$/core/libraries/twig/lib/Twig/NodeInterface.php" />
-      <change type="MOVED" beforePath="D:\Dev\repos\CopperResistance\core\php\libraries\twig\lib\Twig\NodeOutputInterface.php" afterPath="$PROJECT_DIR$/core/libraries/twig/lib/Twig/NodeOutputInterface.php" />
-      <change type="MOVED" beforePath="D:\Dev\repos\CopperResistance\core\php\libraries\twig\lib\Twig\NodeTraverser.php" afterPath="$PROJECT_DIR$/core/libraries/twig/lib/Twig/NodeTraverser.php" />
-      <change type="MOVED" beforePath="D:\Dev\repos\CopperResistance\core\php\libraries\twig\lib\Twig\NodeVisitorInterface.php" afterPath="$PROJECT_DIR$/core/libraries/twig/lib/Twig/NodeVisitorInterface.php" />
-      <change type="MOVED" beforePath="D:\Dev\repos\CopperResistance\core\php\libraries\twig\lib\Twig\NodeVisitor\Escaper.php" afterPath="$PROJECT_DIR$/core/libraries/twig/lib/Twig/NodeVisitor/Escaper.php" />
-      <change type="MOVED" beforePath="D:\Dev\repos\CopperResistance\core\php\libraries\twig\lib\Twig\NodeVisitor\Optimizer.php" afterPath="$PROJECT_DIR$/core/libraries/twig/lib/Twig/NodeVisitor/Optimizer.php" />
-      <change type="MOVED" beforePath="D:\Dev\repos\CopperResistance\core\php\libraries\twig\lib\Twig\NodeVisitor\SafeAnalysis.php" afterPath="$PROJECT_DIR$/core/libraries/twig/lib/Twig/NodeVisitor/SafeAnalysis.php" />
-      <change type="MOVED" beforePath="D:\Dev\repos\CopperResistance\core\php\libraries\twig\lib\Twig\NodeVisitor\Sandbox.php" afterPath="$PROJECT_DIR$/core/libraries/twig/lib/Twig/NodeVisitor/Sandbox.php" />
-      <change type="MOVED" beforePath="D:\Dev\repos\CopperResistance\core\php\libraries\twig\lib\Twig\Node\AutoEscape.php" afterPath="$PROJECT_DIR$/core/libraries/twig/lib/Twig/Node/AutoEscape.php" />
-      <change type="MOVED" beforePath="D:\Dev\repos\CopperResistance\core\php\libraries\twig\lib\Twig\Node\Block.php" afterPath="$PROJECT_DIR$/core/libraries/twig/lib/Twig/Node/Block.php" />
-      <change type="MOVED" beforePath="D:\Dev\repos\CopperResistance\core\php\libraries\twig\lib\Twig\Node\BlockReference.php" afterPath="$PROJECT_DIR$/core/libraries/twig/lib/Twig/Node/BlockReference.php" />
-      <change type="MOVED" beforePath="D:\Dev\repos\CopperResistance\core\php\libraries\twig\lib\Twig\Node\Body.php" afterPath="$PROJECT_DIR$/core/libraries/twig/lib/Twig/Node/Body.php" />
-      <change type="MOVED" beforePath="D:\Dev\repos\CopperResistance\core\php\libraries\twig\lib\Twig\Node\Do.php" afterPath="$PROJECT_DIR$/core/libraries/twig/lib/Twig/Node/Do.php" />
-      <change type="MOVED" beforePath="D:\Dev\repos\CopperResistance\core\php\libraries\twig\lib\Twig\Node\Embed.php" afterPath="$PROJECT_DIR$/core/libraries/twig/lib/Twig/Node/Embed.php" />
-      <change type="MOVED" beforePath="D:\Dev\repos\CopperResistance\core\php\libraries\twig\lib\Twig\Node\Expression.php" afterPath="$PROJECT_DIR$/core/libraries/twig/lib/Twig/Node/Expression.php" />
-      <change type="MOVED" beforePath="D:\Dev\repos\CopperResistance\core\php\libraries\twig\lib\Twig\Node\Expression\Array.php" afterPath="$PROJECT_DIR$/core/libraries/twig/lib/Twig/Node/Expression/Array.php" />
-      <change type="MOVED" beforePath="D:\Dev\repos\CopperResistance\core\php\libraries\twig\lib\Twig\Node\Expression\AssignName.php" afterPath="$PROJECT_DIR$/core/libraries/twig/lib/Twig/Node/Expression/AssignName.php" />
-      <change type="MOVED" beforePath="D:\Dev\repos\CopperResistance\core\php\libraries\twig\lib\Twig\Node\Expression\Binary.php" afterPath="$PROJECT_DIR$/core/libraries/twig/lib/Twig/Node/Expression/Binary.php" />
-      <change type="MOVED" beforePath="D:\Dev\repos\CopperResistance\core\php\libraries\twig\lib\Twig\Node\Expression\Binary\Add.php" afterPath="$PROJECT_DIR$/core/libraries/twig/lib/Twig/Node/Expression/Binary/Add.php" />
-      <change type="MOVED" beforePath="D:\Dev\repos\CopperResistance\core\php\libraries\twig\lib\Twig\Node\Expression\Binary\And.php" afterPath="$PROJECT_DIR$/core/libraries/twig/lib/Twig/Node/Expression/Binary/And.php" />
-      <change type="MOVED" beforePath="D:\Dev\repos\CopperResistance\core\php\libraries\twig\lib\Twig\Node\Expression\Binary\BitwiseAnd.php" afterPath="$PROJECT_DIR$/core/libraries/twig/lib/Twig/Node/Expression/Binary/BitwiseAnd.php" />
-      <change type="MOVED" beforePath="D:\Dev\repos\CopperResistance\core\php\libraries\twig\lib\Twig\Node\Expression\Binary\BitwiseOr.php" afterPath="$PROJECT_DIR$/core/libraries/twig/lib/Twig/Node/Expression/Binary/BitwiseOr.php" />
-      <change type="MOVED" beforePath="D:\Dev\repos\CopperResistance\core\php\libraries\twig\lib\Twig\Node\Expression\Binary\BitwiseXor.php" afterPath="$PROJECT_DIR$/core/libraries/twig/lib/Twig/Node/Expression/Binary/BitwiseXor.php" />
-      <change type="MOVED" beforePath="D:\Dev\repos\CopperResistance\core\php\libraries\twig\lib\Twig\Node\Expression\Binary\Concat.php" afterPath="$PROJECT_DIR$/core/libraries/twig/lib/Twig/Node/Expression/Binary/Concat.php" />
-      <change type="MOVED" beforePath="D:\Dev\repos\CopperResistance\core\php\libraries\twig\lib\Twig\Node\Expression\Binary\Div.php" afterPath="$PROJECT_DIR$/core/libraries/twig/lib/Twig/Node/Expression/Binary/Div.php" />
-      <change type="MOVED" beforePath="D:\Dev\repos\CopperResistance\core\php\libraries\twig\lib\Twig\Node\Expression\Binary\EndsWith.php" afterPath="$PROJECT_DIR$/core/libraries/twig/lib/Twig/Node/Expression/Binary/EndsWith.php" />
-      <change type="MOVED" beforePath="D:\Dev\repos\CopperResistance\core\php\libraries\twig\lib\Twig\Node\Expression\Binary\Equal.php" afterPath="$PROJECT_DIR$/core/libraries/twig/lib/Twig/Node/Expression/Binary/Equal.php" />
-      <change type="MOVED" beforePath="D:\Dev\repos\CopperResistance\core\php\libraries\twig\lib\Twig\Node\Expression\Binary\FloorDiv.php" afterPath="$PROJECT_DIR$/core/libraries/twig/lib/Twig/Node/Expression/Binary/FloorDiv.php" />
-      <change type="MOVED" beforePath="D:\Dev\repos\CopperResistance\core\php\libraries\twig\lib\Twig\Node\Expression\Binary\Greater.php" afterPath="$PROJECT_DIR$/core/libraries/twig/lib/Twig/Node/Expression/Binary/Greater.php" />
-      <change type="MOVED" beforePath="D:\Dev\repos\CopperResistance\core\php\libraries\twig\lib\Twig\Node\Expression\Binary\GreaterEqual.php" afterPath="$PROJECT_DIR$/core/libraries/twig/lib/Twig/Node/Expression/Binary/GreaterEqual.php" />
-      <change type="MOVED" beforePath="D:\Dev\repos\CopperResistance\core\php\libraries\twig\lib\Twig\Node\Expression\Binary\In.php" afterPath="$PROJECT_DIR$/core/libraries/twig/lib/Twig/Node/Expression/Binary/In.php" />
-      <change type="MOVED" beforePath="D:\Dev\repos\CopperResistance\core\php\libraries\twig\lib\Twig\Node\Expression\Binary\Less.php" afterPath="$PROJECT_DIR$/core/libraries/twig/lib/Twig/Node/Expression/Binary/Less.php" />
-      <change type="MOVED" beforePath="D:\Dev\repos\CopperResistance\core\php\libraries\twig\lib\Twig\Node\Expression\Binary\LessEqual.php" afterPath="$PROJECT_DIR$/core/libraries/twig/lib/Twig/Node/Expression/Binary/LessEqual.php" />
-      <change type="MOVED" beforePath="D:\Dev\repos\CopperResistance\core\php\libraries\twig\lib\Twig\Node\Expression\Binary\Matches.php" afterPath="$PROJECT_DIR$/core/libraries/twig/lib/Twig/Node/Expression/Binary/Matches.php" />
-      <change type="MOVED" beforePath="D:\Dev\repos\CopperResistance\core\php\libraries\twig\lib\Twig\Node\Expression\Binary\Mod.php" afterPath="$PROJECT_DIR$/core/libraries/twig/lib/Twig/Node/Expression/Binary/Mod.php" />
-      <change type="MOVED" beforePath="D:\Dev\repos\CopperResistance\core\php\libraries\twig\lib\Twig\Node\Expression\Binary\Mul.php" afterPath="$PROJECT_DIR$/core/libraries/twig/lib/Twig/Node/Expression/Binary/Mul.php" />
-      <change type="MOVED" beforePath="D:\Dev\repos\CopperResistance\core\php\libraries\twig\lib\Twig\Node\Expression\Binary\NotEqual.php" afterPath="$PROJECT_DIR$/core/libraries/twig/lib/Twig/Node/Expression/Binary/NotEqual.php" />
-      <change type="MOVED" beforePath="D:\Dev\repos\CopperResistance\core\php\libraries\twig\lib\Twig\Node\Expression\Binary\NotIn.php" afterPath="$PROJECT_DIR$/core/libraries/twig/lib/Twig/Node/Expression/Binary/NotIn.php" />
-      <change type="MOVED" beforePath="D:\Dev\repos\CopperResistance\core\php\libraries\twig\lib\Twig\Node\Expression\Binary\Or.php" afterPath="$PROJECT_DIR$/core/libraries/twig/lib/Twig/Node/Expression/Binary/Or.php" />
-      <change type="MOVED" beforePath="D:\Dev\repos\CopperResistance\core\php\libraries\twig\lib\Twig\Node\Expression\Binary\Power.php" afterPath="$PROJECT_DIR$/core/libraries/twig/lib/Twig/Node/Expression/Binary/Power.php" />
-      <change type="MOVED" beforePath="D:\Dev\repos\CopperResistance\core\php\libraries\twig\lib\Twig\Node\Expression\Binary\Range.php" afterPath="$PROJECT_DIR$/core/libraries/twig/lib/Twig/Node/Expression/Binary/Range.php" />
-      <change type="MOVED" beforePath="D:\Dev\repos\CopperResistance\core\php\libraries\twig\lib\Twig\Node\Expression\Binary\StartsWith.php" afterPath="$PROJECT_DIR$/core/libraries/twig/lib/Twig/Node/Expression/Binary/StartsWith.php" />
-      <change type="MOVED" beforePath="D:\Dev\repos\CopperResistance\core\php\libraries\twig\lib\Twig\Node\Expression\Binary\Sub.php" afterPath="$PROJECT_DIR$/core/libraries/twig/lib/Twig/Node/Expression/Binary/Sub.php" />
-      <change type="MOVED" beforePath="D:\Dev\repos\CopperResistance\core\php\libraries\twig\lib\Twig\Node\Expression\BlockReference.php" afterPath="$PROJECT_DIR$/core/libraries/twig/lib/Twig/Node/Expression/BlockReference.php" />
-      <change type="MOVED" beforePath="D:\Dev\repos\CopperResistance\core\php\libraries\twig\lib\Twig\Node\Expression\Call.php" afterPath="$PROJECT_DIR$/core/libraries/twig/lib/Twig/Node/Expression/Call.php" />
-      <change type="MOVED" beforePath="D:\Dev\repos\CopperResistance\core\php\libraries\twig\lib\Twig\Node\Expression\Conditional.php" afterPath="$PROJECT_DIR$/core/libraries/twig/lib/Twig/Node/Expression/Conditional.php" />
-      <change type="MOVED" beforePath="D:\Dev\repos\CopperResistance\core\php\libraries\twig\lib\Twig\Node\Expression\Constant.php" afterPath="$PROJECT_DIR$/core/libraries/twig/lib/Twig/Node/Expression/Constant.php" />
-      <change type="MOVED" beforePath="D:\Dev\repos\CopperResistance\core\php\libraries\twig\lib\Twig\Node\Expression\ExtensionReference.php" afterPath="$PROJECT_DIR$/core/libraries/twig/lib/Twig/Node/Expression/ExtensionReference.php" />
-      <change type="MOVED" beforePath="D:\Dev\repos\CopperResistance\core\php\libraries\twig\lib\Twig\Node\Expression\Filter.php" afterPath="$PROJECT_DIR$/core/libraries/twig/lib/Twig/Node/Expression/Filter.php" />
-      <change type="MOVED" beforePath="D:\Dev\repos\CopperResistance\core\php\libraries\twig\lib\Twig\Node\Expression\Filter\Default.php" afterPath="$PROJECT_DIR$/core/libraries/twig/lib/Twig/Node/Expression/Filter/Default.php" />
-      <change type="MOVED" beforePath="D:\Dev\repos\CopperResistance\core\php\libraries\twig\lib\Twig\Node\Expression\Function.php" afterPath="$PROJECT_DIR$/core/libraries/twig/lib/Twig/Node/Expression/Function.php" />
-      <change type="MOVED" beforePath="D:\Dev\repos\CopperResistance\core\php\libraries\twig\lib\Twig\Node\Expression\GetAttr.php" afterPath="$PROJECT_DIR$/core/libraries/twig/lib/Twig/Node/Expression/GetAttr.php" />
-      <change type="MOVED" beforePath="D:\Dev\repos\CopperResistance\core\php\libraries\twig\lib\Twig\Node\Expression\MethodCall.php" afterPath="$PROJECT_DIR$/core/libraries/twig/lib/Twig/Node/Expression/MethodCall.php" />
-      <change type="MOVED" beforePath="D:\Dev\repos\CopperResistance\core\php\libraries\twig\lib\Twig\Node\Expression\Name.php" afterPath="$PROJECT_DIR$/core/libraries/twig/lib/Twig/Node/Expression/Name.php" />
-      <change type="MOVED" beforePath="D:\Dev\repos\CopperResistance\core\php\libraries\twig\lib\Twig\Node\Expression\Parent.php" afterPath="$PROJECT_DIR$/core/libraries/twig/lib/Twig/Node/Expression/Parent.php" />
-      <change type="MOVED" beforePath="D:\Dev\repos\CopperResistance\core\php\libraries\twig\lib\Twig\Node\Expression\TempName.php" afterPath="$PROJECT_DIR$/core/libraries/twig/lib/Twig/Node/Expression/TempName.php" />
-      <change type="MOVED" beforePath="D:\Dev\repos\CopperResistance\core\php\libraries\twig\lib\Twig\Node\Expression\Test.php" afterPath="$PROJECT_DIR$/core/libraries/twig/lib/Twig/Node/Expression/Test.php" />
-      <change type="MOVED" beforePath="D:\Dev\repos\CopperResistance\core\php\libraries\twig\lib\Twig\Node\Expression\Test\Constant.php" afterPath="$PROJECT_DIR$/core/libraries/twig/lib/Twig/Node/Expression/Test/Constant.php" />
-      <change type="MOVED" beforePath="D:\Dev\repos\CopperResistance\core\php\libraries\twig\lib\Twig\Node\Expression\Test\Defined.php" afterPath="$PROJECT_DIR$/core/libraries/twig/lib/Twig/Node/Expression/Test/Defined.php" />
-      <change type="MOVED" beforePath="D:\Dev\repos\CopperResistance\core\php\libraries\twig\lib\Twig\Node\Expression\Test\Divisibleby.php" afterPath="$PROJECT_DIR$/core/libraries/twig/lib/Twig/Node/Expression/Test/Divisibleby.php" />
-      <change type="MOVED" beforePath="D:\Dev\repos\CopperResistance\core\php\libraries\twig\lib\Twig\Node\Expression\Test\Even.php" afterPath="$PROJECT_DIR$/core/libraries/twig/lib/Twig/Node/Expression/Test/Even.php" />
-      <change type="MOVED" beforePath="D:\Dev\repos\CopperResistance\core\php\libraries\twig\lib\Twig\Node\Expression\Test\Null.php" afterPath="$PROJECT_DIR$/core/libraries/twig/lib/Twig/Node/Expression/Test/Null.php" />
-      <change type="MOVED" beforePath="D:\Dev\repos\CopperResistance\core\php\libraries\twig\lib\Twig\Node\Expression\Test\Odd.php" afterPath="$PROJECT_DIR$/core/libraries/twig/lib/Twig/Node/Expression/Test/Odd.php" />
-      <change type="MOVED" beforePath="D:\Dev\repos\CopperResistance\core\php\libraries\twig\lib\Twig\Node\Expression\Test\Sameas.php" afterPath="$PROJECT_DIR$/core/libraries/twig/lib/Twig/Node/Expression/Test/Sameas.php" />
-      <change type="MOVED" beforePath="D:\Dev\repos\CopperResistance\core\php\libraries\twig\lib\Twig\Node\Expression\Unary.php" afterPath="$PROJECT_DIR$/core/libraries/twig/lib/Twig/Node/Expression/Unary.php" />
-      <change type="MOVED" beforePath="D:\Dev\repos\CopperResistance\core\php\libraries\twig\lib\Twig\Node\Expression\Unary\Neg.php" afterPath="$PROJECT_DIR$/core/libraries/twig/lib/Twig/Node/Expression/Unary/Neg.php" />
-      <change type="MOVED" beforePath="D:\Dev\repos\CopperResistance\core\php\libraries\twig\lib\Twig\Node\Expression\Unary\Not.php" afterPath="$PROJECT_DIR$/core/libraries/twig/lib/Twig/Node/Expression/Unary/Not.php" />
-      <change type="MOVED" beforePath="D:\Dev\repos\CopperResistance\core\php\libraries\twig\lib\Twig\Node\Expression\Unary\Pos.php" afterPath="$PROJECT_DIR$/core/libraries/twig/lib/Twig/Node/Expression/Unary/Pos.php" />
-      <change type="MOVED" beforePath="D:\Dev\repos\CopperResistance\core\php\libraries\twig\lib\Twig\Node\Flush.php" afterPath="$PROJECT_DIR$/core/libraries/twig/lib/Twig/Node/Flush.php" />
-      <change type="MOVED" beforePath="D:\Dev\repos\CopperResistance\core\php\libraries\twig\lib\Twig\Node\For.php" afterPath="$PROJECT_DIR$/core/libraries/twig/lib/Twig/Node/For.php" />
-      <change type="MOVED" beforePath="D:\Dev\repos\CopperResistance\core\php\libraries\twig\lib\Twig\Node\ForLoop.php" afterPath="$PROJECT_DIR$/core/libraries/twig/lib/Twig/Node/ForLoop.php" />
-      <change type="MOVED" beforePath="D:\Dev\repos\CopperResistance\core\php\libraries\twig\lib\Twig\Node\If.php" afterPath="$PROJECT_DIR$/core/libraries/twig/lib/Twig/Node/If.php" />
-      <change type="MOVED" beforePath="D:\Dev\repos\CopperResistance\core\php\libraries\twig\lib\Twig\Node\Import.php" afterPath="$PROJECT_DIR$/core/libraries/twig/lib/Twig/Node/Import.php" />
-      <change type="MOVED" beforePath="D:\Dev\repos\CopperResistance\core\php\libraries\twig\lib\Twig\Node\Include.php" afterPath="$PROJECT_DIR$/core/libraries/twig/lib/Twig/Node/Include.php" />
-      <change type="MOVED" beforePath="D:\Dev\repos\CopperResistance\core\php\libraries\twig\lib\Twig\Node\Macro.php" afterPath="$PROJECT_DIR$/core/libraries/twig/lib/Twig/Node/Macro.php" />
-      <change type="MOVED" beforePath="D:\Dev\repos\CopperResistance\core\php\libraries\twig\lib\Twig\Node\Module.php" afterPath="$PROJECT_DIR$/core/libraries/twig/lib/Twig/Node/Module.php" />
-      <change type="MOVED" beforePath="D:\Dev\repos\CopperResistance\core\php\libraries\twig\lib\Twig\Node\Print.php" afterPath="$PROJECT_DIR$/core/libraries/twig/lib/Twig/Node/Print.php" />
-      <change type="MOVED" beforePath="D:\Dev\repos\CopperResistance\core\php\libraries\twig\lib\Twig\Node\Sandbox.php" afterPath="$PROJECT_DIR$/core/libraries/twig/lib/Twig/Node/Sandbox.php" />
-      <change type="MOVED" beforePath="D:\Dev\repos\CopperResistance\core\php\libraries\twig\lib\Twig\Node\SandboxedModule.php" afterPath="$PROJECT_DIR$/core/libraries/twig/lib/Twig/Node/SandboxedModule.php" />
-      <change type="MOVED" beforePath="D:\Dev\repos\CopperResistance\core\php\libraries\twig\lib\Twig\Node\SandboxedPrint.php" afterPath="$PROJECT_DIR$/core/libraries/twig/lib/Twig/Node/SandboxedPrint.php" />
-      <change type="MOVED" beforePath="D:\Dev\repos\CopperResistance\core\php\libraries\twig\lib\Twig\Node\Set.php" afterPath="$PROJECT_DIR$/core/libraries/twig/lib/Twig/Node/Set.php" />
-      <change type="MOVED" beforePath="D:\Dev\repos\CopperResistance\core\php\libraries\twig\lib\Twig\Node\SetTemp.php" afterPath="$PROJECT_DIR$/core/libraries/twig/lib/Twig/Node/SetTemp.php" />
-      <change type="MOVED" beforePath="D:\Dev\repos\CopperResistance\core\php\libraries\twig\lib\Twig\Node\Spaceless.php" afterPath="$PROJECT_DIR$/core/libraries/twig/lib/Twig/Node/Spaceless.php" />
-      <change type="MOVED" beforePath="D:\Dev\repos\CopperResistance\core\php\libraries\twig\lib\Twig\Node\Text.php" afterPath="$PROJECT_DIR$/core/libraries/twig/lib/Twig/Node/Text.php" />
-      <change type="MOVED" beforePath="D:\Dev\repos\CopperResistance\core\php\libraries\twig\lib\Twig\Parser.php" afterPath="$PROJECT_DIR$/core/libraries/twig/lib/Twig/Parser.php" />
-      <change type="MOVED" beforePath="D:\Dev\repos\CopperResistance\core\php\libraries\twig\lib\Twig\ParserInterface.php" afterPath="$PROJECT_DIR$/core/libraries/twig/lib/Twig/ParserInterface.php" />
-      <change type="MOVED" beforePath="D:\Dev\repos\CopperResistance\core\php\libraries\twig\lib\Twig\Sandbox\SecurityError.php" afterPath="$PROJECT_DIR$/core/libraries/twig/lib/Twig/Sandbox/SecurityError.php" />
-      <change type="MOVED" beforePath="D:\Dev\repos\CopperResistance\core\php\libraries\twig\lib\Twig\Sandbox\SecurityPolicy.php" afterPath="$PROJECT_DIR$/core/libraries/twig/lib/Twig/Sandbox/SecurityPolicy.php" />
-      <change type="MOVED" beforePath="D:\Dev\repos\CopperResistance\core\php\libraries\twig\lib\Twig\Sandbox\SecurityPolicyInterface.php" afterPath="$PROJECT_DIR$/core/libraries/twig/lib/Twig/Sandbox/SecurityPolicyInterface.php" />
-      <change type="MOVED" beforePath="D:\Dev\repos\CopperResistance\core\php\libraries\twig\lib\Twig\SimpleFilter.php" afterPath="$PROJECT_DIR$/core/libraries/twig/lib/Twig/SimpleFilter.php" />
-      <change type="MOVED" beforePath="D:\Dev\repos\CopperResistance\core\php\libraries\twig\lib\Twig\SimpleFunction.php" afterPath="$PROJECT_DIR$/core/libraries/twig/lib/Twig/SimpleFunction.php" />
-      <change type="MOVED" beforePath="D:\Dev\repos\CopperResistance\core\php\libraries\twig\lib\Twig\SimpleTest.php" afterPath="$PROJECT_DIR$/core/libraries/twig/lib/Twig/SimpleTest.php" />
-      <change type="MOVED" beforePath="D:\Dev\repos\CopperResistance\core\php\libraries\twig\lib\Twig\Template.php" afterPath="$PROJECT_DIR$/core/libraries/twig/lib/Twig/Template.php" />
-      <change type="MOVED" beforePath="D:\Dev\repos\CopperResistance\core\php\libraries\twig\lib\Twig\TemplateInterface.php" afterPath="$PROJECT_DIR$/core/libraries/twig/lib/Twig/TemplateInterface.php" />
-      <change type="MOVED" beforePath="D:\Dev\repos\CopperResistance\core\php\libraries\twig\lib\Twig\Test.php" afterPath="$PROJECT_DIR$/core/libraries/twig/lib/Twig/Test.php" />
-      <change type="MOVED" beforePath="D:\Dev\repos\CopperResistance\core\php\libraries\twig\lib\Twig\TestCallableInterface.php" afterPath="$PROJECT_DIR$/core/libraries/twig/lib/Twig/TestCallableInterface.php" />
-      <change type="MOVED" beforePath="D:\Dev\repos\CopperResistance\core\php\libraries\twig\lib\Twig\TestInterface.php" afterPath="$PROJECT_DIR$/core/libraries/twig/lib/Twig/TestInterface.php" />
-      <change type="MOVED" beforePath="D:\Dev\repos\CopperResistance\core\php\libraries\twig\lib\Twig\Test\Function.php" afterPath="$PROJECT_DIR$/core/libraries/twig/lib/Twig/Test/Function.php" />
-      <change type="MOVED" beforePath="D:\Dev\repos\CopperResistance\core\php\libraries\twig\lib\Twig\Test\IntegrationTestCase.php" afterPath="$PROJECT_DIR$/core/libraries/twig/lib/Twig/Test/IntegrationTestCase.php" />
-      <change type="MOVED" beforePath="D:\Dev\repos\CopperResistance\core\php\libraries\twig\lib\Twig\Test\Method.php" afterPath="$PROJECT_DIR$/core/libraries/twig/lib/Twig/Test/Method.php" />
-      <change type="MOVED" beforePath="D:\Dev\repos\CopperResistance\core\php\libraries\twig\lib\Twig\Test\Node.php" afterPath="$PROJECT_DIR$/core/libraries/twig/lib/Twig/Test/Node.php" />
-      <change type="MOVED" beforePath="D:\Dev\repos\CopperResistance\core\php\libraries\twig\lib\Twig\Test\NodeTestCase.php" afterPath="$PROJECT_DIR$/core/libraries/twig/lib/Twig/Test/NodeTestCase.php" />
-      <change type="MOVED" beforePath="D:\Dev\repos\CopperResistance\core\php\libraries\twig\lib\Twig\Token.php" afterPath="$PROJECT_DIR$/core/libraries/twig/lib/Twig/Token.php" />
-      <change type="MOVED" beforePath="D:\Dev\repos\CopperResistance\core\php\libraries\twig\lib\Twig\TokenParser.php" afterPath="$PROJECT_DIR$/core/libraries/twig/lib/Twig/TokenParser.php" />
-      <change type="MOVED" beforePath="D:\Dev\repos\CopperResistance\core\php\libraries\twig\lib\Twig\TokenParserBroker.php" afterPath="$PROJECT_DIR$/core/libraries/twig/lib/Twig/TokenParserBroker.php" />
-      <change type="MOVED" beforePath="D:\Dev\repos\CopperResistance\core\php\libraries\twig\lib\Twig\TokenParserBrokerInterface.php" afterPath="$PROJECT_DIR$/core/libraries/twig/lib/Twig/TokenParserBrokerInterface.php" />
-      <change type="MOVED" beforePath="D:\Dev\repos\CopperResistance\core\php\libraries\twig\lib\Twig\TokenParserInterface.php" afterPath="$PROJECT_DIR$/core/libraries/twig/lib/Twig/TokenParserInterface.php" />
-      <change type="MOVED" beforePath="D:\Dev\repos\CopperResistance\core\php\libraries\twig\lib\Twig\TokenParser\AutoEscape.php" afterPath="$PROJECT_DIR$/core/libraries/twig/lib/Twig/TokenParser/AutoEscape.php" />
-      <change type="MOVED" beforePath="D:\Dev\repos\CopperResistance\core\php\libraries\twig\lib\Twig\TokenParser\Block.php" afterPath="$PROJECT_DIR$/core/libraries/twig/lib/Twig/TokenParser/Block.php" />
-      <change type="MOVED" beforePath="D:\Dev\repos\CopperResistance\core\php\libraries\twig\lib\Twig\TokenParser\Do.php" afterPath="$PROJECT_DIR$/core/libraries/twig/lib/Twig/TokenParser/Do.php" />
-      <change type="MOVED" beforePath="D:\Dev\repos\CopperResistance\core\php\libraries\twig\lib\Twig\TokenParser\Embed.php" afterPath="$PROJECT_DIR$/core/libraries/twig/lib/Twig/TokenParser/Embed.php" />
-      <change type="MOVED" beforePath="D:\Dev\repos\CopperResistance\core\php\libraries\twig\lib\Twig\TokenParser\Extends.php" afterPath="$PROJECT_DIR$/core/libraries/twig/lib/Twig/TokenParser/Extends.php" />
-      <change type="MOVED" beforePath="D:\Dev\repos\CopperResistance\core\php\libraries\twig\lib\Twig\TokenParser\Filter.php" afterPath="$PROJECT_DIR$/core/libraries/twig/lib/Twig/TokenParser/Filter.php" />
-      <change type="MOVED" beforePath="D:\Dev\repos\CopperResistance\core\php\libraries\twig\lib\Twig\TokenParser\Flush.php" afterPath="$PROJECT_DIR$/core/libraries/twig/lib/Twig/TokenParser/Flush.php" />
-      <change type="MOVED" beforePath="D:\Dev\repos\CopperResistance\core\php\libraries\twig\lib\Twig\TokenParser\For.php" afterPath="$PROJECT_DIR$/core/libraries/twig/lib/Twig/TokenParser/For.php" />
-      <change type="MOVED" beforePath="D:\Dev\repos\CopperResistance\core\php\libraries\twig\lib\Twig\TokenParser\From.php" afterPath="$PROJECT_DIR$/core/libraries/twig/lib/Twig/TokenParser/From.php" />
-      <change type="MOVED" beforePath="D:\Dev\repos\CopperResistance\core\php\libraries\twig\lib\Twig\TokenParser\If.php" afterPath="$PROJECT_DIR$/core/libraries/twig/lib/Twig/TokenParser/If.php" />
-      <change type="MOVED" beforePath="D:\Dev\repos\CopperResistance\core\php\libraries\twig\lib\Twig\TokenParser\Import.php" afterPath="$PROJECT_DIR$/core/libraries/twig/lib/Twig/TokenParser/Import.php" />
-      <change type="MOVED" beforePath="D:\Dev\repos\CopperResistance\core\php\libraries\twig\lib\Twig\TokenParser\Include.php" afterPath="$PROJECT_DIR$/core/libraries/twig/lib/Twig/TokenParser/Include.php" />
-      <change type="MOVED" beforePath="D:\Dev\repos\CopperResistance\core\php\libraries\twig\lib\Twig\TokenParser\Macro.php" afterPath="$PROJECT_DIR$/core/libraries/twig/lib/Twig/TokenParser/Macro.php" />
-      <change type="MOVED" beforePath="D:\Dev\repos\CopperResistance\core\php\libraries\twig\lib\Twig\TokenParser\Sandbox.php" afterPath="$PROJECT_DIR$/core/libraries/twig/lib/Twig/TokenParser/Sandbox.php" />
-      <change type="MOVED" beforePath="D:\Dev\repos\CopperResistance\core\php\libraries\twig\lib\Twig\TokenParser\Set.php" afterPath="$PROJECT_DIR$/core/libraries/twig/lib/Twig/TokenParser/Set.php" />
-      <change type="MOVED" beforePath="D:\Dev\repos\CopperResistance\core\php\libraries\twig\lib\Twig\TokenParser\Spaceless.php" afterPath="$PROJECT_DIR$/core/libraries/twig/lib/Twig/TokenParser/Spaceless.php" />
-      <change type="MOVED" beforePath="D:\Dev\repos\CopperResistance\core\php\libraries\twig\lib\Twig\TokenParser\Use.php" afterPath="$PROJECT_DIR$/core/libraries/twig/lib/Twig/TokenParser/Use.php" />
-      <change type="MOVED" beforePath="D:\Dev\repos\CopperResistance\core\php\libraries\twig\lib\Twig\TokenStream.php" afterPath="$PROJECT_DIR$/core/libraries/twig/lib/Twig/TokenStream.php" />
-      <change type="MOVED" beforePath="D:\Dev\repos\CopperResistance\core\php\libraries\twig\phpunit.xml.dist" afterPath="$PROJECT_DIR$/core/libraries/twig/phpunit.xml.dist" />
-      <change type="MOVED" beforePath="D:\Dev\repos\CopperResistance\core\php\libraries\twig\test\Twig\Tests\AutoloaderTest.php" afterPath="$PROJECT_DIR$/core/libraries/twig/test/Twig/Tests/AutoloaderTest.php" />
-      <change type="MOVED" beforePath="D:\Dev\repos\CopperResistance\core\php\libraries\twig\test\Twig\Tests\CompilerTest.php" afterPath="$PROJECT_DIR$/core/libraries/twig/test/Twig/Tests/CompilerTest.php" />
-      <change type="MOVED" beforePath="D:\Dev\repos\CopperResistance\core\php\libraries\twig\test\Twig\Tests\EnvironmentTest.php" afterPath="$PROJECT_DIR$/core/libraries/twig/test/Twig/Tests/EnvironmentTest.php" />
-      <change type="MOVED" beforePath="D:\Dev\repos\CopperResistance\core\php\libraries\twig\test\Twig\Tests\ErrorTest.php" afterPath="$PROJECT_DIR$/core/libraries/twig/test/Twig/Tests/ErrorTest.php" />
-      <change type="MOVED" beforePath="D:\Dev\repos\CopperResistance\core\php\libraries\twig\test\Twig\Tests\ExpressionParserTest.php" afterPath="$PROJECT_DIR$/core/libraries/twig/test/Twig/Tests/ExpressionParserTest.php" />
-      <change type="MOVED" beforePath="D:\Dev\repos\CopperResistance\core\php\libraries\twig\test\Twig\Tests\Extension\CoreTest.php" afterPath="$PROJECT_DIR$/core/libraries/twig/test/Twig/Tests/Extension/CoreTest.php" />
-      <change type="MOVED" beforePath="D:\Dev\repos\CopperResistance\core\php\libraries\twig\test\Twig\Tests\Extension\SandboxTest.php" afterPath="$PROJECT_DIR$/core/libraries/twig/test/Twig/Tests/Extension/SandboxTest.php" />
-      <change type="MOVED" beforePath="D:\Dev\repos\CopperResistance\core\php\libraries\twig\test\Twig\Tests\FileCachingTest.php" afterPath="$PROJECT_DIR$/core/libraries/twig/test/Twig/Tests/FileCachingTest.php" />
-      <change type="MOVED" beforePath="D:\Dev\repos\CopperResistance\core\php\libraries\twig\test\Twig\Tests\Fixtures\errors\base.html" afterPath="$PROJECT_DIR$/core/libraries/twig/test/Twig/Tests/Fixtures/errors/base.html" />
-      <change type="MOVED" beforePath="D:\Dev\repos\CopperResistance\core\php\libraries\twig\test\Twig\Tests\Fixtures\errors\index.html" afterPath="$PROJECT_DIR$/core/libraries/twig/test/Twig/Tests/Fixtures/errors/index.html" />
-      <change type="MOVED" beforePath="D:\Dev\repos\CopperResistance\core\php\libraries\twig\test\Twig\Tests\Fixtures\exceptions\unclosed_tag.test" afterPath="$PROJECT_DIR$/core/libraries/twig/test/Twig/Tests/Fixtures/exceptions/unclosed_tag.test" />
-      <change type="MOVED" beforePath="D:\Dev\repos\CopperResistance\core\php\libraries\twig\test\Twig\Tests\Fixtures\expressions\array.test" afterPath="$PROJECT_DIR$/core/libraries/twig/test/Twig/Tests/Fixtures/expressions/array.test" />
-      <change type="MOVED" beforePath="D:\Dev\repos\CopperResistance\core\php\libraries\twig\test\Twig\Tests\Fixtures\expressions\array_call.test" afterPath="$PROJECT_DIR$/core/libraries/twig/test/Twig/Tests/Fixtures/expressions/array_call.test" />
-      <change type="MOVED" beforePath="D:\Dev\repos\CopperResistance\core\php\libraries\twig\test\Twig\Tests\Fixtures\expressions\binary.test" afterPath="$PROJECT_DIR$/core/libraries/twig/test/Twig/Tests/Fixtures/expressions/binary.test" />
-      <change type="MOVED" beforePath="D:\Dev\repos\CopperResistance\core\php\libraries\twig\test\Twig\Tests\Fixtures\expressions\bitwise.test" afterPath="$PROJECT_DIR$/core/libraries/twig/test/Twig/Tests/Fixtures/expressions/bitwise.test" />
-      <change type="MOVED" beforePath="D:\Dev\repos\CopperResistance\core\php\libraries\twig\test\Twig\Tests\Fixtures\expressions\comparison.test" afterPath="$PROJECT_DIR$/core/libraries/twig/test/Twig/Tests/Fixtures/expressions/comparison.test" />
-      <change type="MOVED" beforePath="D:\Dev\repos\CopperResistance\core\php\libraries\twig\test\Twig\Tests\Fixtures\expressions\divisibleby.test" afterPath="$PROJECT_DIR$/core/libraries/twig/test/Twig/Tests/Fixtures/expressions/divisibleby.test" />
-      <change type="MOVED" beforePath="D:\Dev\repos\CopperResistance\core\php\libraries\twig\test\Twig\Tests\Fixtures\expressions\dotdot.test" afterPath="$PROJECT_DIR$/core/libraries/twig/test/Twig/Tests/Fixtures/expressions/dotdot.test" />
-      <change type="MOVED" beforePath="D:\Dev\repos\CopperResistance\core\php\libraries\twig\test\Twig\Tests\Fixtures\expressions\ends_with.test" afterPath="$PROJECT_DIR$/core/libraries/twig/test/Twig/Tests/Fixtures/expressions/ends_with.test" />
-      <change type="MOVED" beforePath="D:\Dev\repos\CopperResistance\core\php\libraries\twig\test\Twig\Tests\Fixtures\expressions\grouping.test" afterPath="$PROJECT_DIR$/core/libraries/twig/test/Twig/Tests/Fixtures/expressions/grouping.test" />
-      <change type="MOVED" beforePath="D:\Dev\repos\CopperResistance\core\php\libraries\twig\test\Twig\Tests\Fixtures\expressions\literals.test" afterPath="$PROJECT_DIR$/core/libraries/twig/test/Twig/Tests/Fixtures/expressions/literals.test" />
-      <change type="MOVED" beforePath="D:\Dev\repos\CopperResistance\core\php\libraries\twig\test\Twig\Tests\Fixtures\expressions\magic_call.test" afterPath="$PROJECT_DIR$/core/libraries/twig/test/Twig/Tests/Fixtures/expressions/magic_call.test" />
-      <change type="MOVED" beforePath="D:\Dev\repos\CopperResistance\core\php\libraries\twig\test\Twig\Tests\Fixtures\expressions\matches.test" afterPath="$PROJECT_DIR$/core/libraries/twig/test/Twig/Tests/Fixtures/expressions/matches.test" />
-      <change type="MOVED" beforePath="D:\Dev\repos\CopperResistance\core\php\libraries\twig\test\Twig\Tests\Fixtures\expressions\method_call.test" afterPath="$PROJECT_DIR$/core/libraries/twig/test/Twig/Tests/Fixtures/expressions/method_call.test" />
-      <change type="MOVED" beforePath="D:\Dev\repos\CopperResistance\core\php\libraries\twig\test\Twig\Tests\Fixtures\expressions\operators_as_variables.test" afterPath="$PROJECT_DIR$/core/libraries/twig/test/Twig/Tests/Fixtures/expressions/operators_as_variables.test" />
-      <change type="MOVED" beforePath="D:\Dev\repos\CopperResistance\core\php\libraries\twig\test\Twig\Tests\Fixtures\expressions\postfix.test" afterPath="$PROJECT_DIR$/core/libraries/twig/test/Twig/Tests/Fixtures/expressions/postfix.test" />
-      <change type="MOVED" beforePath="D:\Dev\repos\CopperResistance\core\php\libraries\twig\test\Twig\Tests\Fixtures\expressions\sameas.test" afterPath="$PROJECT_DIR$/core/libraries/twig/test/Twig/Tests/Fixtures/expressions/sameas.test" />
-      <change type="MOVED" beforePath="D:\Dev\repos\CopperResistance\core\php\libraries\twig\test\Twig\Tests\Fixtures\expressions\starts_with.test" afterPath="$PROJECT_DIR$/core/libraries/twig/test/Twig/Tests/Fixtures/expressions/starts_with.test" />
-      <change type="MOVED" beforePath="D:\Dev\repos\CopperResistance\core\php\libraries\twig\test\Twig\Tests\Fixtures\expressions\strings.test" afterPath="$PROJECT_DIR$/core/libraries/twig/test/Twig/Tests/Fixtures/expressions/strings.test" />
-      <change type="MOVED" beforePath="D:\Dev\repos\CopperResistance\core\php\libraries\twig\test\Twig\Tests\Fixtures\expressions\ternary_operator.test" afterPath="$PROJECT_DIR$/core/libraries/twig/test/Twig/Tests/Fixtures/expressions/ternary_operator.test" />
-      <change type="MOVED" beforePath="D:\Dev\repos\CopperResistance\core\php\libraries\twig\test\Twig\Tests\Fixtures\expressions\ternary_operator_noelse.test" afterPath="$PROJECT_DIR$/core/libraries/twig/test/Twig/Tests/Fixtures/expressions/ternary_operator_noelse.test" />
-      <change type="MOVED" beforePath="D:\Dev\repos\CopperResistance\core\php\libraries\twig\test\Twig\Tests\Fixtures\expressions\ternary_operator_nothen.test" afterPath="$PROJECT_DIR$/core/libraries/twig/test/Twig/Tests/Fixtures/expressions/ternary_operator_nothen.test" />
-      <change type="MOVED" beforePath="D:\Dev\repos\CopperResistance\core\php\libraries\twig\test\Twig\Tests\Fixtures\expressions\two_word_operators_as_variables.test" afterPath="$PROJECT_DIR$/core/libraries/twig/test/Twig/Tests/Fixtures/expressions/two_word_operators_as_variables.test" />
-      <change type="MOVED" beforePath="D:\Dev\repos\CopperResistance\core\php\libraries\twig\test\Twig\Tests\Fixtures\expressions\unary.test" afterPath="$PROJECT_DIR$/core/libraries/twig/test/Twig/Tests/Fixtures/expressions/unary.test" />
-      <change type="MOVED" beforePath="D:\Dev\repos\CopperResistance\core\php\libraries\twig\test\Twig\Tests\Fixtures\expressions\unary_precedence.test" afterPath="$PROJECT_DIR$/core/libraries/twig/test/Twig/Tests/Fixtures/expressions/unary_precedence.test" />
-      <change type="MOVED" beforePath="D:\Dev\repos\CopperResistance\core\php\libraries\twig\test\Twig\Tests\Fixtures\filters\abs.test" afterPath="$PROJECT_DIR$/core/libraries/twig/test/Twig/Tests/Fixtures/filters/abs.test" />
-      <change type="MOVED" beforePath="D:\Dev\repos\CopperResistance\core\php\libraries\twig\test\Twig\Tests\Fixtures\filters\batch.test" afterPath="$PROJECT_DIR$/core/libraries/twig/test/Twig/Tests/Fixtures/filters/batch.test" />
-      <change type="MOVED" beforePath="D:\Dev\repos\CopperResistance\core\php\libraries\twig\test\Twig\Tests\Fixtures\filters\batch_float.php" afterPath="$PROJECT_DIR$/core/libraries/twig/test/Twig/Tests/Fixtures/filters/batch_float.php" />
-      <change type="MOVED" beforePath="D:\Dev\repos\CopperResistance\core\php\libraries\twig\test\Twig\Tests\Fixtures\filters\batch_with_empty_fill.test" afterPath="$PROJECT_DIR$/core/libraries/twig/test/Twig/Tests/Fixtures/filters/batch_with_empty_fill.test" />
-      <change type="MOVED" beforePath="D:\Dev\repos\CopperResistance\core\php\libraries\twig\test\Twig\Tests\Fixtures\filters\batch_with_exact_elements.test" afterPath="$PROJECT_DIR$/core/libraries/twig/test/Twig/Tests/Fixtures/filters/batch_with_exact_elements.test" />
-      <change type="MOVED" beforePath="D:\Dev\repos\CopperResistance\core\php\libraries\twig\test\Twig\Tests\Fixtures\filters\batch_with_fill.test" afterPath="$PROJECT_DIR$/core/libraries/twig/test/Twig/Tests/Fixtures/filters/batch_with_fill.test" />
-      <change type="MOVED" beforePath="D:\Dev\repos\CopperResistance\core\php\libraries\twig\test\Twig\Tests\Fixtures\filters\convert_encoding.test" afterPath="$PROJECT_DIR$/core/libraries/twig/test/Twig/Tests/Fixtures/filters/convert_encoding.test" />
-      <change type="MOVED" beforePath="D:\Dev\repos\CopperResistance\core\php\libraries\twig\test\Twig\Tests\Fixtures\filters\date.test" afterPath="$PROJECT_DIR$/core/libraries/twig/test/Twig/Tests/Fixtures/filters/date.test" />
-      <change type="MOVED" beforePath="D:\Dev\repos\CopperResistance\core\php\libraries\twig\test\Twig\Tests\Fixtures\filters\date_default_format.test" afterPath="$PROJECT_DIR$/core/libraries/twig/test/Twig/Tests/Fixtures/filters/date_default_format.test" />
-      <change type="MOVED" beforePath="D:\Dev\repos\CopperResistance\core\php\libraries\twig\test\Twig\Tests\Fixtures\filters\date_default_format_interval.test" afterPath="$PROJECT_DIR$/core/libraries/twig/test/Twig/Tests/Fixtures/filters/date_default_format_interval.test" />
-      <change type="MOVED" beforePath="D:\Dev\repos\CopperResistance\core\php\libraries\twig\test\Twig\Tests\Fixtures\filters\date_immutable.test" afterPath="$PROJECT_DIR$/core/libraries/twig/test/Twig/Tests/Fixtures/filters/date_immutable.test" />
-      <change type="MOVED" beforePath="D:\Dev\repos\CopperResistance\core\php\libraries\twig\test\Twig\Tests\Fixtures\filters\date_interval.test" afterPath="$PROJECT_DIR$/core/libraries/twig/test/Twig/Tests/Fixtures/filters/date_interval.test" />
-      <change type="MOVED" beforePath="D:\Dev\repos\CopperResistance\core\php\libraries\twig\test\Twig\Tests\Fixtures\filters\date_modify.test" afterPath="$PROJECT_DIR$/core/libraries/twig/test/Twig/Tests/Fixtures/filters/date_modify.test" />
-      <change type="MOVED" beforePath="D:\Dev\repos\CopperResistance\core\php\libraries\twig\test\Twig\Tests\Fixtures\filters\date_namedargs.test" afterPath="$PROJECT_DIR$/core/libraries/twig/test/Twig/Tests/Fixtures/filters/date_namedargs.test" />
-      <change type="MOVED" beforePath="D:\Dev\repos\CopperResistance\core\php\libraries\twig\test\Twig\Tests\Fixtures\filters\default.test" afterPath="$PROJECT_DIR$/core/libraries/twig/test/Twig/Tests/Fixtures/filters/default.test" />
-      <change type="MOVED" beforePath="D:\Dev\repos\CopperResistance\core\php\libraries\twig\test\Twig\Tests\Fixtures\filters\dynamic_filter.test" afterPath="$PROJECT_DIR$/core/libraries/twig/test/Twig/Tests/Fixtures/filters/dynamic_filter.test" />
-      <change type="MOVED" beforePath="D:\Dev\repos\CopperResistance\core\php\libraries\twig\test\Twig\Tests\Fixtures\filters\escape.test" afterPath="$PROJECT_DIR$/core/libraries/twig/test/Twig/Tests/Fixtures/filters/escape.test" />
-      <change type="MOVED" beforePath="D:\Dev\repos\CopperResistance\core\php\libraries\twig\test\Twig\Tests\Fixtures\filters\escape_html_attr.test" afterPath="$PROJECT_DIR$/core/libraries/twig/test/Twig/Tests/Fixtures/filters/escape_html_attr.test" />
-      <change type="MOVED" beforePath="D:\Dev\repos\CopperResistance\core\php\libraries\twig\test\Twig\Tests\Fixtures\filters\escape_non_supported_charset.test" afterPath="$PROJECT_DIR$/core/libraries/twig/test/Twig/Tests/Fixtures/filters/escape_non_supported_charset.test" />
-      <change type="MOVED" beforePath="D:\Dev\repos\CopperResistance\core\php\libraries\twig\test\Twig\Tests\Fixtures\filters\first.test" afterPath="$PROJECT_DIR$/core/libraries/twig/test/Twig/Tests/Fixtures/filters/first.test" />
-      <change type="MOVED" beforePath="D:\Dev\repos\CopperResistance\core\php\libraries\twig\test\Twig\Tests\Fixtures\filters\force_escape.test" afterPath="$PROJECT_DIR$/core/libraries/twig/test/Twig/Tests/Fixtures/filters/force_escape.test" />
-      <change type="MOVED" beforePath="D:\Dev\repos\CopperResistance\core\php\libraries\twig\test\Twig\Tests\Fixtures\filters\format.test" afterPath="$PROJECT_DIR$/core/libraries/twig/test/Twig/Tests/Fixtures/filters/format.test" />
-      <change type="MOVED" beforePath="D:\Dev\repos\CopperResistance\core\php\libraries\twig\test\Twig\Tests\Fixtures\filters\join.test" afterPath="$PROJECT_DIR$/core/libraries/twig/test/Twig/Tests/Fixtures/filters/join.test" />
-      <change type="MOVED" beforePath="D:\Dev\repos\CopperResistance\core\php\libraries\twig\test\Twig\Tests\Fixtures\filters\json_encode.test" afterPath="$PROJECT_DIR$/core/libraries/twig/test/Twig/Tests/Fixtures/filters/json_encode.test" />
-      <change type="MOVED" beforePath="D:\Dev\repos\CopperResistance\core\php\libraries\twig\test\Twig\Tests\Fixtures\filters\last.test" afterPath="$PROJECT_DIR$/core/libraries/twig/test/Twig/Tests/Fixtures/filters/last.test" />
-      <change type="MOVED" beforePath="D:\Dev\repos\CopperResistance\core\php\libraries\twig\test\Twig\Tests\Fixtures\filters\length.test" afterPath="$PROJECT_DIR$/core/libraries/twig/test/Twig/Tests/Fixtures/filters/length.test" />
-      <change type="MOVED" beforePath="D:\Dev\repos\CopperResistance\core\php\libraries\twig\test\Twig\Tests\Fixtures\filters\length_utf8.test" afterPath="$PROJECT_DIR$/core/libraries/twig/test/Twig/Tests/Fixtures/filters/length_utf8.test" />
-      <change type="MOVED" beforePath="D:\Dev\repos\CopperResistance\core\php\libraries\twig\test\Twig\Tests\Fixtures\filters\merge.test" afterPath="$PROJECT_DIR$/core/libraries/twig/test/Twig/Tests/Fixtures/filters/merge.test" />
-      <change type="MOVED" beforePath="D:\Dev\repos\CopperResistance\core\php\libraries\twig\test\Twig\Tests\Fixtures\filters\nl2br.test" afterPath="$PROJECT_DIR$/core/libraries/twig/test/Twig/Tests/Fixtures/filters/nl2br.test" />
-      <change type="MOVED" beforePath="D:\Dev\repos\CopperResistance\core\php\libraries\twig\test\Twig\Tests\Fixtures\filters\number_format.test" afterPath="$PROJECT_DIR$/core/libraries/twig/test/Twig/Tests/Fixtures/filters/number_format.test" />
-      <change type="MOVED" beforePath="D:\Dev\repos\CopperResistance\core\php\libraries\twig\test\Twig\Tests\Fixtures\filters\number_format_default.test" afterPath="$PROJECT_DIR$/core/libraries/twig/test/Twig/Tests/Fixtures/filters/number_format_default.test" />
-      <change type="MOVED" beforePath="D:\Dev\repos\CopperResistance\core\php\libraries\twig\test\Twig\Tests\Fixtures\filters\replace.test" afterPath="$PROJECT_DIR$/core/libraries/twig/test/Twig/Tests/Fixtures/filters/replace.test" />
-      <change type="MOVED" beforePath="D:\Dev\repos\CopperResistance\core\php\libraries\twig\test\Twig\Tests\Fixtures\filters\reverse.test" afterPath="$PROJECT_DIR$/core/libraries/twig/test/Twig/Tests/Fixtures/filters/reverse.test" />
-      <change type="MOVED" beforePath="D:\Dev\repos\CopperResistance\core\php\libraries\twig\test\Twig\Tests\Fixtures\filters\round.test" afterPath="$PROJECT_DIR$/core/libraries/twig/test/Twig/Tests/Fixtures/filters/round.test" />
-      <change type="MOVED" beforePath="D:\Dev\repos\CopperResistance\core\php\libraries\twig\test\Twig\Tests\Fixtures\filters\slice.test" afterPath="$PROJECT_DIR$/core/libraries/twig/test/Twig/Tests/Fixtures/filters/slice.test" />
-      <change type="MOVED" beforePath="D:\Dev\repos\CopperResistance\core\php\libraries\twig\test\Twig\Tests\Fixtures\filters\sort.test" afterPath="$PROJECT_DIR$/core/libraries/twig/test/Twig/Tests/Fixtures/filters/sort.test" />
-      <change type="MOVED" beforePath="D:\Dev\repos\CopperResistance\core\php\libraries\twig\test\Twig\Tests\Fixtures\filters\special_chars.test" afterPath="$PROJECT_DIR$/core/libraries/twig/test/Twig/Tests/Fixtures/filters/special_chars.test" />
-      <change type="MOVED" beforePath="D:\Dev\repos\CopperResistance\core\php\libraries\twig\test\Twig\Tests\Fixtures\filters\split.test" afterPath="$PROJECT_DIR$/core/libraries/twig/test/Twig/Tests/Fixtures/filters/split.test" />
-      <change type="MOVED" beforePath="D:\Dev\repos\CopperResistance\core\php\libraries\twig\test\Twig\Tests\Fixtures\filters\trim.test" afterPath="$PROJECT_DIR$/core/libraries/twig/test/Twig/Tests/Fixtures/filters/trim.test" />
-      <change type="MOVED" beforePath="D:\Dev\repos\CopperResistance\core\php\libraries\twig\test\Twig\Tests\Fixtures\filters\urlencode.test" afterPath="$PROJECT_DIR$/core/libraries/twig/test/Twig/Tests/Fixtures/filters/urlencode.test" />
-      <change type="MOVED" beforePath="D:\Dev\repos\CopperResistance\core\php\libraries\twig\test\Twig\Tests\Fixtures\functions\attribute.test" afterPath="$PROJECT_DIR$/core/libraries/twig/test/Twig/Tests/Fixtures/functions/attribute.test" />
-      <change type="MOVED" beforePath="D:\Dev\repos\CopperResistance\core\php\libraries\twig\test\Twig\Tests\Fixtures\functions\block.test" afterPath="$PROJECT_DIR$/core/libraries/twig/test/Twig/Tests/Fixtures/functions/block.test" />
-      <change type="MOVED" beforePath="D:\Dev\repos\CopperResistance\core\php\libraries\twig\test\Twig\Tests\Fixtures\functions\constant.test" afterPath="$PROJECT_DIR$/core/libraries/twig/test/Twig/Tests/Fixtures/functions/constant.test" />
-      <change type="MOVED" beforePath="D:\Dev\repos\CopperResistance\core\php\libraries\twig\test\Twig\Tests\Fixtures\functions\cycle.test" afterPath="$PROJECT_DIR$/core/libraries/twig/test/Twig/Tests/Fixtures/functions/cycle.test" />
-      <change type="MOVED" beforePath="D:\Dev\repos\CopperResistance\core\php\libraries\twig\test\Twig\Tests\Fixtures\functions\date.test" afterPath="$PROJECT_DIR$/core/libraries/twig/test/Twig/Tests/Fixtures/functions/date.test" />
-      <change type="MOVED" beforePath="D:\Dev\repos\CopperResistance\core\php\libraries\twig\test\Twig\Tests\Fixtures\functions\date_namedargs.test" afterPath="$PROJECT_DIR$/core/libraries/twig/test/Twig/Tests/Fixtures/functions/date_namedargs.test" />
-      <change type="MOVED" beforePath="D:\Dev\repos\CopperResistance\core\php\libraries\twig\test\Twig\Tests\Fixtures\functions\dump.test" afterPath="$PROJECT_DIR$/core/libraries/twig/test/Twig/Tests/Fixtures/functions/dump.test" />
-      <change type="MOVED" beforePath="D:\Dev\repos\CopperResistance\core\php\libraries\twig\test\Twig\Tests\Fixtures\functions\dump_array.test" afterPath="$PROJECT_DIR$/core/libraries/twig/test/Twig/Tests/Fixtures/functions/dump_array.test" />
-      <change type="MOVED" beforePath="D:\Dev\repos\CopperResistance\core\php\libraries\twig\test\Twig\Tests\Fixtures\functions\dynamic_function.test" afterPath="$PROJECT_DIR$/core/libraries/twig/test/Twig/Tests/Fixtures/functions/dynamic_function.test" />
-      <change type="MOVED" beforePath="D:\Dev\repos\CopperResistance\core\php\libraries\twig\test\Twig\Tests\Fixtures\functions\include\assignment.test" afterPath="$PROJECT_DIR$/core/libraries/twig/test/Twig/Tests/Fixtures/functions/include/assignment.test" />
-      <change type="MOVED" beforePath="D:\Dev\repos\CopperResistance\core\php\libraries\twig\test\Twig\Tests\Fixtures\functions\include\autoescaping.test" afterPath="$PROJECT_DIR$/core/libraries/twig/test/Twig/Tests/Fixtures/functions/include/autoescaping.test" />
-      <change type="MOVED" beforePath="D:\Dev\repos\CopperResistance\core\php\libraries\twig\test\Twig\Tests\Fixtures\functions\include\basic.test" afterPath="$PROJECT_DIR$/core/libraries/twig/test/Twig/Tests/Fixtures/functions/include/basic.test" />
-      <change type="MOVED" beforePath="D:\Dev\repos\CopperResistance\core\php\libraries\twig\test\Twig\Tests\Fixtures\functions\include\expression.test" afterPath="$PROJECT_DIR$/core/libraries/twig/test/Twig/Tests/Fixtures/functions/include/expression.test" />
-      <change type="MOVED" beforePath="D:\Dev\repos\CopperResistance\core\php\libraries\twig\test\Twig\Tests\Fixtures\functions\include\ignore_missing.test" afterPath="$PROJECT_DIR$/core/libraries/twig/test/Twig/Tests/Fixtures/functions/include/ignore_missing.test" />
-      <change type="MOVED" beforePath="D:\Dev\repos\CopperResistance\core\php\libraries\twig\test\Twig\Tests\Fixtures\functions\include\missing.test" afterPath="$PROJECT_DIR$/core/libraries/twig/test/Twig/Tests/Fixtures/functions/include/missing.test" />
-      <change type="MOVED" beforePath="D:\Dev\repos\CopperResistance\core\php\libraries\twig\test\Twig\Tests\Fixtures\functions\include\missing_nested.test" afterPath="$PROJECT_DIR$/core/libraries/twig/test/Twig/Tests/Fixtures/functions/include/missing_nested.test" />
-      <change type="MOVED" beforePath="D:\Dev\repos\CopperResistance\core\php\libraries\twig\test\Twig\Tests\Fixtures\functions\include\sandbox.test" afterPath="$PROJECT_DIR$/core/libraries/twig/test/Twig/Tests/Fixtures/functions/include/sandbox.test" />
-      <change type="MOVED" beforePath="D:\Dev\repos\CopperResistance\core\php\libraries\twig\test\Twig\Tests\Fixtures\functions\include\template_instance.test" afterPath="$PROJECT_DIR$/core/libraries/twig/test/Twig/Tests/Fixtures/functions/include/template_instance.test" />
-      <change type="MOVED" beforePath="D:\Dev\repos\CopperResistance\core\php\libraries\twig\test\Twig\Tests\Fixtures\functions\include\templates_as_array.test" afterPath="$PROJECT_DIR$/core/libraries/twig/test/Twig/Tests/Fixtures/functions/include/templates_as_array.test" />
-      <change type="MOVED" beforePath="D:\Dev\repos\CopperResistance\core\php\libraries\twig\test\Twig\Tests\Fixtures\functions\include\with_context.test" afterPath="$PROJECT_DIR$/core/libraries/twig/test/Twig/Tests/Fixtures/functions/include/with_context.test" />
-      <change type="MOVED" beforePath="D:\Dev\repos\CopperResistance\core\php\libraries\twig\test\Twig\Tests\Fixtures\functions\include\with_variables.test" afterPath="$PROJECT_DIR$/core/libraries/twig/test/Twig/Tests/Fixtures/functions/include/with_variables.test" />
-      <change type="MOVED" beforePath="D:\Dev\repos\CopperResistance\core\php\libraries\twig\test\Twig\Tests\Fixtures\functions\max.test" afterPath="$PROJECT_DIR$/core/libraries/twig/test/Twig/Tests/Fixtures/functions/max.test" />
-      <change type="MOVED" beforePath="D:\Dev\repos\CopperResistance\core\php\libraries\twig\test\Twig\Tests\Fixtures\functions\min.test" afterPath="$PROJECT_DIR$/core/libraries/twig/test/Twig/Tests/Fixtures/functions/min.test" />
-      <change type="MOVED" beforePath="D:\Dev\repos\CopperResistance\core\php\libraries\twig\test\Twig\Tests\Fixtures\functions\range.test" afterPath="$PROJECT_DIR$/core/libraries/twig/test/Twig/Tests/Fixtures/functions/range.test" />
-      <change type="MOVED" beforePath="D:\Dev\repos\CopperResistance\core\php\libraries\twig\test\Twig\Tests\Fixtures\functions\source.test" afterPath="$PROJECT_DIR$/core/libraries/twig/test/Twig/Tests/Fixtures/functions/source.test" />
-      <change type="MOVED" beforePath="D:\Dev\repos\CopperResistance\core\php\libraries\twig\test\Twig\Tests\Fixtures\functions\special_chars.test" afterPath="$PROJECT_DIR$/core/libraries/twig/test/Twig/Tests/Fixtures/functions/special_chars.test" />
-      <change type="MOVED" beforePath="D:\Dev\repos\CopperResistance\core\php\libraries\twig\test\Twig\Tests\Fixtures\functions\template_from_string.test" afterPath="$PROJECT_DIR$/core/libraries/twig/test/Twig/Tests/Fixtures/functions/template_from_string.test" />
-      <change type="MOVED" beforePath="D:\Dev\repos\CopperResistance\core\php\libraries\twig\test\Twig\Tests\Fixtures\macros\default_values.test" afterPath="$PROJECT_DIR$/core/libraries/twig/test/Twig/Tests/Fixtures/macros/default_values.test" />
-      <change type="MOVED" beforePath="D:\Dev\repos\CopperResistance\core\php\libraries\twig\test\Twig\Tests\Fixtures\macros\nested_calls.test" afterPath="$PROJECT_DIR$/core/libraries/twig/test/Twig/Tests/Fixtures/macros/nested_calls.test" />
-      <change type="MOVED" beforePath="D:\Dev\repos\CopperResistance\core\php\libraries\twig\test\Twig\Tests\Fixtures\macros\reserved_variables.test" afterPath="$PROJECT_DIR$/core/libraries/twig/test/Twig/Tests/Fixtures/macros/reserved_variables.test" />
-      <change type="MOVED" beforePath="D:\Dev\repos\CopperResistance\core\php\libraries\twig\test\Twig\Tests\Fixtures\macros\simple.test" afterPath="$PROJECT_DIR$/core/libraries/twig/test/Twig/Tests/Fixtures/macros/simple.test" />
-      <change type="MOVED" beforePath="D:\Dev\repos\CopperResistance\core\php\libraries\twig\test\Twig\Tests\Fixtures\macros\with_filters.test" afterPath="$PROJECT_DIR$/core/libraries/twig/test/Twig/Tests/Fixtures/macros/with_filters.test" />
-      <change type="MOVED" beforePath="D:\Dev\repos\CopperResistance\core\php\libraries\twig\test\Twig\Tests\Fixtures\regression\empty_token.test" afterPath="$PROJECT_DIR$/core/libraries/twig/test/Twig/Tests/Fixtures/regression/empty_token.test" />
-      <change type="MOVED" beforePath="D:\Dev\repos\CopperResistance\core\php\libraries\twig\test\Twig\Tests\Fixtures\regression\issue_1143.test" afterPath="$PROJECT_DIR$/core/libraries/twig/test/Twig/Tests/Fixtures/regression/issue_1143.test" />
-      <change type="MOVED" beforePath="D:\Dev\repos\CopperResistance\core\php\libraries\twig\test\Twig\Tests\Fixtures\regression\simple_xml_element.test" afterPath="$PROJECT_DIR$/core/libraries/twig/test/Twig/Tests/Fixtures/regression/simple_xml_element.test" />
-      <change type="MOVED" beforePath="D:\Dev\repos\CopperResistance\core\php\libraries\twig\test\Twig\Tests\Fixtures\regression\strings_like_numbers.test" afterPath="$PROJECT_DIR$/core/libraries/twig/test/Twig/Tests/Fixtures/regression/strings_like_numbers.test" />
-      <change type="MOVED" beforePath="D:\Dev\repos\CopperResistance\core\php\libraries\twig\test\Twig\Tests\Fixtures\tags\autoescape\basic.test" afterPath="$PROJECT_DIR$/core/libraries/twig/test/Twig/Tests/Fixtures/tags/autoescape/basic.test" />
-      <change type="MOVED" beforePath="D:\Dev\repos\CopperResistance\core\php\libraries\twig\test\Twig\Tests\Fixtures\tags\autoescape\blocks.test" afterPath="$PROJECT_DIR$/core/libraries/twig/test/Twig/Tests/Fixtures/tags/autoescape/blocks.test" />
-      <change type="MOVED" beforePath="D:\Dev\repos\CopperResistance\core\php\libraries\twig\test\Twig\Tests\Fixtures\tags\autoescape\double_escaping.test" afterPath="$PROJECT_DIR$/core/libraries/twig/test/Twig/Tests/Fixtures/tags/autoescape/double_escaping.test" />
-      <change type="MOVED" beforePath="D:\Dev\repos\CopperResistance\core\php\libraries\twig\test\Twig\Tests\Fixtures\tags\autoescape\functions.test" afterPath="$PROJECT_DIR$/core/libraries/twig/test/Twig/Tests/Fixtures/tags/autoescape/functions.test" />
-      <change type="MOVED" beforePath="D:\Dev\repos\CopperResistance\core\php\libraries\twig\test\Twig\Tests\Fixtures\tags\autoescape\literal.test" afterPath="$PROJECT_DIR$/core/libraries/twig/test/Twig/Tests/Fixtures/tags/autoescape/literal.test" />
-      <change type="MOVED" beforePath="D:\Dev\repos\CopperResistance\core\php\libraries\twig\test\Twig\Tests\Fixtures\tags\autoescape\nested.test" afterPath="$PROJECT_DIR$/core/libraries/twig/test/Twig/Tests/Fixtures/tags/autoescape/nested.test" />
-      <change type="MOVED" beforePath="D:\Dev\repos\CopperResistance\core\php\libraries\twig\test\Twig\Tests\Fixtures\tags\autoescape\objects.test" afterPath="$PROJECT_DIR$/core/libraries/twig/test/Twig/Tests/Fixtures/tags/autoescape/objects.test" />
-      <change type="MOVED" beforePath="D:\Dev\repos\CopperResistance\core\php\libraries\twig\test\Twig\Tests\Fixtures\tags\autoescape\raw.test" afterPath="$PROJECT_DIR$/core/libraries/twig/test/Twig/Tests/Fixtures/tags/autoescape/raw.test" />
-      <change type="MOVED" beforePath="D:\Dev\repos\CopperResistance\core\php\libraries\twig\test\Twig\Tests\Fixtures\tags\autoescape\strategy.test" afterPath="$PROJECT_DIR$/core/libraries/twig/test/Twig/Tests/Fixtures/tags/autoescape/strategy.test" />
-      <change type="MOVED" beforePath="D:\Dev\repos\CopperResistance\core\php\libraries\twig\test\Twig\Tests\Fixtures\tags\autoescape\type.test" afterPath="$PROJECT_DIR$/core/libraries/twig/test/Twig/Tests/Fixtures/tags/autoescape/type.test" />
-      <change type="MOVED" beforePath="D:\Dev\repos\CopperResistance\core\php\libraries\twig\test\Twig\Tests\Fixtures\tags\autoescape\with_filters.test" afterPath="$PROJECT_DIR$/core/libraries/twig/test/Twig/Tests/Fixtures/tags/autoescape/with_filters.test" />
-      <change type="MOVED" beforePath="D:\Dev\repos\CopperResistance\core\php\libraries\twig\test\Twig\Tests\Fixtures\tags\autoescape\with_filters_arguments.test" afterPath="$PROJECT_DIR$/core/libraries/twig/test/Twig/Tests/Fixtures/tags/autoescape/with_filters_arguments.test" />
-      <change type="MOVED" beforePath="D:\Dev\repos\CopperResistance\core\php\libraries\twig\test\Twig\Tests\Fixtures\tags\autoescape\with_pre_escape_filters.test" afterPath="$PROJECT_DIR$/core/libraries/twig/test/Twig/Tests/Fixtures/tags/autoescape/with_pre_escape_filters.test" />
-      <change type="MOVED" beforePath="D:\Dev\repos\CopperResistance\core\php\libraries\twig\test\Twig\Tests\Fixtures\tags\autoescape\with_preserves_safety_filters.test" afterPath="$PROJECT_DIR$/core/libraries/twig/test/Twig/Tests/Fixtures/tags/autoescape/with_preserves_safety_filters.test" />
-      <change type="MOVED" beforePath="D:\Dev\repos\CopperResistance\core\php\libraries\twig\test\Twig\Tests\Fixtures\tags\block\basic.test" afterPath="$PROJECT_DIR$/core/libraries/twig/test/Twig/Tests/Fixtures/tags/block/basic.test" />
-      <change type="MOVED" beforePath="D:\Dev\repos\CopperResistance\core\php\libraries\twig\test\Twig\Tests\Fixtures\tags\block\block_unique_name.test" afterPath="$PROJECT_DIR$/core/libraries/twig/test/Twig/Tests/Fixtures/tags/block/block_unique_name.test" />
-      <change type="MOVED" beforePath="D:\Dev\repos\CopperResistance\core\php\libraries\twig\test\Twig\Tests\Fixtures\tags\block\special_chars.test" afterPath="$PROJECT_DIR$/core/libraries/twig/test/Twig/Tests/Fixtures/tags/block/special_chars.test" />
-      <change type="MOVED" beforePath="D:\Dev\repos\CopperResistance\core\php\libraries\twig\test\Twig\Tests\Fixtures\tags\embed\basic.test" afterPath="$PROJECT_DIR$/core/libraries/twig/test/Twig/Tests/Fixtures/tags/embed/basic.test" />
-      <change type="MOVED" beforePath="D:\Dev\repos\CopperResistance\core\php\libraries\twig\test\Twig\Tests\Fixtures\tags\embed\error_line.test" afterPath="$PROJECT_DIR$/core/libraries/twig/test/Twig/Tests/Fixtures/tags/embed/error_line.test" />
-      <change type="MOVED" beforePath="D:\Dev\repos\CopperResistance\core\php\libraries\twig\test\Twig\Tests\Fixtures\tags\embed\multiple.test" afterPath="$PROJECT_DIR$/core/libraries/twig/test/Twig/Tests/Fixtures/tags/embed/multiple.test" />
-      <change type="MOVED" beforePath="D:\Dev\repos\CopperResistance\core\php\libraries\twig\test\Twig\Tests\Fixtures\tags\embed\nested.test" afterPath="$PROJECT_DIR$/core/libraries/twig/test/Twig/Tests/Fixtures/tags/embed/nested.test" />
-      <change type="MOVED" beforePath="D:\Dev\repos\CopperResistance\core\php\libraries\twig\test\Twig\Tests\Fixtures\tags\embed\with_extends.test" afterPath="$PROJECT_DIR$/core/libraries/twig/test/Twig/Tests/Fixtures/tags/embed/with_extends.test" />
-      <change type="MOVED" beforePath="D:\Dev\repos\CopperResistance\core\php\libraries\twig\test\Twig\Tests\Fixtures\tags\filter\basic.test" afterPath="$PROJECT_DIR$/core/libraries/twig/test/Twig/Tests/Fixtures/tags/filter/basic.test" />
-      <change type="MOVED" beforePath="D:\Dev\repos\CopperResistance\core\php\libraries\twig\test\Twig\Tests\Fixtures\tags\filter\json_encode.test" afterPath="$PROJECT_DIR$/core/libraries/twig/test/Twig/Tests/Fixtures/tags/filter/json_encode.test" />
-      <change type="MOVED" beforePath="D:\Dev\repos\CopperResistance\core\php\libraries\twig\test\Twig\Tests\Fixtures\tags\filter\multiple.test" afterPath="$PROJECT_DIR$/core/libraries/twig/test/Twig/Tests/Fixtures/tags/filter/multiple.test" />
-      <change type="MOVED" beforePath="D:\Dev\repos\CopperResistance\core\php\libraries\twig\test\Twig\Tests\Fixtures\tags\filter\nested.test" afterPath="$PROJECT_DIR$/core/libraries/twig/test/Twig/Tests/Fixtures/tags/filter/nested.test" />
-      <change type="MOVED" beforePath="D:\Dev\repos\CopperResistance\core\php\libraries\twig\test\Twig\Tests\Fixtures\tags\filter\with_for_tag.test" afterPath="$PROJECT_DIR$/core/libraries/twig/test/Twig/Tests/Fixtures/tags/filter/with_for_tag.test" />
-      <change type="MOVED" beforePath="D:\Dev\repos\CopperResistance\core\php\libraries\twig\test\Twig\Tests\Fixtures\tags\filter\with_if_tag.test" afterPath="$PROJECT_DIR$/core/libraries/twig/test/Twig/Tests/Fixtures/tags/filter/with_if_tag.test" />
-      <change type="MOVED" beforePath="D:\Dev\repos\CopperResistance\core\php\libraries\twig\test\Twig\Tests\Fixtures\tags\for\condition.test" afterPath="$PROJECT_DIR$/core/libraries/twig/test/Twig/Tests/Fixtures/tags/for/condition.test" />
-      <change type="MOVED" beforePath="D:\Dev\repos\CopperResistance\core\php\libraries\twig\test\Twig\Tests\Fixtures\tags\for\context.test" afterPath="$PROJECT_DIR$/core/libraries/twig/test/Twig/Tests/Fixtures/tags/for/context.test" />
-      <change type="MOVED" beforePath="D:\Dev\repos\CopperResistance\core\php\libraries\twig\test\Twig\Tests\Fixtures\tags\for\else.test" afterPath="$PROJECT_DIR$/core/libraries/twig/test/Twig/Tests/Fixtures/tags/for/else.test" />
-      <change type="MOVED" beforePath="D:\Dev\repos\CopperResistance\core\php\libraries\twig\test\Twig\Tests\Fixtures\tags\for\inner_variables.test" afterPath="$PROJECT_DIR$/core/libraries/twig/test/Twig/Tests/Fixtures/tags/for/inner_variables.test" />
-      <change type="MOVED" beforePath="D:\Dev\repos\CopperResistance\core\php\libraries\twig\test\Twig\Tests\Fixtures\tags\for\keys.test" afterPath="$PROJECT_DIR$/core/libraries/twig/test/Twig/Tests/Fixtures/tags/for/keys.test" />
-      <change type="MOVED" beforePath="D:\Dev\repos\CopperResistance\core\php\libraries\twig\test\Twig\Tests\Fixtures\tags\for\keys_and_values.test" afterPath="$PROJECT_DIR$/core/libraries/twig/test/Twig/Tests/Fixtures/tags/for/keys_and_values.test" />
-      <change type="MOVED" beforePath="D:\Dev\repos\CopperResistance\core\php\libraries\twig\test\Twig\Tests\Fixtures\tags\for\loop_context.test" afterPath="$PROJECT_DIR$/core/libraries/twig/test/Twig/Tests/Fixtures/tags/for/loop_context.test" />
-      <change type="MOVED" beforePath="D:\Dev\repos\CopperResistance\core\php\libraries\twig\test\Twig\Tests\Fixtures\tags\for\loop_context_local.test" afterPath="$PROJECT_DIR$/core/libraries/twig/test/Twig/Tests/Fixtures/tags/for/loop_context_local.test" />
-      <change type="MOVED" beforePath="D:\Dev\repos\CopperResistance\core\php\libraries\twig\test\Twig\Tests\Fixtures\tags\for\loop_not_defined.test" afterPath="$PROJECT_DIR$/core/libraries/twig/test/Twig/Tests/Fixtures/tags/for/loop_not_defined.test" />
-      <change type="MOVED" beforePath="D:\Dev\repos\CopperResistance\core\php\libraries\twig\test\Twig\Tests\Fixtures\tags\for\loop_not_defined_cond.test" afterPath="$PROJECT_DIR$/core/libraries/twig/test/Twig/Tests/Fixtures/tags/for/loop_not_defined_cond.test" />
-      <change type="MOVED" beforePath="D:\Dev\repos\CopperResistance\core\php\libraries\twig\test\Twig\Tests\Fixtures\tags\for\nested_else.test" afterPath="$PROJECT_DIR$/core/libraries/twig/test/Twig/Tests/Fixtures/tags/for/nested_else.test" />
-      <change type="MOVED" beforePath="D:\Dev\repos\CopperResistance\core\php\libraries\twig\test\Twig\Tests\Fixtures\tags\for\objects.test" afterPath="$PROJECT_DIR$/core/libraries/twig/test/Twig/Tests/Fixtures/tags/for/objects.test" />
-      <change type="MOVED" beforePath="D:\Dev\repos\CopperResistance\core\php\libraries\twig\test\Twig\Tests\Fixtures\tags\for\objects_countable.test" afterPath="$PROJECT_DIR$/core/libraries/twig/test/Twig/Tests/Fixtures/tags/for/objects_countable.test" />
-      <change type="MOVED" beforePath="D:\Dev\repos\CopperResistance\core\php\libraries\twig\test\Twig\Tests\Fixtures\tags\for\recursive.test" afterPath="$PROJECT_DIR$/core/libraries/twig/test/Twig/Tests/Fixtures/tags/for/recursive.test" />
-      <change type="MOVED" beforePath="D:\Dev\repos\CopperResistance\core\php\libraries\twig\test\Twig\Tests\Fixtures\tags\for\values.test" afterPath="$PROJECT_DIR$/core/libraries/twig/test/Twig/Tests/Fixtures/tags/for/values.test" />
-      <change type="MOVED" beforePath="D:\Dev\repos\CopperResistance\core\php\libraries\twig\test\Twig\Tests\Fixtures\tags\from.test" afterPath="$PROJECT_DIR$/core/libraries/twig/test/Twig/Tests/Fixtures/tags/from.test" />
-      <change type="MOVED" beforePath="D:\Dev\repos\CopperResistance\core\php\libraries\twig\test\Twig\Tests\Fixtures\tags\if\basic.test" afterPath="$PROJECT_DIR$/core/libraries/twig/test/Twig/Tests/Fixtures/tags/if/basic.test" />
-      <change type="MOVED" beforePath="D:\Dev\repos\CopperResistance\core\php\libraries\twig\test\Twig\Tests\Fixtures\tags\if\expression.test" afterPath="$PROJECT_DIR$/core/libraries/twig/test/Twig/Tests/Fixtures/tags/if/expression.test" />
-      <change type="MOVED" beforePath="D:\Dev\repos\CopperResistance\core\php\libraries\twig\test\Twig\Tests\Fixtures\tags\include\basic.test" afterPath="$PROJECT_DIR$/core/libraries/twig/test/Twig/Tests/Fixtures/tags/include/basic.test" />
-      <change type="MOVED" beforePath="D:\Dev\repos\CopperResistance\core\php\libraries\twig\test\Twig\Tests\Fixtures\tags\include\expression.test" afterPath="$PROJECT_DIR$/core/libraries/twig/test/Twig/Tests/Fixtures/tags/include/expression.test" />
-      <change type="MOVED" beforePath="D:\Dev\repos\CopperResistance\core\php\libraries\twig\test\Twig\Tests\Fixtures\tags\include\ignore_missing.test" afterPath="$PROJECT_DIR$/core/libraries/twig/test/Twig/Tests/Fixtures/tags/include/ignore_missing.test" />
-      <change type="MOVED" beforePath="D:\Dev\repos\CopperResistance\core\php\libraries\twig\test\Twig\Tests\Fixtures\tags\include\missing.test" afterPath="$PROJECT_DIR$/core/libraries/twig/test/Twig/Tests/Fixtures/tags/include/missing.test" />
-      <change type="MOVED" beforePath="D:\Dev\repos\CopperResistance\core\php\libraries\twig\test\Twig\Tests\Fixtures\tags\include\missing_nested.test" afterPath="$PROJECT_DIR$/core/libraries/twig/test/Twig/Tests/Fixtures/tags/include/missing_nested.test" />
-      <change type="MOVED" beforePath="D:\Dev\repos\CopperResistance\core\php\libraries\twig\test\Twig\Tests\Fixtures\tags\include\only.test" afterPath="$PROJECT_DIR$/core/libraries/twig/test/Twig/Tests/Fixtures/tags/include/only.test" />
-      <change type="MOVED" beforePath="D:\Dev\repos\CopperResistance\core\php\libraries\twig\test\Twig\Tests\Fixtures\tags\include\template_instance.test" afterPath="$PROJECT_DIR$/core/libraries/twig/test/Twig/Tests/Fixtures/tags/include/template_instance.test" />
-      <change type="MOVED" beforePath="D:\Dev\repos\CopperResistance\core\php\libraries\twig\test\Twig\Tests\Fixtures\tags\include\templates_as_array.test" afterPath="$PROJECT_DIR$/core/libraries/twig/test/Twig/Tests/Fixtures/tags/include/templates_as_array.test" />
-      <change type="MOVED" beforePath="D:\Dev\repos\CopperResistance\core\php\libraries\twig\test\Twig\Tests\Fixtures\tags\include\with_variables.test" afterPath="$PROJECT_DIR$/core/libraries/twig/test/Twig/Tests/Fixtures/tags/include/with_variables.test" />
-      <change type="MOVED" beforePath="D:\Dev\repos\CopperResistance\core\php\libraries\twig\test\Twig\Tests\Fixtures\tags\inheritance\basic.test" afterPath="$PROJECT_DIR$/core/libraries/twig/test/Twig/Tests/Fixtures/tags/inheritance/basic.test" />
-      <change type="MOVED" beforePath="D:\Dev\repos\CopperResistance\core\php\libraries\twig\test\Twig\Tests\Fixtures\tags\inheritance\conditional.test" afterPath="$PROJECT_DIR$/core/libraries/twig/test/Twig/Tests/Fixtures/tags/inheritance/conditional.test" />
-      <change type="MOVED" beforePath="D:\Dev\repos\CopperResistance\core\php\libraries\twig\test\Twig\Tests\Fixtures\tags\inheritance\dynamic.test" afterPath="$PROJECT_DIR$/core/libraries/twig/test/Twig/Tests/Fixtures/tags/inheritance/dynamic.test" />
-      <change type="MOVED" beforePath="D:\Dev\repos\CopperResistance\core\php\libraries\twig\test\Twig\Tests\Fixtures\tags\inheritance\empty.test" afterPath="$PROJECT_DIR$/core/libraries/twig/test/Twig/Tests/Fixtures/tags/inheritance/empty.test" />
-      <change type="MOVED" beforePath="D:\Dev\repos\CopperResistance\core\php\libraries\twig\test\Twig\Tests\Fixtures\tags\inheritance\extends_as_array.test" afterPath="$PROJECT_DIR$/core/libraries/twig/test/Twig/Tests/Fixtures/tags/inheritance/extends_as_array.test" />
-      <change type="MOVED" beforePath="D:\Dev\repos\CopperResistance\core\php\libraries\twig\test\Twig\Tests\Fixtures\tags\inheritance\multiple.test" afterPath="$PROJECT_DIR$/core/libraries/twig/test/Twig/Tests/Fixtures/tags/inheritance/multiple.test" />
-      <change type="MOVED" beforePath="D:\Dev\repos\CopperResistance\core\php\libraries\twig\test\Twig\Tests\Fixtures\tags\inheritance\nested_blocks.test" afterPath="$PROJECT_DIR$/core/libraries/twig/test/Twig/Tests/Fixtures/tags/inheritance/nested_blocks.test" />
-      <change type="MOVED" beforePath="D:\Dev\repos\CopperResistance\core\php\libraries\twig\test\Twig\Tests\Fixtures\tags\inheritance\nested_blocks_parent_only.test" afterPath="$PROJECT_DIR$/core/libraries/twig/test/Twig/Tests/Fixtures/tags/inheritance/nested_blocks_parent_only.test" />
-      <change type="MOVED" beforePath="D:\Dev\repos\CopperResistance\core\php\libraries\twig\test\Twig\Tests\Fixtures\tags\inheritance\nested_inheritance.test" afterPath="$PROJECT_DIR$/core/libraries/twig/test/Twig/Tests/Fixtures/tags/inheritance/nested_inheritance.test" />
-      <change type="MOVED" beforePath="D:\Dev\repos\CopperResistance\core\php\libraries\twig\test\Twig\Tests\Fixtures\tags\inheritance\parent.test" afterPath="$PROJECT_DIR$/core/libraries/twig/test/Twig/Tests/Fixtures/tags/inheritance/parent.test" />
-      <change type="MOVED" beforePath="D:\Dev\repos\CopperResistance\core\php\libraries\twig\test\Twig\Tests\Fixtures\tags\inheritance\parent_change.test" afterPath="$PROJECT_DIR$/core/libraries/twig/test/Twig/Tests/Fixtures/tags/inheritance/parent_change.test" />
-      <change type="MOVED" beforePath="D:\Dev\repos\CopperResistance\core\php\libraries\twig\test\Twig\Tests\Fixtures\tags\inheritance\parent_in_a_block.test" afterPath="$PROJECT_DIR$/core/libraries/twig/test/Twig/Tests/Fixtures/tags/inheritance/parent_in_a_block.test" />
-      <change type="MOVED" beforePath="D:\Dev\repos\CopperResistance\core\php\libraries\twig\test\Twig\Tests\Fixtures\tags\inheritance\parent_isolation.test" afterPath="$PROJECT_DIR$/core/libraries/twig/test/Twig/Tests/Fixtures/tags/inheritance/parent_isolation.test" />
-      <change type="MOVED" beforePath="D:\Dev\repos\CopperResistance\core\php\libraries\twig\test\Twig\Tests\Fixtures\tags\inheritance\parent_nested.test" afterPath="$PROJECT_DIR$/core/libraries/twig/test/Twig/Tests/Fixtures/tags/inheritance/parent_nested.test" />
-      <change type="MOVED" beforePath="D:\Dev\repos\CopperResistance\core\php\libraries\twig\test\Twig\Tests\Fixtures\tags\inheritance\parent_without_extends.test" afterPath="$PROJECT_DIR$/core/libraries/twig/test/Twig/Tests/Fixtures/tags/inheritance/parent_without_extends.test" />
-      <change type="MOVED" beforePath="D:\Dev\repos\CopperResistance\core\php\libraries\twig\test\Twig\Tests\Fixtures\tags\inheritance\parent_without_extends_but_traits.test" afterPath="$PROJECT_DIR$/core/libraries/twig/test/Twig/Tests/Fixtures/tags/inheritance/parent_without_extends_but_traits.test" />
-      <change type="MOVED" beforePath="D:\Dev\repos\CopperResistance\core\php\libraries\twig\test\Twig\Tests\Fixtures\tags\inheritance\template_instance.test" afterPath="$PROJECT_DIR$/core/libraries/twig/test/Twig/Tests/Fixtures/tags/inheritance/template_instance.test" />
-      <change type="MOVED" beforePath="D:\Dev\repos\CopperResistance\core\php\libraries\twig\test\Twig\Tests\Fixtures\tags\inheritance\use.test" afterPath="$PROJECT_DIR$/core/libraries/twig/test/Twig/Tests/Fixtures/tags/inheritance/use.test" />
-      <change type="MOVED" beforePath="D:\Dev\repos\CopperResistance\core\php\libraries\twig\test\Twig\Tests\Fixtures\tags\macro\basic.test" afterPath="$PROJECT_DIR$/core/libraries/twig/test/Twig/Tests/Fixtures/tags/macro/basic.test" />
-      <change type="MOVED" beforePath="D:\Dev\repos\CopperResistance\core\php\libraries\twig\test\Twig\Tests\Fixtures\tags\macro\endmacro_name.test" afterPath="$PROJECT_DIR$/core/libraries/twig/test/Twig/Tests/Fixtures/tags/macro/endmacro_name.test" />
-      <change type="MOVED" beforePath="D:\Dev\repos\CopperResistance\core\php\libraries\twig\test\Twig\Tests\Fixtures\tags\macro\external.test" afterPath="$PROJECT_DIR$/core/libraries/twig/test/Twig/Tests/Fixtures/tags/macro/external.test" />
-      <change type="MOVED" beforePath="D:\Dev\repos\CopperResistance\core\php\libraries\twig\test\Twig\Tests\Fixtures\tags\macro\from.test" afterPath="$PROJECT_DIR$/core/libraries/twig/test/Twig/Tests/Fixtures/tags/macro/from.test" />
-      <change type="MOVED" beforePath="D:\Dev\repos\CopperResistance\core\php\libraries\twig\test\Twig\Tests\Fixtures\tags\macro\global.test" afterPath="$PROJECT_DIR$/core/libraries/twig/test/Twig/Tests/Fixtures/tags/macro/global.test" />
-      <change type="MOVED" beforePath="D:\Dev\repos\CopperResistance\core\php\libraries\twig\test\Twig\Tests\Fixtures\tags\macro\self_import.test" afterPath="$PROJECT_DIR$/core/libraries/twig/test/Twig/Tests/Fixtures/tags/macro/self_import.test" />
-      <change type="MOVED" beforePath="D:\Dev\repos\CopperResistance\core\php\libraries\twig\test\Twig\Tests\Fixtures\tags\macro\special_chars.test" afterPath="$PROJECT_DIR$/core/libraries/twig/test/Twig/Tests/Fixtures/tags/macro/special_chars.test" />
-      <change type="MOVED" beforePath="D:\Dev\repos\CopperResistance\core\php\libraries\twig\test\Twig\Tests\Fixtures\tags\raw\basic.test" afterPath="$PROJECT_DIR$/core/libraries/twig/test/Twig/Tests/Fixtures/tags/raw/basic.test" />
-      <change type="MOVED" beforePath="D:\Dev\repos\CopperResistance\core\php\libraries\twig\test\Twig\Tests\Fixtures\tags\raw\mixed_usage_with_raw.test" afterPath="$PROJECT_DIR$/core/libraries/twig/test/Twig/Tests/Fixtures/tags/raw/mixed_usage_with_raw.test" />
-      <change type="MOVED" beforePath="D:\Dev\repos\CopperResistance\core\php\libraries\twig\test\Twig\Tests\Fixtures\tags\raw\whitespace_control.test" afterPath="$PROJECT_DIR$/core/libraries/twig/test/Twig/Tests/Fixtures/tags/raw/whitespace_control.test" />
-      <change type="MOVED" beforePath="D:\Dev\repos\CopperResistance\core\php\libraries\twig\test\Twig\Tests\Fixtures\tags\sandbox\not_valid1.test" afterPath="$PROJECT_DIR$/core/libraries/twig/test/Twig/Tests/Fixtures/tags/sandbox/not_valid1.test" />
-      <change type="MOVED" beforePath="D:\Dev\repos\CopperResistance\core\php\libraries\twig\test\Twig\Tests\Fixtures\tags\sandbox\not_valid2.test" afterPath="$PROJECT_DIR$/core/libraries/twig/test/Twig/Tests/Fixtures/tags/sandbox/not_valid2.test" />
-      <change type="MOVED" beforePath="D:\Dev\repos\CopperResistance\core\php\libraries\twig\test\Twig\Tests\Fixtures\tags\sandbox\simple.test" afterPath="$PROJECT_DIR$/core/libraries/twig/test/Twig/Tests/Fixtures/tags/sandbox/simple.test" />
-      <change type="MOVED" beforePath="D:\Dev\repos\CopperResistance\core\php\libraries\twig\test\Twig\Tests\Fixtures\tags\set\basic.test" afterPath="$PROJECT_DIR$/core/libraries/twig/test/Twig/Tests/Fixtures/tags/set/basic.test" />
-      <change type="MOVED" beforePath="D:\Dev\repos\CopperResistance\core\php\libraries\twig\test\Twig\Tests\Fixtures\tags\set\capture-empty.test" afterPath="$PROJECT_DIR$/core/libraries/twig/test/Twig/Tests/Fixtures/tags/set/capture-empty.test" />
-      <change type="MOVED" beforePath="D:\Dev\repos\CopperResistance\core\php\libraries\twig\test\Twig\Tests\Fixtures\tags\set\capture.test" afterPath="$PROJECT_DIR$/core/libraries/twig/test/Twig/Tests/Fixtures/tags/set/capture.test" />
-      <change type="MOVED" beforePath="D:\Dev\repos\CopperResistance\core\php\libraries\twig\test\Twig\Tests\Fixtures\tags\set\expression.test" afterPath="$PROJECT_DIR$/core/libraries/twig/test/Twig/Tests/Fixtures/tags/set/expression.test" />
-      <change type="MOVED" beforePath="D:\Dev\repos\CopperResistance\core\php\libraries\twig\test\Twig\Tests\Fixtures\tags\spaceless\simple.test" afterPath="$PROJECT_DIR$/core/libraries/twig/test/Twig/Tests/Fixtures/tags/spaceless/simple.test" />
-      <change type="MOVED" beforePath="D:\Dev\repos\CopperResistance\core\php\libraries\twig\test\Twig\Tests\Fixtures\tags\special_chars.test" afterPath="$PROJECT_DIR$/core/libraries/twig/test/Twig/Tests/Fixtures/tags/special_chars.test" />
-      <change type="MOVED" beforePath="D:\Dev\repos\CopperResistance\core\php\libraries\twig\test\Twig\Tests\Fixtures\tags\trim_block.test" afterPath="$PROJECT_DIR$/core/libraries/twig/test/Twig/Tests/Fixtures/tags/trim_block.test" />
-      <change type="MOVED" beforePath="D:\Dev\repos\CopperResistance\core\php\libraries\twig\test\Twig\Tests\Fixtures\tags\use\aliases.test" afterPath="$PROJECT_DIR$/core/libraries/twig/test/Twig/Tests/Fixtures/tags/use/aliases.test" />
-      <change type="MOVED" beforePath="D:\Dev\repos\CopperResistance\core\php\libraries\twig\test\Twig\Tests\Fixtures\tags\use\basic.test" afterPath="$PROJECT_DIR$/core/libraries/twig/test/Twig/Tests/Fixtures/tags/use/basic.test" />
-      <change type="MOVED" beforePath="D:\Dev\repos\CopperResistance\core\php\libraries\twig\test\Twig\Tests\Fixtures\tags\use\deep.test" afterPath="$PROJECT_DIR$/core/libraries/twig/test/Twig/Tests/Fixtures/tags/use/deep.test" />
-      <change type="MOVED" beforePath="D:\Dev\repos\CopperResistance\core\php\libraries\twig\test\Twig\Tests\Fixtures\tags\use\deep_empty.test" afterPath="$PROJECT_DIR$/core/libraries/twig/test/Twig/Tests/Fixtures/tags/use/deep_empty.test" />
-      <change type="MOVED" beforePath="D:\Dev\repos\CopperResistance\core\php\libraries\twig\test\Twig\Tests\Fixtures\tags\use\multiple.test" afterPath="$PROJECT_DIR$/core/libraries/twig/test/Twig/Tests/Fixtures/tags/use/multiple.test" />
-      <change type="MOVED" beforePath="D:\Dev\repos\CopperResistance\core\php\libraries\twig\test\Twig\Tests\Fixtures\tags\use\multiple_aliases.test" afterPath="$PROJECT_DIR$/core/libraries/twig/test/Twig/Tests/Fixtures/tags/use/multiple_aliases.test" />
-      <change type="MOVED" beforePath="D:\Dev\repos\CopperResistance\core\php\libraries\twig\test\Twig\Tests\Fixtures\tags\verbatim\basic.test" afterPath="$PROJECT_DIR$/core/libraries/twig/test/Twig/Tests/Fixtures/tags/verbatim/basic.test" />
-      <change type="MOVED" beforePath="D:\Dev\repos\CopperResistance\core\php\libraries\twig\test\Twig\Tests\Fixtures\tags\verbatim\mixed_usage_with_raw.test" afterPath="$PROJECT_DIR$/core/libraries/twig/test/Twig/Tests/Fixtures/tags/verbatim/mixed_usage_with_raw.test" />
-      <change type="MOVED" beforePath="D:\Dev\repos\CopperResistance\core\php\libraries\twig\test\Twig\Tests\Fixtures\tags\verbatim\whitespace_control.test" afterPath="$PROJECT_DIR$/core/libraries/twig/test/Twig/Tests/Fixtures/tags/verbatim/whitespace_control.test" />
-      <change type="MOVED" beforePath="D:\Dev\repos\CopperResistance\core\php\libraries\twig\test\Twig\Tests\Fixtures\tests\array.test" afterPath="$PROJECT_DIR$/core/libraries/twig/test/Twig/Tests/Fixtures/tests/array.test" />
-      <change type="MOVED" beforePath="D:\Dev\repos\CopperResistance\core\php\libraries\twig\test\Twig\Tests\Fixtures\tests\constant.test" afterPath="$PROJECT_DIR$/core/libraries/twig/test/Twig/Tests/Fixtures/tests/constant.test" />
-      <change type="MOVED" beforePath="D:\Dev\repos\CopperResistance\core\php\libraries\twig\test\Twig\Tests\Fixtures\tests\defined.test" afterPath="$PROJECT_DIR$/core/libraries/twig/test/Twig/Tests/Fixtures/tests/defined.test" />
-      <change type="MOVED" beforePath="D:\Dev\repos\CopperResistance\core\php\libraries\twig\test\Twig\Tests\Fixtures\tests\empty.test" afterPath="$PROJECT_DIR$/core/libraries/twig/test/Twig/Tests/Fixtures/tests/empty.test" />
-      <change type="MOVED" beforePath="D:\Dev\repos\CopperResistance\core\php\libraries\twig\test\Twig\Tests\Fixtures\tests\even.test" afterPath="$PROJECT_DIR$/core/libraries/twig/test/Twig/Tests/Fixtures/tests/even.test" />
-      <change type="MOVED" beforePath="D:\Dev\repos\CopperResistance\core\php\libraries\twig\test\Twig\Tests\Fixtures\tests\in.test" afterPath="$PROJECT_DIR$/core/libraries/twig/test/Twig/Tests/Fixtures/tests/in.test" />
-      <change type="MOVED" beforePath="D:\Dev\repos\CopperResistance\core\php\libraries\twig\test\Twig\Tests\Fixtures\tests\in_with_objects.test" afterPath="$PROJECT_DIR$/core/libraries/twig/test/Twig/Tests/Fixtures/tests/in_with_objects.test" />
-      <change type="MOVED" beforePath="D:\Dev\repos\CopperResistance\core\php\libraries\twig\test\Twig\Tests\Fixtures\tests\iterable.test" afterPath="$PROJECT_DIR$/core/libraries/twig/test/Twig/Tests/Fixtures/tests/iterable.test" />
-      <change type="MOVED" beforePath="D:\Dev\repos\CopperResistance\core\php\libraries\twig\test\Twig\Tests\Fixtures\tests\odd.test" afterPath="$PROJECT_DIR$/core/libraries/twig/test/Twig/Tests/Fixtures/tests/odd.test" />
-      <change type="MOVED" beforePath="D:\Dev\repos\CopperResistance\core\php\libraries\twig\test\Twig\Tests\IntegrationTest.php" afterPath="$PROJECT_DIR$/core/libraries/twig/test/Twig/Tests/IntegrationTest.php" />
-      <change type="MOVED" beforePath="D:\Dev\repos\CopperResistance\core\php\libraries\twig\test\Twig\Tests\LexerTest.php" afterPath="$PROJECT_DIR$/core/libraries/twig/test/Twig/Tests/LexerTest.php" />
-      <change type="MOVED" beforePath="D:\Dev\repos\CopperResistance\core\php\libraries\twig\test\Twig\Tests\Loader\ArrayTest.php" afterPath="$PROJECT_DIR$/core/libraries/twig/test/Twig/Tests/Loader/ArrayTest.php" />
-      <change type="MOVED" beforePath="D:\Dev\repos\CopperResistance\core\php\libraries\twig\test\Twig\Tests\Loader\ChainTest.php" afterPath="$PROJECT_DIR$/core/libraries/twig/test/Twig/Tests/Loader/ChainTest.php" />
-      <change type="MOVED" beforePath="D:\Dev\repos\CopperResistance\core\php\libraries\twig\test\Twig\Tests\Loader\FilesystemTest.php" afterPath="$PROJECT_DIR$/core/libraries/twig/test/Twig/Tests/Loader/FilesystemTest.php" />
-      <change type="MOVED" beforePath="D:\Dev\repos\CopperResistance\core\php\libraries\twig\test\Twig\Tests\Loader\Fixtures\named\index.html" afterPath="$PROJECT_DIR$/core/libraries/twig/test/Twig/Tests/Loader/Fixtures/named/index.html" />
-      <change type="MOVED" beforePath="D:\Dev\repos\CopperResistance\core\php\libraries\twig\test\Twig\Tests\Loader\Fixtures\named_bis\index.html" afterPath="$PROJECT_DIR$/core/libraries/twig/test/Twig/Tests/Loader/Fixtures/named_bis/index.html" />
-      <change type="MOVED" beforePath="D:\Dev\repos\CopperResistance\core\php\libraries\twig\test\Twig\Tests\Loader\Fixtures\named_final\index.html" afterPath="$PROJECT_DIR$/core/libraries/twig/test/Twig/Tests/Loader/Fixtures/named_final/index.html" />
-      <change type="MOVED" beforePath="D:\Dev\repos\CopperResistance\core\php\libraries\twig\test\Twig\Tests\Loader\Fixtures\named_ter\index.html" afterPath="$PROJECT_DIR$/core/libraries/twig/test/Twig/Tests/Loader/Fixtures/named_ter/index.html" />
-      <change type="MOVED" beforePath="D:\Dev\repos\CopperResistance\core\php\libraries\twig\test\Twig\Tests\Loader\Fixtures\normal\index.html" afterPath="$PROJECT_DIR$/core/libraries/twig/test/Twig/Tests/Loader/Fixtures/normal/index.html" />
-      <change type="MOVED" beforePath="D:\Dev\repos\CopperResistance\core\php\libraries\twig\test\Twig\Tests\Loader\Fixtures\normal_bis\index.html" afterPath="$PROJECT_DIR$/core/libraries/twig/test/Twig/Tests/Loader/Fixtures/normal_bis/index.html" />
-      <change type="MOVED" beforePath="D:\Dev\repos\CopperResistance\core\php\libraries\twig\test\Twig\Tests\Loader\Fixtures\normal_final\index.html" afterPath="$PROJECT_DIR$/core/libraries/twig/test/Twig/Tests/Loader/Fixtures/normal_final/index.html" />
-      <change type="MOVED" beforePath="D:\Dev\repos\CopperResistance\core\php\libraries\twig\test\Twig\Tests\Loader\Fixtures\normal_ter\index.html" afterPath="$PROJECT_DIR$/core/libraries/twig/test/Twig/Tests/Loader/Fixtures/normal_ter/index.html" />
-      <change type="MOVED" beforePath="D:\Dev\repos\CopperResistance\core\php\libraries\twig\test\Twig\Tests\Loader\Fixtures\themes\theme1\blocks.html.twig" afterPath="$PROJECT_DIR$/core/libraries/twig/test/Twig/Tests/Loader/Fixtures/themes/theme1/blocks.html.twig" />
-      <change type="MOVED" beforePath="D:\Dev\repos\CopperResistance\core\php\libraries\twig\test\Twig\Tests\Loader\Fixtures\themes\theme2\blocks.html.twig" afterPath="$PROJECT_DIR$/core/libraries/twig/test/Twig/Tests/Loader/Fixtures/themes/theme2/blocks.html.twig" />
-      <change type="MOVED" beforePath="D:\Dev\repos\CopperResistance\core\php\libraries\twig\test\Twig\Tests\NativeExtensionTest.php" afterPath="$PROJECT_DIR$/core/libraries/twig/test/Twig/Tests/NativeExtensionTest.php" />
-      <change type="MOVED" beforePath="D:\Dev\repos\CopperResistance\core\php\libraries\twig\test\Twig\Tests\NodeVisitor\OptimizerTest.php" afterPath="$PROJECT_DIR$/core/libraries/twig/test/Twig/Tests/NodeVisitor/OptimizerTest.php" />
-      <change type="MOVED" beforePath="D:\Dev\repos\CopperResistance\core\php\libraries\twig\test\Twig\Tests\Node\AutoEscapeTest.php" afterPath="$PROJECT_DIR$/core/libraries/twig/test/Twig/Tests/Node/AutoEscapeTest.php" />
-      <change type="MOVED" beforePath="D:\Dev\repos\CopperResistance\core\php\libraries\twig\test\Twig\Tests\Node\BlockReferenceTest.php" afterPath="$PROJECT_DIR$/core/libraries/twig/test/Twig/Tests/Node/BlockReferenceTest.php" />
-      <change type="MOVED" beforePath="D:\Dev\repos\CopperResistance\core\php\libraries\twig\test\Twig\Tests\Node\BlockTest.php" afterPath="$PROJECT_DIR$/core/libraries/twig/test/Twig/Tests/Node/BlockTest.php" />
-      <change type="MOVED" beforePath="D:\Dev\repos\CopperResistance\core\php\libraries\twig\test\Twig\Tests\Node\DoTest.php" afterPath="$PROJECT_DIR$/core/libraries/twig/test/Twig/Tests/Node/DoTest.php" />
-      <change type="MOVED" beforePath="D:\Dev\repos\CopperResistance\core\php\libraries\twig\test\Twig\Tests\Node\Expression\ArrayTest.php" afterPath="$PROJECT_DIR$/core/libraries/twig/test/Twig/Tests/Node/Expression/ArrayTest.php" />
-      <change type="MOVED" beforePath="D:\Dev\repos\CopperResistance\core\php\libraries\twig\test\Twig\Tests\Node\Expression\AssignNameTest.php" afterPath="$PROJECT_DIR$/core/libraries/twig/test/Twig/Tests/Node/Expression/AssignNameTest.php" />
-      <change type="MOVED" beforePath="D:\Dev\repos\CopperResistance\core\php\libraries\twig\test\Twig\Tests\Node\Expression\Binary\AddTest.php" afterPath="$PROJECT_DIR$/core/libraries/twig/test/Twig/Tests/Node/Expression/Binary/AddTest.php" />
-      <change type="MOVED" beforePath="D:\Dev\repos\CopperResistance\core\php\libraries\twig\test\Twig\Tests\Node\Expression\Binary\AndTest.php" afterPath="$PROJECT_DIR$/core/libraries/twig/test/Twig/Tests/Node/Expression/Binary/AndTest.php" />
-      <change type="MOVED" beforePath="D:\Dev\repos\CopperResistance\core\php\libraries\twig\test\Twig\Tests\Node\Expression\Binary\ConcatTest.php" afterPath="$PROJECT_DIR$/core/libraries/twig/test/Twig/Tests/Node/Expression/Binary/ConcatTest.php" />
-      <change type="MOVED" beforePath="D:\Dev\repos\CopperResistance\core\php\libraries\twig\test\Twig\Tests\Node\Expression\Binary\DivTest.php" afterPath="$PROJECT_DIR$/core/libraries/twig/test/Twig/Tests/Node/Expression/Binary/DivTest.php" />
-      <change type="MOVED" beforePath="D:\Dev\repos\CopperResistance\core\php\libraries\twig\test\Twig\Tests\Node\Expression\Binary\FloorDivTest.php" afterPath="$PROJECT_DIR$/core/libraries/twig/test/Twig/Tests/Node/Expression/Binary/FloorDivTest.php" />
-      <change type="MOVED" beforePath="D:\Dev\repos\CopperResistance\core\php\libraries\twig\test\Twig\Tests\Node\Expression\Binary\ModTest.php" afterPath="$PROJECT_DIR$/core/libraries/twig/test/Twig/Tests/Node/Expression/Binary/ModTest.php" />
-      <change type="MOVED" beforePath="D:\Dev\repos\CopperResistance\core\php\libraries\twig\test\Twig\Tests\Node\Expression\Binary\MulTest.php" afterPath="$PROJECT_DIR$/core/libraries/twig/test/Twig/Tests/Node/Expression/Binary/MulTest.php" />
-      <change type="MOVED" beforePath="D:\Dev\repos\CopperResistance\core\php\libraries\twig\test\Twig\Tests\Node\Expression\Binary\OrTest.php" afterPath="$PROJECT_DIR$/core/libraries/twig/test/Twig/Tests/Node/Expression/Binary/OrTest.php" />
-      <change type="MOVED" beforePath="D:\Dev\repos\CopperResistance\core\php\libraries\twig\test\Twig\Tests\Node\Expression\Binary\SubTest.php" afterPath="$PROJECT_DIR$/core/libraries/twig/test/Twig/Tests/Node/Expression/Binary/SubTest.php" />
-      <change type="MOVED" beforePath="D:\Dev\repos\CopperResistance\core\php\libraries\twig\test\Twig\Tests\Node\Expression\CallTest.php" afterPath="$PROJECT_DIR$/core/libraries/twig/test/Twig/Tests/Node/Expression/CallTest.php" />
-      <change type="MOVED" beforePath="D:\Dev\repos\CopperResistance\core\php\libraries\twig\test\Twig\Tests\Node\Expression\ConditionalTest.php" afterPath="$PROJECT_DIR$/core/libraries/twig/test/Twig/Tests/Node/Expression/ConditionalTest.php" />
-      <change type="MOVED" beforePath="D:\Dev\repos\CopperResistance\core\php\libraries\twig\test\Twig\Tests\Node\Expression\ConstantTest.php" afterPath="$PROJECT_DIR$/core/libraries/twig/test/Twig/Tests/Node/Expression/ConstantTest.php" />
-      <change type="MOVED" beforePath="D:\Dev\repos\CopperResistance\core\php\libraries\twig\test\Twig\Tests\Node\Expression\FilterTest.php" afterPath="$PROJECT_DIR$/core/libraries/twig/test/Twig/Tests/Node/Expression/FilterTest.php" />
-      <change type="MOVED" beforePath="D:\Dev\repos\CopperResistance\core\php\libraries\twig\test\Twig\Tests\Node\Expression\FunctionTest.php" afterPath="$PROJECT_DIR$/core/libraries/twig/test/Twig/Tests/Node/Expression/FunctionTest.php" />
-      <change type="MOVED" beforePath="D:\Dev\repos\CopperResistance\core\php\libraries\twig\test\Twig\Tests\Node\Expression\GetAttrTest.php" afterPath="$PROJECT_DIR$/core/libraries/twig/test/Twig/Tests/Node/Expression/GetAttrTest.php" />
-      <change type="MOVED" beforePath="D:\Dev\repos\CopperResistance\core\php\libraries\twig\test\Twig\Tests\Node\Expression\NameTest.php" afterPath="$PROJECT_DIR$/core/libraries/twig/test/Twig/Tests/Node/Expression/NameTest.php" />
-      <change type="MOVED" beforePath="D:\Dev\repos\CopperResistance\core\php\libraries\twig\test\Twig\Tests\Node\Expression\PHP53\FilterInclude.php" afterPath="$PROJECT_DIR$/core/libraries/twig/test/Twig/Tests/Node/Expression/PHP53/FilterInclude.php" />
-      <change type="MOVED" beforePath="D:\Dev\repos\CopperResistance\core\php\libraries\twig\test\Twig\Tests\Node\Expression\PHP53\FunctionInclude.php" afterPath="$PROJECT_DIR$/core/libraries/twig/test/Twig/Tests/Node/Expression/PHP53/FunctionInclude.php" />
-      <change type="MOVED" beforePath="D:\Dev\repos\CopperResistance\core\php\libraries\twig\test\Twig\Tests\Node\Expression\PHP53\TestInclude.php" afterPath="$PROJECT_DIR$/core/libraries/twig/test/Twig/Tests/Node/Expression/PHP53/TestInclude.php" />
-      <change type="MOVED" beforePath="D:\Dev\repos\CopperResistance\core\php\libraries\twig\test\Twig\Tests\Node\Expression\ParentTest.php" afterPath="$PROJECT_DIR$/core/libraries/twig/test/Twig/Tests/Node/Expression/ParentTest.php" />
-      <change type="MOVED" beforePath="D:\Dev\repos\CopperResistance\core\php\libraries\twig\test\Twig\Tests\Node\Expression\TestTest.php" afterPath="$PROJECT_DIR$/core/libraries/twig/test/Twig/Tests/Node/Expression/TestTest.php" />
-      <change type="MOVED" beforePath="D:\Dev\repos\CopperResistance\core\php\libraries\twig\test\Twig\Tests\Node\Expression\Unary\NegTest.php" afterPath="$PROJECT_DIR$/core/libraries/twig/test/Twig/Tests/Node/Expression/Unary/NegTest.php" />
-      <change type="MOVED" beforePath="D:\Dev\repos\CopperResistance\core\php\libraries\twig\test\Twig\Tests\Node\Expression\Unary\NotTest.php" afterPath="$PROJECT_DIR$/core/libraries/twig/test/Twig/Tests/Node/Expression/Unary/NotTest.php" />
-      <change type="MOVED" beforePath="D:\Dev\repos\CopperResistance\core\php\libraries\twig\test\Twig\Tests\Node\Expression\Unary\PosTest.php" afterPath="$PROJECT_DIR$/core/libraries/twig/test/Twig/Tests/Node/Expression/Unary/PosTest.php" />
-      <change type="MOVED" beforePath="D:\Dev\repos\CopperResistance\core\php\libraries\twig\test\Twig\Tests\Node\ForTest.php" afterPath="$PROJECT_DIR$/core/libraries/twig/test/Twig/Tests/Node/ForTest.php" />
-      <change type="MOVED" beforePath="D:\Dev\repos\CopperResistance\core\php\libraries\twig\test\Twig\Tests\Node\IfTest.php" afterPath="$PROJECT_DIR$/core/libraries/twig/test/Twig/Tests/Node/IfTest.php" />
-      <change type="MOVED" beforePath="D:\Dev\repos\CopperResistance\core\php\libraries\twig\test\Twig\Tests\Node\ImportTest.php" afterPath="$PROJECT_DIR$/core/libraries/twig/test/Twig/Tests/Node/ImportTest.php" />
-      <change type="MOVED" beforePath="D:\Dev\repos\CopperResistance\core\php\libraries\twig\test\Twig\Tests\Node\IncludeTest.php" afterPath="$PROJECT_DIR$/core/libraries/twig/test/Twig/Tests/Node/IncludeTest.php" />
-      <change type="MOVED" beforePath="D:\Dev\repos\CopperResistance\core\php\libraries\twig\test\Twig\Tests\Node\MacroTest.php" afterPath="$PROJECT_DIR$/core/libraries/twig/test/Twig/Tests/Node/MacroTest.php" />
-      <change type="MOVED" beforePath="D:\Dev\repos\CopperResistance\core\php\libraries\twig\test\Twig\Tests\Node\ModuleTest.php" afterPath="$PROJECT_DIR$/core/libraries/twig/test/Twig/Tests/Node/ModuleTest.php" />
-      <change type="MOVED" beforePath="D:\Dev\repos\CopperResistance\core\php\libraries\twig\test\Twig\Tests\Node\PrintTest.php" afterPath="$PROJECT_DIR$/core/libraries/twig/test/Twig/Tests/Node/PrintTest.php" />
-      <change type="MOVED" beforePath="D:\Dev\repos\CopperResistance\core\php\libraries\twig\test\Twig\Tests\Node\SandboxTest.php" afterPath="$PROJECT_DIR$/core/libraries/twig/test/Twig/Tests/Node/SandboxTest.php" />
-      <change type="MOVED" beforePath="D:\Dev\repos\CopperResistance\core\php\libraries\twig\test\Twig\Tests\Node\SandboxedModuleTest.php" afterPath="$PROJECT_DIR$/core/libraries/twig/test/Twig/Tests/Node/SandboxedModuleTest.php" />
-      <change type="MOVED" beforePath="D:\Dev\repos\CopperResistance\core\php\libraries\twig\test\Twig\Tests\Node\SandboxedPrintTest.php" afterPath="$PROJECT_DIR$/core/libraries/twig/test/Twig/Tests/Node/SandboxedPrintTest.php" />
-      <change type="MOVED" beforePath="D:\Dev\repos\CopperResistance\core\php\libraries\twig\test\Twig\Tests\Node\SetTest.php" afterPath="$PROJECT_DIR$/core/libraries/twig/test/Twig/Tests/Node/SetTest.php" />
-      <change type="MOVED" beforePath="D:\Dev\repos\CopperResistance\core\php\libraries\twig\test\Twig\Tests\Node\SpacelessTest.php" afterPath="$PROJECT_DIR$/core/libraries/twig/test/Twig/Tests/Node/SpacelessTest.php" />
-      <change type="MOVED" beforePath="D:\Dev\repos\CopperResistance\core\php\libraries\twig\test\Twig\Tests\Node\TextTest.php" afterPath="$PROJECT_DIR$/core/libraries/twig/test/Twig/Tests/Node/TextTest.php" />
-      <change type="MOVED" beforePath="D:\Dev\repos\CopperResistance\core\php\libraries\twig\test\Twig\Tests\ParserTest.php" afterPath="$PROJECT_DIR$/core/libraries/twig/test/Twig/Tests/ParserTest.php" />
-      <change type="MOVED" beforePath="D:\Dev\repos\CopperResistance\core\php\libraries\twig\test\Twig\Tests\TemplateTest.php" afterPath="$PROJECT_DIR$/core/libraries/twig/test/Twig/Tests/TemplateTest.php" />
-      <change type="MOVED" beforePath="D:\Dev\repos\CopperResistance\core\php\libraries\twig\test\Twig\Tests\TokenStreamTest.php" afterPath="$PROJECT_DIR$/core/libraries/twig/test/Twig/Tests/TokenStreamTest.php" />
-      <change type="MOVED" beforePath="D:\Dev\repos\CopperResistance\core\php\libraries\twig\test\Twig\Tests\escapingTest.php" afterPath="$PROJECT_DIR$/core/libraries/twig/test/Twig/Tests/escapingTest.php" />
-      <change type="MOVED" beforePath="D:\Dev\repos\CopperResistance\core\php\libraries\twig\test\bootstrap.php" afterPath="$PROJECT_DIR$/core/libraries/twig/test/bootstrap.php" />
-      <change type="MOVED" beforePath="D:\Dev\repos\CopperResistance\core\php\update.php" afterPath="$PROJECT_DIR$/core/update.php" />
-      <change type="MOVED" beforePath="D:\Dev\repos\CopperResistance\core\templates\story.html" afterPath="$PROJECT_DIR$/assets/templates/story.html" />
-      <change type="MOVED" beforePath="D:\Dev\repos\CopperResistance\core\templates\wire.html" afterPath="$PROJECT_DIR$/assets/templates/wire.html" />
-      <change type="MOVED" beforePath="D:\Dev\repos\CopperResistance\core\templates\wire_stream.html" afterPath="$PROJECT_DIR$/assets/templates/wire_stream.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/assets/templates/wire.html" afterPath="$PROJECT_DIR$/assets/templates/wire.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/components/classes/wire.class.php" afterPath="$PROJECT_DIR$/core/components/classes/wire.class.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/index.php" afterPath="$PROJECT_DIR$/index.php" />
     </list>
     <ignored path="CopperResistance.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -627,6 +26,33 @@
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
     <leaf>
+      <file leaf-file-name="wire.class.php" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/core/components/classes/wire.class.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="26" column="31" selection-start="514" selection-end="514" vertical-scroll-proportion="0.37633136">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="wire.js" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/assets/js/wire.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="37" column="1" selection-start="799" selection-end="799" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="database.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/core/components/database.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="24" column="0" selection-start="771" selection-end="879" vertical-scroll-proportion="-13.730769">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file leaf-file-name="story.php" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/story.php">
           <provider selected="true" editor-type-id="text-editor">
@@ -639,43 +65,34 @@
       <file leaf-file-name="update.php" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/core/update.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="30" column="0" selection-start="1534" selection-end="1534" vertical-scroll-proportion="-0.65384614">
+            <state line="25" column="123" selection-start="1166" selection-end="1229" vertical-scroll-proportion="-13.076923">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="wire.js" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/assets/js/wire.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="26" column="26" selection-start="604" selection-end="604" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="stream.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/stream.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="5" column="28" selection-start="88" selection-end="88" vertical-scroll-proportion="-3.2692308">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="index.php" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="index.php" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/index.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="9" column="0" selection-start="109" selection-end="109" vertical-scroll-proportion="0.18106508">
+            <state line="10" column="0" selection-start="163" selection-end="163" vertical-scroll-proportion="-6.5384617">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="config.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/config.php">
+      <file leaf-file-name="wire.html" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/assets/templates/wire.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="6" column="0" selection-start="209" selection-end="209" vertical-scroll-proportion="-3.9230769">
+            <state line="25" column="0" selection-start="799" selection-end="799" vertical-scroll-proportion="-4.576923">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="wire_stream.html" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/assets/templates/wire_stream.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-0.0">
               <folding />
             </state>
           </provider>
@@ -699,24 +116,6 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="views.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/core/components/views.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="14" column="0" selection-start="194" selection-end="194" vertical-scroll-proportion="-9.153846">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="wire.class.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/core/components/classes/wire.class.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="23" column="5" selection-start="587" selection-end="587" vertical-scroll-proportion="-15.038462">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
     </leaf>
   </component>
   <component name="FindManager">
@@ -730,9 +129,6 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/stream.php" />
-        <option value="$PROJECT_DIR$/assets/js/wire.js" />
-        <option value="$PROJECT_DIR$/core/libraries/routing/Matcher/UrlMatcher.php" />
         <option value="$PROJECT_DIR$/.htaccess" />
         <option value="$PROJECT_DIR$/core/components/Request.php" />
         <option value="$PROJECT_DIR$/test.php" />
@@ -743,9 +139,12 @@
         <option value="$PROJECT_DIR$/test2.php" />
         <option value="$PROJECT_DIR$/core/components/database.php" />
         <option value="$PROJECT_DIR$/config.php" />
-        <option value="$PROJECT_DIR$/core/components/classes/wire.class.php" />
         <option value="$PROJECT_DIR$/story.php" />
         <option value="$PROJECT_DIR$/core/components/classes/story.class.php" />
+        <option value="$PROJECT_DIR$/index.php" />
+        <option value="$PROJECT_DIR$/assets/js/wire.js" />
+        <option value="$PROJECT_DIR$/assets/templates/wire.html" />
+        <option value="$PROJECT_DIR$/core/components/classes/wire.class.php" />
       </list>
     </option>
   </component>
@@ -851,6 +250,56 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="classes" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="CopperResistance" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="CopperResistance" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="assets" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="templates" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="CopperResistance" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="CopperResistance" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="assets" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="js" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="CopperResistance" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="CopperResistance" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="assets" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -976,19 +425,14 @@
     <option name="FILE_HISTORY_SPLITTER_PROPORTION" value="0.6" />
   </component>
   <component name="XDebuggerManager">
-    <breakpoint-manager />
+    <breakpoint-manager>
+      <option name="time" value="1" />
+    </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/core/libraries/routing/Matcher/UrlMatcher.php">
       <provider selected="true" editor-type-id="text-editor">
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/core/components/database.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="76" column="0" selection-start="1699" selection-end="1699" vertical-scroll-proportion="-49.692307">
           <folding />
         </state>
       </provider>
@@ -1007,30 +451,9 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/core/update.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="30" column="0" selection-start="1534" selection-end="1534" vertical-scroll-proportion="-0.65384614">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/assets/js/wire.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="26" column="26" selection-start="604" selection-end="604" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/core/components/views.php">
       <provider selected="true" editor-type-id="text-editor">
         <state line="14" column="0" selection-start="194" selection-end="194" vertical-scroll-proportion="-9.153846">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/core/components/classes/wire.class.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="23" column="5" selection-start="587" selection-end="587" vertical-scroll-proportion="-15.038462">
           <folding />
         </state>
       </provider>
@@ -1056,9 +479,51 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/core/update.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="25" column="123" selection-start="1166" selection-end="1229" vertical-scroll-proportion="-13.076923">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/core/components/database.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="24" column="0" selection-start="771" selection-end="879" vertical-scroll-proportion="-13.730769">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/index.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="9" column="0" selection-start="109" selection-end="109" vertical-scroll-proportion="0.18106508">
+        <state line="10" column="0" selection-start="163" selection-end="163" vertical-scroll-proportion="-6.5384617">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/assets/templates/wire_stream.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/assets/js/wire.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="37" column="1" selection-start="799" selection-end="799" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/assets/templates/wire.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="25" column="0" selection-start="799" selection-end="799" vertical-scroll-proportion="-4.576923">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/core/components/classes/wire.class.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="26" column="31" selection-start="514" selection-end="514" vertical-scroll-proportion="0.37633136">
           <folding />
         </state>
       </provider>
