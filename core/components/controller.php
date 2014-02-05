@@ -1,15 +1,6 @@
 <?php
 
-class Page extends View {
-
-
-}
-
-class Chunk extends View {
-
-}
-
-class View {
+class Controller {
 
 	public $model;
 	public $name;
@@ -34,10 +25,4 @@ class View {
 
 		echo $twig->render($this->template, $this->data);
 	}
-}
-
-class Admin extends View {
-
-
-
 }

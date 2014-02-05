@@ -1,14 +1,21 @@
 <?php
 
 require 'core/libraries/router/AltoRouter.php';
-require 'core/components/views.php';
+require 'core/components/controller.php';
 require 'core/components/database.php';
 
 $router = new AltoRouter();
 $router->setBasePath('/CopperResistance');
 $router->map('GET|POST','/', array('c' => 'home', 'a' => 'render'));
-$router->map('GET','/test/', array('c' => 'test', 'a' => 'testaction'));
-$router->map('GET','/test/[i:id]', array('c' => 'test', 'a' => 'testaction'));
+$router->map('GET','/wire', array('c' => 'wire', 'a' => 'display'));
+$router->map('GET','/wire/[*:category]', array('c' => 'wire', 'a' => 'display'));
+$router->map('GET','/wire/load/[:cat]/[i:start]', array('c' => 'wire', 'a' => 'loadStream'));
+$router->map('GET','/test/[:category][i:id]', array('c' => 'test', 'a' => 'testaction'));
+
+$router->map('GET','/story/[i:id]', array('c' => 'story', 'a' => 'display'));
+$router->map('GET','/story/favourite/[i:id]', array('c' => 'story', 'a' => 'favourite'));
+$router->map('GET','/story/delete/[i:id]', array('c' => 'story', 'a' => 'delete'));
+
 
 // match current request
 $match = $router->match();
@@ -31,16 +38,3 @@ if ( isset($match['target']['c']) ){
 
 
 ?>
-<h1>AltoRouter</h3>
-
-<h3>Current request: </h3>
-<pre>
-	Target: <?php var_dump($match['target']); ?>
-	Params: <?php var_dump($match['params']); ?>
-	Name: 	<?php var_dump($match['name']); ?>
-</pre>
-
-<h3>Try these requests: </h3>
-<p><a href="<?php echo $router->generate('home'); ?>">GET <?php echo $router->generate('home'); ?></a></p>
-<p><a href="<?php echo $router->generate('users_show', array('id' => 5)); ?>">GET <?php echo $router->generate('users_show', array('id' => 5)); ?></a></p>
-<p><form action="<?php echo $router->generate('users_do', array('id' => 10, 'action' => 'update')); ?>" method="post"><button type="submit"><?php echo $router->generate('users_do', array('id' => 10, 'action' => 'update')); ?></button></form></p>

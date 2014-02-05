@@ -1,6 +1,6 @@
 <?php
 
-class Wire {
+class Wire extends Controller {
 
     private $db;
     public $category;
@@ -18,6 +18,12 @@ class Wire {
             $this->region = $region;
         }
 
+        $this->bindData('title', 'Wire');
+
+        $this->template = 'wire.html';
+
+        parent::__construct();
+
     }
 
     public function set_category($category){
@@ -28,10 +34,10 @@ class Wire {
 
     public function get_stories($start = 0){
 
-        if(isset($this->category)){
-            $query = 'SELECT s.* FROM catmap sc, stories s, categories c WHERE sc.category_id = c.id AND (c.id = ' . $this->category . ') AND s.id = sc.story_id GROUP BY s.id LIMIT ' .$start .', 15';
-        } else {
+        if($this->category == 'all'){
             $query = 'SELECT * from stories ORDER by date DESC LIMIT ' . $start . ', 15';
+        } else {
+            $query = 'SELECT s.* FROM catmap sc, stories s, categories c WHERE sc.category_id = c.id AND (c.id = ' . $this->category . ') AND s.id = sc.story_id GROUP BY s.id LIMIT ' .$start .', 15';
         }
 
         $stmt = $this->db->query($query);
@@ -72,6 +78,7 @@ class Wire {
     }
 
     public function get_stories_in_region(){
+
         $stmt = $this->db->query('SELECT * FROM stories WHERE source IN (' . $this->get_sources_in_region() . ')');
 
         $stmt->setFetchMode(PDO::FETCH_ASSOC);
@@ -83,5 +90,19 @@ class Wire {
         return $this->db->get_row("stories", "id", $id);
     }
 
+
+    public function loadStream($cat, $start){
+        $this->set_category($cat);
+        $this->template = 'wire_stream.html';
+        $this->bindData('stories',$this->get_stories($start));
+        $this->render();
+    }
+
+    public function display($cat = 'all'){
+        $this->bindData('categories', $this->get_categories());
+        $this->bindData('category', $cat);
+        $this->render();
+        
+    }
 }
 

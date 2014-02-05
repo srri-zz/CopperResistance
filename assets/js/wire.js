@@ -26,9 +26,9 @@ Wire.prototype.changeStory = function(id){
 Wire.prototype.loadStream = function(){
 	var url; 
 	if (this.cat !== undefined){
-		url = "stream.php?start="+this.start+"&cat="+this.cat
+		url = "wire/load/"+this.cat+"/"+this.start
 	} else {
-		url = "stream.php?start="+this.start
+		url = "wire/load/all/"+this.start
 	}
 
 	$.get(url, function( data ) { $("#stream").append(data); });
@@ -56,7 +56,7 @@ function Story(id){
 }
 
 Story.prototype.load = function(target){
-	$.getJSON("story.php?id="+this.id, function( data ) {
+	$.getJSON("story/"+this.id, function( data ) {
 		$(target+"-title").html(data.title);
 		$(target+"-date").html(data.date);
 		$(target+"-link").attr("href", data.link)

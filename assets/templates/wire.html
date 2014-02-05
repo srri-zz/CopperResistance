@@ -7,7 +7,7 @@
     	<meta name="description" content="">
     	<meta name="author" content="">
 
-    	<title>{{ title }}</title>		
+    	<title>nuwire - {{ title }}</title>		
 
     	<link href="assets/bs/css/bootstrap.css" rel="stylesheet">
     	<link href="assets/css/main.css" rel="stylesheet">
@@ -26,6 +26,7 @@
 
 			$(function(){
 				wire = new Wire("#stream", "#current-story");
+				wire.setCategory({{ category }});
 				wire.loadStream(); 
 			});
 
