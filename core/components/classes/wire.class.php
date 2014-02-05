@@ -21,14 +21,40 @@ class Wire {
     }
 
     public function set_category($category){
-        $this->category = $this->db->get_row("categories", "id", $category);
+
+        $this->category = $category;
+
     }
 
     public function get_stories($start = 0){
-        return $this->db->get_table("stories", "date", "desc", 15, $start, "source_id", $this->category['feeds']);
+
+        if(isset($this->category)){
+            $query = 'SELECT s.* FROM catmap sc, stories s, categories c WHERE sc.category_id = c.id AND (c.id = ' . $this->category . ') AND s.id = sc.story_id GROUP BY s.id LIMIT ' .$start .', 15';
+        } else {
+            $query = 'SELECT * from stories ORDER by date DESC LIMIT ' . $start . ', 15';
+        }
+
+        $stmt = $this->db->query($query);
+
+        $stmt->setFetchMode(PDO::FETCH_ASSOC);
+
+        return $stmt->fetchAll();
+        
+    }
+
+    public function get_all_stories($start = 0){
+
+        $query = "SELECT * from stories ORDER BY date DESC LIMIT " . $start . ", 15";
+
+        $stmt = $this->db->query($query);
+
+        $stmt->setFetchMode(PDO::FETCH_ASSOC);
+
+        return $stmt->fetchAll();
     }
 
     public function get_categories(){
+
         $stmt = $this->db->query('SELECT id, name FROM categories');
 
         $stmt->setFetchMode(PDO::FETCH_ASSOC);
@@ -37,6 +63,7 @@ class Wire {
     }
 
     public function get_sources_in_region(){
+
         $stmt = $this->db->query('SELECT id FROM sources WHERE region = ' . $this->region());
 
         $stmt->setFetchMode(PDO::FETCH_ASSOC);

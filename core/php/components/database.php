@@ -1,6 +1,6 @@
 <?php 
 
-class Database extends PDO {
+class Database extends PDO{
 
 	public function __construct(){
 
@@ -66,7 +66,6 @@ class Model {
 
 		$result = $STH->fetchAll(PDO::FETCH_ASSOC);
 		return $result[0];
-
 	}
 
 }
@@ -83,8 +82,8 @@ class PageModel extends Model {
 		return $this->info['title'];
 	}
 
-}
 
+}
 
 class ChunkModel extends Model {
 

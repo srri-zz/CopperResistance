@@ -2,7 +2,9 @@
 
 class Page extends View {
 
-	public function __construct($model){
+	public function __construct(){
+
+		$model = new PageModel();
 
 		parent::__construct($model);
 
@@ -40,3 +42,8 @@ class View {
 	}
 }
 
+class Admin extends View {
+
+
+
+}

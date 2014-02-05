@@ -94,8 +94,11 @@
 				$data = array($uid, $title, $date, $source_name, $source_id, $desc, $content, $image, $link, $color);  
   			
 			  	try
-			    {    
+			    {  
 			    	$stmt = $dbh->prepare("INSERT INTO stories (uid, title, date, source, source_id, description, content, image, link, color) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)");  
+					$stmt->execute($data); 
+
+					$stmt = $dbh->prepare("INSERT INTO catmap (category_id, story_id) VALUES (4, LAST_INSERT_ID())");  
 					$stmt->execute($data); 
 			    }
 			    catch (PDOException $e)

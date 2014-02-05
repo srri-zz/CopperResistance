@@ -1,15 +1,14 @@
 // Wire class
-function Wire(category, streamDiv, storyDiv){
+function Wire(streamDiv, storyDiv){
 
 	this.start = 0;
 	this.streamDiv = streamDiv;
 	this.storyDiv = storyDiv;
-	this.cat = category;
 	this.active = new Story(0);
 
 }
 
-Wire.prototype.changeCategory = function(id){
+Wire.prototype.setCategory = function(id){
     this.cat = id;
 }
 Wire.prototype.changeStory = function(id){
@@ -25,9 +24,14 @@ Wire.prototype.changeStory = function(id){
 }
 
 Wire.prototype.loadStream = function(){
-	$.get("stream.php?start="+this.start+"&cat="+this.cat, function( data ) {
-	  $("#stream").append(data);
-	});
+	var url; 
+	if (this.cat !== undefined){
+		url = "stream.php?start="+this.start+"&cat="+this.cat
+	} else {
+		url = "stream.php?start="+this.start
+	}
+
+	$.get(url, function( data ) { $("#stream").append(data); });
 }
 Wire.prototype.loadMore = function(){
 	this.start = this.start + 15;
@@ -35,10 +39,11 @@ Wire.prototype.loadMore = function(){
 }
 Wire.prototype.clearStream = function(){
     $("#stream").empty();
+    this.start = 0;
 }
 
 Wire.prototype.updateCategory = function(id){
-    this.changeCategory(id);
+    this.setCategory(id);
     this.clearStream();
     this.loadStream();
 }
@@ -58,5 +63,6 @@ Story.prototype.load = function(target){
 		$(target+"-source").html(data.source);
 		$(target+"-content").html(data.content);
 		$(target+'-con').scrollTop(0);
+		console.log("woo");
 	});
 }
