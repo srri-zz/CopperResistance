@@ -8,8 +8,8 @@ class Controller {
 	protected $template;
 	public $data = array();
 
-	public function __construct(){
-		//$this->model = new Model();
+	public function __construct($model){
+		$this->model = $model;
 	}
 
 	public function bindData($key, $value){

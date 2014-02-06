@@ -9,8 +9,9 @@
 
     	<title>nuwire - {{ title }}</title>		
 
-    	<link href="assets/bs/css/bootstrap.css" rel="stylesheet">
-    	<link href="assets/css/main.css" rel="stylesheet">
+    	<link href="http://localhost:8888/CopperResistance/assets/bs/css/bootstrap.css" rel="stylesheet">
+    	<link href="http://localhost:8888/CopperResistance/assets/css/main.css" rel="stylesheet">
+    	<link href="http://localhost:8888/CopperResistance/assets/css/bootstrap-datetimepicker.min.css" rel="stylesheet">
 
 	    <!--[if lt IE 9]>
     		<script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
@@ -18,16 +19,16 @@
     	<![endif]-->
     	<script src="https://code.jquery.com/jquery-1.10.2.min.js"></script>
 
-		<script src="assets/js/wire.js"></script>
+		<script src="http://localhost:8888/CopperResistance/assets/js/wire.js"></script>
 
 		<script>
 
 		var wire;
 
 			$(function(){
-				wire = new Wire("#stream", "#current-story");
-				wire.setCategory({{ category }});
-				wire.loadStream(); 
+
+				wire = new Wire("#stream", "#current-story", "{{ action }}", "{{ cur_category }}", "{{ query }}");
+				wire.load();
 			});
 
 		</script>
@@ -49,10 +50,13 @@
 		    <!-- Collect the nav links, forms, and other content for toggling -->
 		    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 		    	<ul class="main-nav nav navbar-nav">
-		    		<li class="active"><a href="#">All</a></li>
-		    		<li><a href="#">National</a></li>
-                {% for category in categories %}
-                    <li><a href="javascript:wire.updateCategory({{ category.id }});">{{ category.name }}</a></li>
+		    	{% for category in categories %}
+		    		{% if category.name == cur_category %}
+                    <li class="active">
+                    {% else %}
+                    <li>
+                    {% endif %}
+                	<a href="http://localhost:8888/CopperResistance/wire/{{ category.name }}">{{ category.name|capitalize }}</a></li>
                 {% endfor %}
 		    		<li class="dropdown">
 		    			<a href="#" class="dropdown-toggle" data-toggle="dropdown">Regional <b class="caret"></b></a>
@@ -67,9 +71,9 @@
 		    			</ul>
 		    		</li>
 		    	</ul>
-		    	<form class="navbar-form navbar-right hidden-sm hidden-xs" role="search">
+		    	<form class="navbar-form navbar-right hidden-sm hidden-xs" role="search" action="http://localhost:8888/CopperResistance/wire/search" method="get">
 			    		<div class="input-group" style="width: 300px;">
-			    			<input type="text" class="search-bar form-control">
+			    			<input name="q" type="text" class="search-bar form-control" value="{{ query }}" />
 			    			<span class="input-group-btn">
 			    				<button type="submit" class="btn btn-default search-button"><span class="glyphicon glyphicon-search"></span></button>
 			    			</span>
@@ -142,27 +146,50 @@
 					</div>
 				</div>
 				<div id="current-story-con" class="col-lg-6 scroll-con visible-lg">
-					<div id="current-bar">
-						<div style="padding: 13px 15px;">
-						  	<button class="btn btn-default btn-sm" type="button">
-						  		<span class="glyphicon glyphicon-edit"></span> Edit
-						  	</button>
-						  	<a href="{{ story.id }}" class="btn btn-default btn-sm">
-						  		<span class="glyphicon glyphicon-star"></span> Favourite
-						  	</a>
-						  	<button class="btn btn-default btn-sm" type="button">
-						  		<span class="glyphicon glyphicon-flag"></span> Flag
-						  	</button>
-						  	<button class="btn btn-default btn-sm dropdown-toggle" type="button" data-toggle="dropdown">
-								<span class="glyphicon glyphicon-tag"></span> Add Tag <span class="caret"></span>
-								</button>
+					<div id="current-story-wrap" style="display: none;">
+						<div id="current-bar">
+							<div style="padding: 13px 15px;">
+							  	<button class="btn btn-default btn-sm" data-toggle="modal" data-target=".bs-modal-lg" type="button">
+							  		<span class="glyphicon glyphicon-edit"></span> Edit
+							  	</button>
+							  	<a href="{{ story.id }}" class="btn btn-default btn-sm">
+							  		<span class="glyphicon glyphicon-star"></span> Favourite
+							  	</a>
+							  	<button class="btn btn-default btn-sm" type="button">
+							  		<span class="glyphicon glyphicon-flag"></span> Flag
+							  	</button>
+							  	<button class="btn btn-default btn-sm dropdown-toggle" type="button" data-toggle="dropdown">
+									<span class="glyphicon glyphicon-tag"></span> Add Tag <span class="caret"></span>
+									</button>
+							</div>
 						</div>
-					</div>
-					<div id="current-story" style="margin-top: 55px;">
-						<a id="current-story-link" href="#"><h3 id="current-story-title"></h3></a>
-						<h4 id="current-story-info" class="text-muted"><span id="current-story-date"></span> | <span id="current-story-source"></span></h4>
-						<hr>
-						<div id="current-story-content"></div>
+						<div id="current-story" style="margin-top: 55px;">
+							<a id="current-story-link" href="#"><h3 id="current-story-title"></h3></a>
+							<h4 id="current-story-info" class="text-muted"><span id="current-story-date"></span> - <span id="current-story-source"></span></h4>
+							<hr>
+							<div id="current-story-content"></div>
+
+							<div class="modal fade bs-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria=hidden="true">
+						  		<div class="modal-dialog modal-lg">
+						    		<div class="modal-content" style="padding: 5px 15px 25px 15px;">
+						     			<form role="form">
+						     			  <h3>Edit Article</h3>
+										  <div class="form-group">
+										    <label for="current-story-title-form">Title</label>
+										    <input type="text" class="form-control" value="test" id="current-story-title-form">
+										  </div>
+
+										  <br/>
+										  <button type="submit" class="btn btn-default">Submit</button>
+										</form>
+						    		</div>
+						  		</div>
+							</div>
+
+						</div>
+						<div id="current-story-placeholder">
+							there is nothing here.
+						</div>
 					</div>
 				</div>
 		</div>
@@ -177,6 +204,7 @@
 				</span> 
 			</div>
 		</div>
+	
 
 	<script>
 		$( "#load-more" ).click(function() {
@@ -190,6 +218,6 @@
 	</script>
 
     <!-- Bootstrap core JavaScript -->
-    <script src="assets/bs/js/bootstrap.min.js"></script>
+    <script src="http://localhost:8888/CopperResistance/assets/bs/js/bootstrap.min.js"></script>
   </body>
 </html>
