@@ -39,6 +39,13 @@ Wire.prototype.changeStory = function(id){
 
 }
 
+Wire.prototype.updateStory = function(){
+
+	this.active.update(this.storyDiv);
+
+}
+
+
 Wire.prototype.loadStream = function(){
 	
 	var url = "http://localhost:8888/CopperResistance/wire/load/"+this.category+"/"+this.start
@@ -78,22 +85,32 @@ function Story(id){
 
 Story.prototype.load = function(target){
 
-	$(target+"-wrap").css({ opacity: 0.2 });
-
 	$.getJSON("http://localhost:8888/CopperResistance/story/"+this.id, function( data ) {
+		$("#wire-stats").hide();
 		$(target+"-wrap").show();
 		$(target+"-placeholder").hide();
 		$(target+"-title").html(data.title);
 		$(target+"-title-form").val(data.title);
 
 		$(target+"-date").html(data.date);
-		$(target+"-link").attr("href", data.link)
+		$(target+"-date-form").val(data.date);
+
+		$(target+"-link").attr("href", data.link);
+		//$("#edit-story-form").attr("action", 'http://localhost:8888/CopperResistance/story/update/'+data.id);
+		$(target+"-link-form").val(data.link);
+
+		$(target+"-desc-form").text(data.description);
+
 		$(target+"-source").html(data.source);
 		$(target+"-content").html(data.content);
 		$(target+'-con').scrollTop(0);
 
-		$(target+"-wrap").css({ opacity: 1 });
-
-
 	});
+}
+
+Story.prototype.update = function(target){
+
+	$.post( "http://localhost:8888/CopperResistance/story/update/"+this.id, $( "#edit-story-form" ).serialize());
+
+
 }

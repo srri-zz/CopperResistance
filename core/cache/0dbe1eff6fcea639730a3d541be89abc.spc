@@ -1,0 +1,53 @@
+a:4:{s:5:"child";a:1:{s:0:"";a:1:{s:3:"rss";a:1:{i:0;a:6:{s:4:"data";s:3:"
+
+
+";s:7:"attribs";a:1:{s:0:"";a:1:{s:7:"version";s:3:"2.0";}}s:8:"xml_base";s:0:"";s:17:"xml_base_explicit";b:0;s:8:"xml_lang";s:0:"";s:5:"child";a:1:{s:0:"";a:1:{s:7:"channel";a:1:{i:0;a:6:{s:4:"data";s:24:"
+	
+	
+	
+	
+	
+	
+		
+		
+	
+	
+	";s:7:"attribs";a:0:{}s:8:"xml_base";s:0:"";s:17:"xml_base_explicit";b:0;s:8:"xml_lang";s:0:"";s:5:"child";a:3:{s:0:"";a:7:{s:5:"title";a:1:{i:0;a:5:{s:4:"data";s:23:"The Ubyssey » Features";s:7:"attribs";a:0:{}s:8:"xml_base";s:0:"";s:17:"xml_base_explicit";b:0;s:8:"xml_lang";s:0:"";}}s:4:"link";a:1:{i:0;a:5:{s:4:"data";s:17:"http://ubyssey.ca";s:7:"attribs";a:0:{}s:8:"xml_base";s:0:"";s:17:"xml_base_explicit";b:0;s:8:"xml_lang";s:0:"";}}s:11:"description";a:1:{i:0;a:5:{s:4:"data";s:32:"UBC's official student newspaper";s:7:"attribs";a:0:{}s:8:"xml_base";s:0:"";s:17:"xml_base_explicit";b:0;s:8:"xml_lang";s:0:"";}}s:13:"lastBuildDate";a:1:{i:0;a:5:{s:4:"data";s:31:"Sun, 23 Feb 2014 13:05:31 +0000";s:7:"attribs";a:0:{}s:8:"xml_base";s:0:"";s:17:"xml_base_explicit";b:0;s:8:"xml_lang";s:0:"";}}s:8:"language";a:1:{i:0;a:5:{s:4:"data";s:5:"en-US";s:7:"attribs";a:0:{}s:8:"xml_base";s:0:"";s:17:"xml_base_explicit";b:0;s:8:"xml_lang";s:0:"";}}s:9:"generator";a:1:{i:0;a:5:{s:4:"data";s:29:"http://wordpress.org/?v=3.8.1";s:7:"attribs";a:0:{}s:8:"xml_base";s:0:"";s:17:"xml_base_explicit";b:0;s:8:"xml_lang";s:0:"";}}s:4:"item";a:1:{i:0;a:6:{s:4:"data";s:39:"
+		
+		
+		
+		
+		
+		
+		
+		
+				
+			
+		
+		";s:7:"attribs";a:0:{}s:8:"xml_base";s:0:"";s:17:"xml_base_explicit";b:0;s:8:"xml_lang";s:0:"";s:5:"child";a:5:{s:0:"";a:6:{s:5:"title";a:1:{i:0;a:5:{s:4:"data";s:55:"David McArthur’s wine science course goes down smooth";s:7:"attribs";a:0:{}s:8:"xml_base";s:0:"";s:17:"xml_base_explicit";b:0;s:8:"xml_lang";s:0:"";}}s:4:"link";a:1:{i:0;a:5:{s:4:"data";s:56:"http://ubyssey.ca/features/david-mcarthur-our-campus294/";s:7:"attribs";a:0:{}s:8:"xml_base";s:0:"";s:17:"xml_base_explicit";b:0;s:8:"xml_lang";s:0:"";}}s:8:"comments";a:1:{i:0;a:5:{s:4:"data";s:65:"http://ubyssey.ca/features/david-mcarthur-our-campus294/#comments";s:7:"attribs";a:0:{}s:8:"xml_base";s:0:"";s:17:"xml_base_explicit";b:0;s:8:"xml_lang";s:0:"";}}s:7:"pubDate";a:1:{i:0;a:5:{s:4:"data";s:31:"Tue, 29 Oct 2013 22:06:55 +0000";s:7:"attribs";a:0:{}s:8:"xml_base";s:0:"";s:17:"xml_base_explicit";b:0;s:8:"xml_lang";s:0:"";}}s:4:"guid";a:1:{i:0;a:5:{s:4:"data";s:45:"http://ubyssey.ca/?post_type=features&p=40431";s:7:"attribs";a:1:{s:0:"";a:1:{s:11:"isPermaLink";s:5:"false";}}s:8:"xml_base";s:0:"";s:17:"xml_base_explicit";b:0;s:8:"xml_lang";s:0:"";}}s:11:"description";a:1:{i:0;a:5:{s:4:"data";s:397:"<p>Teaching a course called "Introduction to Wine Sciences," the David McArthur has managed to balance between the enjoyment and academic pursuit of wine.</p><p>The post <a rel="nofollow" href="http://ubyssey.ca/features/david-mcarthur-our-campus294/">David McArthur&#8217;s wine science course goes down smooth</a> appeared first on <a rel="nofollow" href="http://ubyssey.ca">The Ubyssey</a>.</p>";s:7:"attribs";a:0:{}s:8:"xml_base";s:0:"";s:17:"xml_base_explicit";b:0;s:8:"xml_lang";s:0:"";}}}s:32:"http://purl.org/dc/elements/1.1/";a:1:{s:7:"creator";a:1:{i:0;a:5:{s:4:"data";s:12:"Mormei Zanke";s:7:"attribs";a:0:{}s:8:"xml_base";s:0:"";s:17:"xml_base_explicit";b:0;s:8:"xml_lang";s:0:"";}}}s:40:"http://purl.org/rss/1.0/modules/content/";a:1:{s:7:"encoded";a:1:{i:0;a:5:{s:4:"data";s:5054:"<div id="attachment_40508" style="width: 1034px" class="wp-caption alignnone"><img src="http://ubyssey.ca/wp-content/uploads/2013/10/David-McArthur_20131017__Stephaine-Xu-1024x682.jpg" alt="Photo Stephanie Xu / The Ubyssey" width="1024" height="682" class="size-large wp-image-40508" /><p class="wp-caption-text">Photo Stephanie Xu / The Ubyssey</p></div>
+<div class="top-share">
+        <ul class="clearfix">
+            <li class="facebook-like"><div class="fb-like" data-href="http://ubyssey.ca/features/david-mcarthur-our-campus294/" data-send="false" data-layout="button_count" data-width="126" data-show-faces="true" data-action="recommend"></div></li>
+            <li class="tweet"><a href="https://twitter.com/share" class="twitter-share-button" data-url="http://ubyssey.ca/features/david-mcarthur-our-campus294/" data-lang="en" data-text="David McArthur&#8217;s wine science course goes down smooth" data-via="ubyssey">Tweet</a></li>
+            <li class="reddit hide-mobile"><script type="text/javascript" src="http://www.reddit.com/static/button/button1.js"></script></li>
+            <li class="hide-mobile hide-tablet"><a href="mailto:?subject=The Ubyssey: David McArthur&#8217;s wine science course goes down smooth&body=http://ubyssey.ca/features/david-mcarthur-our-campus294/" target="_blank"><span aria-hidden="true" class="icon-email"></span>&nbsp; email</a></li>
+            <li class="hide-mobile hide-tablet"><a href="javascript:window.print()"><span aria-hidden="true" class="icon-printer"></span>&nbsp; print</a></li>
+        </ul>
+    </div><!-- .top-share -->
+<p>David McArthur knows a thing or two about wines.</p>
+<p>Teaching a course called &#8220;Introduction to Wine Sciences,&#8221; the Land and Food Systems prof has managed to balance between the enjoyment and academic pursuit of wine.</p>
+<p>He was offered the teaching job in 2001, but McArthur says he was initially unsure if it would be merely a drinking course or if there was scientific analysis involved. </p>
+<div class="ub_box"><h3>Box of Facts</h3><strong>Wine recommendations for Halloween:</strong><br />
+B.C. VQA Okanagan Valley: Moon Cursor Vineyards: “Dead of Night” red and “Afraid of the Dark” white — try local VQA Wine Stores</p>
+<p><strong>For cooler weather in the fall:</strong> “I enjoy red wine especially.” Marques Casa Concha and CoverDrive blend (averages $27/bottle). The Seghesio Zinfandel from California ($33/bottle). </p>
+<p><strong>Cheaper fall option:</strong> Calona Vineyards’ Artist Series Pinot Noir is very good for only $14.</p>
+<p><strong>His take on boxed wine:</strong> “They can make a decent sangria.” McArthur’s economy wine picks are the B.C. VQA Calona Vineyards Artist Series wines (“often quite good,” $13-14/bottle), or the Cono Sur wines from Chile (“some are good,” $11–14/bottle) or &#8230; the Gallo wines from California (“for camping,” $9/bottle).<br />
+</div>
+<p>McArthur completed his undergraduate and master of science at UBC with a focus in horticulture — the study of plant cultivation — and continued on to receive his doctorate from the University of Alberta in plant physiology and agriculture sciences. Ultimately, it was his passion that convinced him to accept the position and teach FNH 330, a course he has developed and tweaked for over a decade. </p>
+<p>McArthur wanted the course to be both informative and fun. “It should be [a course] where you can walk out of the lab &#8230; and buy something from the wine store and not just pick a wine that has a kangaroo on it because it looks cool,&#8221; he said. &#8220;It gives you a real perspective.”</p>
+<p>Taste attributes, how the grapes were grown and processed and the best food pairings are just some of the factors McArthur takes into consideration. &#8220;Either in the lab [or] if I buy some for myself to enjoy off the job, I still use my sensory training to evaluate them as I sip,&#8221; he said.</p>
+<p>McArthur says many students seem to enjoy the course. One of his most memorable moments happened at a UBC alumni wine event when a father approached him, gave him a hug and relayed how both his son and daughter had taken his wine sciences class.</p>
+<p>“For many people, wine is something that is applicable to everyday life,&#8221; McArthur said. &#8220;Wine often appears at their meals and social occasions. It&#8217;s a topic of conversation.</p>
+<p>&#8220;Wine is about the land, people, the art and science of its making and how these all come together.”</p>
+<p>McArthur talks like a man who has found his niche — someone who truly loves his job and respects wine as an art form. After talking to him for just a few moments, it becomes clear that he approaches life much like he approaches wine: “I like a wine to surprise me.” </p>
+<p>The post <a rel="nofollow" href="http://ubyssey.ca/features/david-mcarthur-our-campus294/">David McArthur&#8217;s wine science course goes down smooth</a> appeared first on <a rel="nofollow" href="http://ubyssey.ca">The Ubyssey</a>.</p>";s:7:"attribs";a:0:{}s:8:"xml_base";s:0:"";s:17:"xml_base_explicit";b:0;s:8:"xml_lang";s:0:"";}}}s:36:"http://wellformedweb.org/CommentAPI/";a:1:{s:10:"commentRss";a:1:{i:0;a:5:{s:4:"data";s:61:"http://ubyssey.ca/features/david-mcarthur-our-campus294/feed/";s:7:"attribs";a:0:{}s:8:"xml_base";s:0:"";s:17:"xml_base_explicit";b:0;s:8:"xml_lang";s:0:"";}}}s:38:"http://purl.org/rss/1.0/modules/slash/";a:1:{s:8:"comments";a:1:{i:0;a:5:{s:4:"data";s:1:"0";s:7:"attribs";a:0:{}s:8:"xml_base";s:0:"";s:17:"xml_base_explicit";b:0;s:8:"xml_lang";s:0:"";}}}}}}}s:27:"http://www.w3.org/2005/Atom";a:1:{s:4:"link";a:1:{i:0;a:5:{s:4:"data";s:0:"";s:7:"attribs";a:1:{s:0:"";a:3:{s:4:"href";s:63:"http://ubyssey.ca/feed/?post_type=features&feature_category=nuw";s:3:"rel";s:4:"self";s:4:"type";s:19:"application/rss+xml";}}s:8:"xml_base";s:0:"";s:17:"xml_base_explicit";b:0;s:8:"xml_lang";s:0:"";}}}s:44:"http://purl.org/rss/1.0/modules/syndication/";a:2:{s:12:"updatePeriod";a:1:{i:0;a:5:{s:4:"data";s:6:"hourly";s:7:"attribs";a:0:{}s:8:"xml_base";s:0:"";s:17:"xml_base_explicit";b:0;s:8:"xml_lang";s:0:"";}}s:15:"updateFrequency";a:1:{i:0;a:5:{s:4:"data";s:1:"1";s:7:"attribs";a:0:{}s:8:"xml_base";s:0:"";s:17:"xml_base_explicit";b:0;s:8:"xml_lang";s:0:"";}}}}}}}}}}}}s:4:"type";i:128;s:7:"headers";a:20:{s:6:"server";s:12:"nginx/1.1.19";s:12:"content-type";s:23:"text/xml; charset=UTF-8";s:12:"x-powered-by";s:30:"PHP/5.5.9-1+sury.org~precise+1";s:12:"x-robots-tag";s:14:"noindex,follow";s:13:"last-modified";s:29:"Sun, 23 Feb 2014 13:05:31 GMT";s:7:"expires";s:29:"Sun, 23 Feb 2014 18:34:17 GMT";s:6:"pragma";s:6:"public";s:13:"cache-control";s:20:"max-age=3600, public";s:4:"etag";s:32:"e5d281c3dc720bf99320e846b56131a2";s:16:"content-encoding";s:4:"gzip";s:4:"vary";s:15:"Accept-Encoding";s:10:"x-pingback";s:28:"http://ubyssey.ca/xmlrpc.php";s:14:"content-length";s:4:"3122";s:13:"accept-ranges";s:5:"bytes";s:4:"date";s:29:"Sun, 23 Feb 2014 17:34:17 GMT";s:9:"x-varnish";s:10:"1107573170";s:3:"age";s:1:"0";s:3:"via";s:11:"1.1 varnish";s:10:"connection";s:10:"keep-alive";s:7:"x-cache";s:4:"MISS";}s:5:"build";s:14:"20140201060756";}

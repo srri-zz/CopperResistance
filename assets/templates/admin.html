@@ -9,27 +9,22 @@
 
     	<title>{{ title }}</title>		
 
-    	<link href="assets/bs/css/bootstrap.css" rel="stylesheet">
-    	<link href="assets/css/main.css" rel="stylesheet">
+    	<link href="http://localhost:8888/CopperResistance/assets/bs/css/bootstrap.css" rel="stylesheet">
+    	<link href="http://localhost:8888/CopperResistance/assets/css/main.css" rel="stylesheet">
+
+    	<script src="https://code.jquery.com/jquery-1.10.2.min.js"></script>
+    	<!-- Bootstrap core JavaScript -->
+    	<script src="http://localhost:8888/CopperResistance/assets/bs/js/bootstrap.min.js"></script>
+
+    	<link href="http://localhost:8888/CopperResistance/assets/css/bootstrap-editable.css" rel="stylesheet"/>
+    	<script src="http://localhost:8888/CopperResistance/assets/js/bootstrap-editable.min.js"></script>
 
 	    <!--[if lt IE 9]>
     		<script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
     		<script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
     	<![endif]-->
-    	<script src="https://code.jquery.com/jquery-1.10.2.min.js"></script>
+    	{% block scripts %}{% endblock %}
 
-		<script src="assets/js/wire.js"></script>
-
-		<script>
-
-		var wire;
-
-			$(function(){
-				wire = new Wire(1, "#stream", "#current-story");
-				wire.loadStream(); 
-			});
-
-		</script>
 	</head>
 	
 	<body>
@@ -42,18 +37,34 @@
 		    		<span class="icon-bar"></span>
 		    		<span class="icon-bar"></span>
 		    	</button>
-		    	<a class="navbar-brand" href="#">nuwire admin</a>
+		    	<a class="navbar-brand" href="http://localhost:8888/CopperResistance/admin">nuwire admin</a>
 		    </div>
 		
 		    <!-- Collect the nav links, forms, and other content for toggling -->
 		    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 		    	<ul class="nav navbar-nav">
-		    		{% for section in sections %}
-		    		<li><a href="#">{{ section.name }}
-		    		{% endfor %}
+		    		
+		    		<li><a href="http://localhost:8888/CopperResistance/admin/feeds">Feeds</a></li>
+		    		<li><a href="http://localhost:8888/CopperResistance/admin/sources">Sources</a></li>
+		    		<li><a href="http://localhost:8888/CopperResistance/admin/users">Users</a></li>
+		    		
 		    	</ul>
 		    </div>
 	    </nav>
+
+	    <div class="main-content row">
+	    	{% block content %}
+	    	<div class="col-sm-4">
+	    	test
+	    	</div>
+	    	<div class="col-sm-4">
+	    	test
+	    	</div>
+	    	<div class="col-sm-4">
+	    	test
+	    	</div>
+	    	{% endblock %}
+	    </div>
 			
 		<div id="footer">
 			<div class="text-center" style="padding: 9px;">
@@ -66,14 +77,5 @@
 				</span> 
 			</div>
 		</div>
-
-	<script>
-		$( "#load-more" ).click(function() {
-			wire.loadMore();
-		});
-	</script>
-
-    <!-- Bootstrap core JavaScript -->
-    <script src="assets/bs/js/bootstrap.min.js"></script>
   </body>
 </html>

@@ -3,11 +3,12 @@
 require 'core/libraries/router/AltoRouter.php';
 require 'core/components/controller.php';
 require 'core/components/database.php';
+require 'core/components/user.php';
 
 $router = new AltoRouter();
 $router->setBasePath('/CopperResistance');
-$router->map('GET|POST','/', array('c' => 'home', 'a' => 'render'));
-$router->map('GET','/wire', array('c' => 'wire', 'a' => 'display'));
+$router->map('GET|POST','/', array('c' => 'home', 'a' => 'welcome'));
+$router->map('GET','/wire', array('c' => 'Wire', 'a' => 'display'));
 $router->map('GET','/wire/search', array('c' => 'Wire', 'a' => 'search'));
 $router->map('GET','/wire/[:category]', array('c' => 'Wire', 'a' => 'display'));
 $router->map('GET','/wire/load/[:cat]/[i:start]', array('c' => 'Wire', 'a' => 'loadStream'));
@@ -15,9 +16,17 @@ $router->map('GET','/wire/load/search', array('c' => 'Wire', 'a' => 'loadSearch'
 $router->map('GET','/test/[:category][i:id]', array('c' => 'test', 'a' => 'testaction'));
 
 $router->map('GET','/story/[i:id]', array('c' => 'Story', 'a' => 'display'));
+$router->map('GET|POST','/story/update/[i:id]', array('c' => 'Story', 'a' => 'update'));
 $router->map('GET','/story/favourite/[i:id]', array('c' => 'Story', 'a' => 'favourite'));
 $router->map('GET','/story/delete/[i:id]', array('c' => 'Story', 'a' => 'delete'));
 
+$router->map('GET','/admin', array('c' => 'Admin', 'a' => 'home'));
+$router->map('GET','/admin/sources', array('c' => 'Admin', 'a' => 'manage_sources'));
+
+$router->map('GET|POST','/source/update/name', array('c' => 'Source', 'a' => 'updateName'));
+
+$router->map('GET|POST','/login', array('c' => 'Home', 'a' => 'login'));
+$router->map('GET|POST','/logout', array('c' => 'Home', 'a' => 'logout'));
 
 // match current request
 $match = $router->match();
@@ -39,7 +48,5 @@ if ( isset($match['target']['c']) ){
 	}
 	
 }
-
-
 
 ?>

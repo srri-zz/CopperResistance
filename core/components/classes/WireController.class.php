@@ -38,14 +38,25 @@ class WireController extends Controller {
     }
 
     public function display($cat = 'all'){
+
+        $this->user->authenticate('wire');
+
         $this->bindData('cur_category', $cat);
         $this->bindData('action', 'load');
         $this->bindData('categories', $this->model->get_categories());
+        //$this->bindData('new_stories_day', $this->model->get_stats_24hr());
+        //$this->bindData('new_stories_week', $this->model->get_stats_week());
+        //$this->bindData('new_stories_month', $this->model->get_stats_month());
+        $this->bindData('user_rank', $this->user->get_rank());
+
         $this->render();
         
     }
 
     public function search(){
+
+        $this->user->authenticate('wire');
+        $this->bindData('user_rank', $this->user->get_rank());
 
         if ( isset($_GET['q'])){
             $this->bindData('query', $_GET['q']);

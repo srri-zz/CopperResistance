@@ -1,0 +1,98 @@
+{% extends "admin.html" %}
+{% block scripts %}
+  <script>
+    $(document).ready(function() {
+    //toggle `popup` / `inline` mode
+    $.fn.editable.defaults.mode = 'popup';     
+
+    //make username editable
+    $('.name').editable({url: 'http://localhost:8888/CopperResistance/source/update/name'});
+
+    //make status editable
+    $('#status').editable({
+        type: 'select',
+        title: 'Select status',
+        placement: 'right',
+        value: 2,
+        source: [
+            {value: 1, text: 'status 1'},
+            {value: 2, text: 'status 2'},
+            {value: 3, text: 'status 3'}
+        ]});
+  });
+</script>
+{% endblock %}
+{% block content %}
+<div id="current-bar">
+  <div style="padding: 13px 15px;">
+      <button class="btn btn-default btn-sm" data-toggle="modal" data-target=".bs-modal-lg" type="button">
+        <span class="glyphicon glyphicon-edit"></span> New Source
+      </button>
+  </div>
+</div>
+<table id="sources" class="table table-striped">
+	<thead>
+		<tr>
+			<th>Name</th>
+			<th>City</th>
+			<th>Region</th>
+			<th>Website</th>
+		</tr>
+	</thead>
+	<tbody>
+{% for source in sources %}
+	<tr>
+		<td><a href="#" class="name" data-type="text" data-placement="right" data-pk="{{ source.id }}">{{ source.name }}</a></td>
+		<td>{{ source.city }}</td>
+		<td>{{ source.region }}</td>
+		<td>{{ source.url }}</td>
+	</tr>
+{% endfor %}
+	</tbody>
+</table>
+
+<div class="modal fade bs-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria=hidden="true">
+  <div class="modal-dialog modal-lg">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+        <h4 class="modal-title">New Source</h4>
+      </div>
+      <div class="modal-body" style="">
+        <form role="form">
+            <div class="form-group">
+                <div class="input-group">
+                  <span class="input-group-addon"><span class="glyphicon glyphicon-info-sign"></span></span>
+                  <input type="text" class="form-control" id="inputName" placeholder="Name">
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="input-group">
+                  <span class="input-group-addon"><span class="glyphicon glyphicon-home"></span></span>
+                  <input type="text" class="form-control" id="inputCity" placeholder="City">
+                </div>
+            </div>
+             <div class="form-group">
+              <div class="input-group">
+                <span class="input-group-addon"><span class="glyphicon glyphicon-globe"></span></span>
+                <input type="text" class="form-control" id="inputRegion" placeholder="Region">
+              </div>
+            </div>
+             <div class="form-group">
+              <div class="input-group">
+                <span class="input-group-addon"><span class="glyphicon glyphicon-link"></span></span>
+                <input type="text" class="form-control" id="inputWebsite" placeholder="Website">
+              </div>
+            </div>
+      </div>
+      <div class="modal-footer">
+          <button type="submit" class="btn btn-success">Submit</button>
+          <button class="btn btn-default" data-dismiss="modal" aria-hidden="true">Cancel</button>
+        </form>
+      </div>
+      </div>
+
+    </div>
+  </div>
+</div>
+{% endblock %}

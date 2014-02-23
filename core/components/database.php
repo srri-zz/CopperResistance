@@ -31,6 +31,14 @@ class Database extends mysqli {
 
         return $result;
 	}
+
+	public function update($table, $field, $value, $id){
+		$stmt = $this->prepare('UPDATE sources SET ' . $field . ' = ? WHERE id = ?');
+		$stmt->bind_param('si', $value, $id);
+		$stmt->execute(); 
+		$stmt->close();
+	}
+
 }
 
 class Model {

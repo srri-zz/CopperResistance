@@ -3,12 +3,18 @@ body, html {
     overflow: hidden;
 }
 
+body.home {
+	background-color: #464545;
+}
+
 footer {
     position: absolute;
     left: 0;
     bottom: 0;
     height: 100px;
     width: 100%;
+    background-color: #464545;
+
 }
 
 .list-group-item:first-child {
@@ -82,7 +88,6 @@ footer {
 
 .main-content {
 	padding-top: 50px;
-	padding-bottom: 40px;
 	height: 100%;
 	max-width: 100%;
 	margin-left: 0;
@@ -153,8 +158,8 @@ footer {
 	position: absolute;
 	bottom: 0;
 	width: 100%;
-	border-top: solid 1px rgb(216, 216, 216);
 	height: 40px;
+	background-color: #464545;
 }
 
 .footer-content {
@@ -176,8 +181,6 @@ footer {
 }
 
 #current-bar {
-	top: 50px;
-	position: fixed;
 	width: 100%;
 	height: 55px;
 	background: rgb(240, 240, 240);
@@ -186,6 +189,15 @@ footer {
 	-moz-box-shadow:    0px 1px 1px 0px rgba(87, 87, 87, 0.03);
   	-webkit-box-shadow: 0px 1px 1px 0px rgba(87, 87, 87, 0.03);
   	box-shadow:         0px 1px 1px 0px rgba(87, 87, 87, 0.03);
+}
+
+#current-story-wrap #current-bar {
+	top: 50px;
+	position: fixed;
+}
+
+#sources td, #sources th {
+	padding-left: 15px;
 }
 
 .search-bar {
@@ -221,4 +233,33 @@ footer {
 	width: 100%; 
 	padding: 15px 0; 
 	background: rgb(233, 233, 233);
+}
+
+ainput {
+	margin: 10px 0;
+}
+
+#wire-stats h4 {
+	color: rgb(94, 94, 94);
+	margin-top: 5px;
+	margin-bottom: 15px;
+}
+
+.stats-cat {
+	font-weight: bold; 
+	color: rgb(165, 165, 165);
+}
+
+.stats-cat.current {
+	color: rgb(92, 92, 92);
+}
+
+.stats-cat:hover {
+	color: #428bca;
+	text-decoration: none;
+
+}
+
+#stats-week, #stats-month {
+	display: none;
 }

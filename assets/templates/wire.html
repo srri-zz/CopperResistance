@@ -11,7 +11,6 @@
 
     	<link href="http://localhost:8888/CopperResistance/assets/bs/css/bootstrap.css" rel="stylesheet">
     	<link href="http://localhost:8888/CopperResistance/assets/css/main.css" rel="stylesheet">
-    	<link href="http://localhost:8888/CopperResistance/assets/css/bootstrap-datetimepicker.min.css" rel="stylesheet">
 
 	    <!--[if lt IE 9]>
     		<script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
@@ -20,6 +19,7 @@
     	<script src="https://code.jquery.com/jquery-1.10.2.min.js"></script>
 
 		<script src="http://localhost:8888/CopperResistance/assets/js/wire.js"></script>
+		<script src="http://localhost:8888/CopperResistance/assets/js/chart/Chart.js"></script>
 
 		<script>
 
@@ -29,6 +29,8 @@
 
 				wire = new Wire("#stream", "#current-story", "{{ action }}", "{{ cur_category }}", "{{ query }}");
 				wire.load();
+				stats_init();
+
 			});
 
 		</script>
@@ -44,7 +46,7 @@
 		    		<span class="icon-bar"></span>
 		    		<span class="icon-bar"></span>
 		    	</button>
-		    	<a class="navbar-brand" href="#">nuwire</a>
+		    	<a class="navbar-brand" href="http://localhost:8888/CopperResistance/wire">nuwire</a>
 		    </div>
 		
 		    <!-- Collect the nav links, forms, and other content for toggling -->
@@ -144,16 +146,167 @@
 					<div id="load-more" class="text-center">
 							  	Load More
 					</div>
+
 				</div>
 				<div id="current-story-con" class="col-lg-6 scroll-con visible-lg">
+
+					<div id="wire-stats" style="padding: 15px 25px;">
+						<h4><span class="glyphicon glyphicon-fire"></span> &nbsp;New Stories</h4>
+						<div style="width: 100%; overflow: auto;">
+							<div class="text-center" style="width: 33%; float: left;">
+								<a id="load-24hr" class="stats-cat current" href="#">
+									<span style="line-height: 0.9em; font-size: 72px;">{{ new_stories_day }}</span><br/>
+									<span style="line-height: 180%; font-size: 17px; font-weight: bold;">LAST 24 HRS</span>
+								</a>
+							</div>
+							<div class="text-center" style="width: 33%; float: left;">
+								<a id="load-week" class="stats-cat" href="#">
+									<span style="line-height: 0.9em; font-size: 72px; font-weight: bold;">{{ new_stories_week }}</span><br/>
+									<span style="line-height: 180%; font-size: 17px; font-weight: bold;">&nbsp; PAST WEEK</span>
+								</a>
+							</div>
+							<div class="text-center" style="width: 33%; float: left; color: rgb(165, 165, 165);">
+								<a id="load-month" class="stats-cat" href="#">
+									<span style="line-height: 0.9em; font-size: 72px; font-weight: bold;">{{ new_stories_month }}</span><br/>
+									<span style="line-height: 180%; font-size: 17px; font-weight: bold;">THIS MONTH</span>
+								</a>
+							</div>
+						</div>
+						<hr/>
+						<div id="stats-24hr">
+							<div style="overflow: none; white-space: nowrap;">
+								<div style="display: inline-block; width: 50%;">
+									<h4><span class="glyphicon glyphicon-th-list"></span> &nbsp;Categories</h4>
+									<div style="overflow: none; white-space: nowrap;">
+										<div style="display: inline-block; vertical-align: middle;">
+											<canvas id="myChart" width="150" height="150" ></canvas>
+										</div>
+										<div style="display: inline-block; vertical-align: middle; padding: 0 15px;">
+											<ul class="list-unstyled" style="font-size: 18px; font-weight: bold; color: grey;">
+												<li>30 <span style="color: #5351D2;">Sports</span></li>
+												<li>50 <span style="color: #3ACF93;">Culture</span></li>
+												<li>70 <span style="color: #FFB147;">Politics</span></li>
+												<li>70 <span style="color: #FFB147;">Politics</span></li>
+												<li style="color: grey;">30 Other</li>
+											</ul>
+										</div>
+									</div>
+								</div>
+								<div style="display: inline-block;">
+									<h4><span class="glyphicon glyphicon-link"></span> &nbsp;Top Contributors</h4>
+									<div style="overflow: none; white-space: nowrap;">
+										<div style="display: inline-block; vertical-align: middle; padding-right: 5px;">
+											<ul class="list-unstyled" style="font-size: 18px; font-weight: bold; color: grey;">
+												<li>The Ubyssey</li>
+												<li>The Varsity</li>
+												<li>The Martlet</li>
+												<li>Dalhouise Gazette</li>
+												<li>The McGill Daily</li>
+											</ul>
+										</div>
+										<div style="display: inline-block; vertical-align: middle;">
+											<canvas id="myChart2" width="140" height="160" ></canvas>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div id="stats-week">
+							<div style="overflow: none; white-space: nowrap;">
+								<div style="display: inline-block; width: 50%;">
+									<h4><span class="glyphicon glyphicon-th-list"></span> &nbsp;Categories</h4>
+									<div style="overflow: none; white-space: nowrap;">
+										<div style="display: inline-block; vertical-align: middle;">
+											<canvas id="myChart3" width="150" height="150" ></canvas>
+										</div>
+										<div style="display: inline-block; vertical-align: middle; padding: 0 15px;">
+											<ul class="list-unstyled" style="font-size: 18px; font-weight: bold; color: grey;">
+												<li>30 <span style="color: #5351D2;">Sports</span></li>
+												<li>50 <span style="color: #3ACF93;">Culture</span></li>
+												<li>70 <span style="color: #FFB147;">Politics</span></li>
+												<li>70 <span style="color: #FFB147;">Politics</span></li>
+												<li style="color: grey;">30 Other</li>
+											</ul>
+										</div>
+									</div>
+								</div>
+								<div style="display: inline-block;">
+									<h4><span class="glyphicon glyphicon-link"></span> &nbsp;Top Contributors</h4>
+									<div style="overflow: none; white-space: nowrap;">
+										<div style="display: inline-block; vertical-align: middle; padding-right: 5px;">
+											<ul class="list-unstyled" style="font-size: 18px; font-weight: bold; color: grey;">
+												<li>The Ubyssey</li>
+												<li>The Varsity</li>
+												<li>The Martlet</li>
+												<li>Dalhouise Gazette</li>
+												<li>The McGill Daily</li>
+											</ul>
+										</div>
+										<div style="display: inline-block; vertical-align: middle;">
+											<canvas id="myChart4" width="140" height="160" ></canvas>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div id="stats-month">
+							<div style="overflow: none; white-space: nowrap;">
+								<div style="display: inline-block; width: 50%;">
+									<h4><span class="glyphicon glyphicon-th-list"></span> &nbsp;Categories</h4>
+									<div style="overflow: none; white-space: nowrap;">
+										<div style="display: inline-block; vertical-align: middle;">
+											<canvas id="myChart5" width="150" height="150" ></canvas>
+										</div>
+										<div style="display: inline-block; vertical-align: middle; padding: 0 15px;">
+											<ul class="list-unstyled" style="font-size: 18px; font-weight: bold; color: grey;">
+												<li>30 <span style="color: #5351D2;">Sports</span></li>
+												<li>50 <span style="color: #3ACF93;">Culture</span></li>
+												<li>70 <span style="color: #FFB147;">Politics</span></li>
+												<li>70 <span style="color: #FFB147;">Politics</span></li>
+												<li style="color: grey;">30 Other</li>
+											</ul>
+										</div>
+									</div>
+								</div>
+								<div style="display: inline-block;">
+									<h4><span class="glyphicon glyphicon-link"></span> &nbsp;Top Contributors</h4>
+									<div style="overflow: none; white-space: nowrap;">
+										<div style="display: inline-block; vertical-align: middle; padding-right: 5px;">
+											<ul class="list-unstyled" style="font-size: 18px; font-weight: bold; color: grey;">
+												<li>The Ubyssey</li>
+												<li>The Varsity</li>
+												<li>The Martlet</li>
+												<li>Dalhouise Gazette</li>
+												<li>The McGill Daily</li>
+											</ul>
+										</div>
+										<div style="display: inline-block; vertical-align: middle;">
+											<canvas id="myChart6" width="140" height="160" ></canvas>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<hr/>
+							<h4><span class="glyphicon glyphicon-star"></span> Recently Starred</h4>	
+							<ul class="list-unstyled">
+								<li><strong>Letting the cat out of the bag</strong> - The Martlet - Feb 20 2014</li>
+								<li><strong>Letting the cat out of the bag</strong> - The Martlet - Feb 20 2014</li>
+								<li><strong>Letting the cat out of the bag</strong> - The Martlet - Feb 20 2014</li>
+								<li><strong>Letting the cat out of the bag</strong> - The Martlet - Feb 20 2014</li>
+							</ul>
+					</div>
+
 					<div id="current-story-wrap" style="display: none;">
 						<div id="current-bar">
 							<div style="padding: 13px 15px;">
+								{% if user_rank == 1 %}
 							  	<button class="btn btn-default btn-sm" data-toggle="modal" data-target=".bs-modal-lg" type="button">
 							  		<span class="glyphicon glyphicon-edit"></span> Edit
 							  	</button>
+							  	{% endif %}
 							  	<a href="{{ story.id }}" class="btn btn-default btn-sm">
-							  		<span class="glyphicon glyphicon-star"></span> Favourite
+							  		<span class="glyphicon glyphicon-star"></span> Star
 							  	</a>
 							  	<button class="btn btn-default btn-sm" type="button">
 							  		<span class="glyphicon glyphicon-flag"></span> Flag
@@ -171,17 +324,41 @@
 
 							<div class="modal fade bs-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria=hidden="true">
 						  		<div class="modal-dialog modal-lg">
-						    		<div class="modal-content" style="padding: 5px 15px 25px 15px;">
-						     			<form role="form">
-						     			  <h3>Edit Article</h3>
-										  <div class="form-group">
-										    <label for="current-story-title-form">Title</label>
-										    <input type="text" class="form-control" value="test" id="current-story-title-form">
-										  </div>
-
-										  <br/>
-										  <button type="submit" class="btn btn-default">Submit</button>
-										</form>
+      								<div class="modal-content">
+      									<div class="modal-header">
+									    	<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+									        <h4 class="modal-title">Edit Article</h4>
+									    </div>
+									    <div class="modal-body">
+											<form id="edit-story-form" role="form" method="post">
+									            <div class="form-group">
+									            	<label for="current-story-title-form">Title</label>
+									                <input name="title" type="text" class="form-control" id="current-story-title-form" placeholder="Title" value="">
+									            </div>
+									            <div class="form-group">
+									            	<label for="current-story-date-form">Date</label>
+									                <div class="input-group">
+									                  <span class="input-group-addon"><span class="glyphicon glyphicon-calendar"></span></span>
+									                  <input type="text" class="form-control" id="current-story-date-form" placeholder="Date">
+									                </div>
+									            </div>
+									            <div class="form-group">
+													<label for="current-story-desc-form">Description</label>
+												    <textarea name="desc" id="current-story-desc-form" class="form-control" rows="3"></textarea>
+												</div>
+									             <div class="form-group">
+									             	<label for="current-story-link-form">URL</label>
+									              <div class="input-group">
+									                <span class="input-group-addon"><span class="glyphicon glyphicon-link"></span></span>
+									                <input name="link" type="text" class="form-control" id="current-story-link-form" placeholder="URL">
+									              </div>
+									            </div>
+									      </form>
+									    </div>
+									    <div class="modal-footer">
+									    	<button class="btn btn-success" onclick="wire.updateStory();" data-dismiss="modal" aria-hidden="true">Submit</button>
+									        <button class="btn btn-default" data-dismiss="modal" aria-hidden="true">Cancel</button>
+									    </div>
 						    		</div>
 						  		</div>
 							</div>
@@ -193,7 +370,9 @@
 					</div>
 				</div>
 		</div>
-		<div id="footer">
+
+
+		<!-- <div id="footer">
 			<div class="text-center" style="padding: 9px;">
 				<span class="text-muted visible-lg visible-md visible-sm">
 					© The National University Wire
@@ -203,12 +382,160 @@
 					Report a Bug
 				</span> 
 			</div>
-		</div>
+		</div> -->
 	
 
 	<script>
+
+		var data = [
+			{
+				value: 30,
+				color:"#5351D2"
+			},
+			{
+				value : 50,
+				color : "#3ACF93"
+			},
+			{
+				value : 70,
+				color : "#FFB147"
+			},
+			{
+				value : 30,
+				color : "rgb(165, 165, 165)"
+			}				
+		];
+
+		var data2 = {
+			labels : ["","","","",""],
+			datasets : [
+				{
+					fillColor : "rgba(220,220,220,0.5)",
+					strokeColor : "rgba(220,220,220,1)",
+					data : [20,35,50,68,80]
+				}
+			]
+		};
+
+		var options2 = {
+				
+
+			//String - Colour of the scale line	
+			scaleLineColor : "#FFF",
+			
+			//Number - Pixel width of the scale line	
+			scaleLineWidth : 1,
+
+			scaleShowLabels : false,
+			
+			scaleLabel : "",
+			
+			//String - Scale label font declaration for the scale label
+			scaleFontFamily : "'Arial'",
+			
+			//Number - Scale label font size in pixels	
+			scaleFontSize : 12,
+			
+			//String - Scale label font weight style	
+			scaleFontStyle : "normal",
+			
+			//String - Scale label font colour	
+			scaleFontColor : "#666",	
+			
+			///Boolean - Whether grid lines are shown across the chart
+			scaleShowGridLines : false,
+			
+			//String - Colour of the grid lines
+			scaleGridLineColor : "rgba(0,0,0,.05)",
+			
+			//Number - Width of the grid lines
+			scaleGridLineWidth : 0,	
+
+			//Boolean - If there is a stroke on each bar	
+			barShowStroke : false,			
+			barValueSpacing : 1,
+			barDatasetSpacing : 0,
+			
+			//Boolean - Whether to animate the chart
+			animation : true,
+
+			//Number - Number of animation steps
+			animationSteps : 60,
+			
+			//String - Animation easing effect
+			animationEasing : "easeOutQuart",
+
+			//Function - Fires when the animation is complete
+			onAnimationComplete : null,
+
+			align: 'h'
+			
+		}
+
+		
+
 		$( "#load-more" ).click(function() {
 			wire.loadMore();
+		});
+
+		$( "#load-24hr" ).click(function() {
+
+			stats_init();
+
+		});
+
+		var stats_init = function(){
+			$("#stats-24hr").show();
+
+			$("#load-24hr").addClass("current");
+			$("#load-week").removeClass("current");
+			$("#load-month").removeClass("current");
+
+			$("#stats-week").hide();
+			$("#stats-month").hide();
+
+			var ctx = $("#myChart").get(0).getContext("2d");
+			var myNewChart = new Chart(ctx).Pie(data);
+
+			var ctx2 = $("#myChart2").get(0).getContext("2d");
+			var myNewChart2 = new Chart(ctx2).Bar(data2, options2);
+		}
+
+		$( "#load-week" ).click(function() {
+
+			var ctx = $("#myChart3").get(0).getContext("2d");
+			var myNewChart = new Chart(ctx).Pie(data);
+
+			var ctx2 = $("#myChart4").get(0).getContext("2d");
+			var myNewChart2 = new Chart(ctx2).Bar(data2, options2);
+
+			$("#stats-week").show();
+
+			$("#load-24hr").removeClass("current");
+			$("#load-week").addClass("current");
+			$("#load-month").removeClass("current");
+
+			$("#stats-24hr").hide();
+			$("#stats-month").hide();
+			console.log('test');
+		});
+
+		$( "#load-month" ).click(function() {
+
+			var ctx = $("#myChart5").get(0).getContext("2d");
+			var myNewChart = new Chart(ctx).Pie(data);
+
+			var ctx2 = $("#myChart6").get(0).getContext("2d");
+			var myNewChart2 = new Chart(ctx2).Bar(data2, options2);
+
+			$("#stats-month").show();
+
+			$("#load-24hr").removeClass("current");
+			$("#load-week").removeClass("current");
+			$("#load-month").addClass("current");
+
+			$("#stats-week").hide();
+			$("#stats-24hr").hide();
 		});
 
 		$('.main-nav > li').click(function (e) {

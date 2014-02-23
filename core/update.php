@@ -1,5 +1,8 @@
 <?php	
 
+
+	require 'components/database.php';
+
 	function shorten($string, $limit, $break=" ", $pad="...") {
 		// return with no change if string is shorter than $limit
 		if(strlen($string) <= $limit) return $string;
@@ -44,10 +47,12 @@
   	$pass = 'portland22';
 
 	$dbh = new PDO('mysql:host=nuwire.petersiemens.com;dbname=nuwire', $user, $pass);
+	$db = new Database();
+	$sources2 = $db->get_all('SELECT * FROM feeds');
 
   	$feed = new SimplePie();
 
-  	foreach($sources as $source):
+  	foreach($sources2 as $source):
 
   		$source_name = $source['source'];
   		$source_id = $source['id'];
@@ -72,8 +77,7 @@
 
 		  		$title = $item->get_title();
 
-			  	$h2t = new html2text($item->get_description());
-			  	$desc = shorten($h2t->get_text(), 150);
+			  	$desc = strip_tags(shorten($item->get_description(), 150));
 
 			  	$date = $item->get_date('Y-m-d H:i:s');
 			  	$content = $item->get_content();
@@ -98,8 +102,8 @@
 			    	$stmt = $dbh->prepare("INSERT INTO stories (uid, title, date, source, source_id, description, content, image, link, color) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)");  
 					$stmt->execute($data); 
 
-					$stmt = $dbh->prepare("INSERT INTO catmap (category_id, story_id) VALUES (4, LAST_INSERT_ID())");  
-					$stmt->execute($data); 
+					$stmt = $dbh->prepare("INSERT INTO catmap (category_id, story_id) VALUES (?, LAST_INSERT_ID())");  
+					$stmt->execute(array($source['category'])); 
 			    }
 			    catch (PDOException $e)
 			    {
@@ -124,4 +128,77 @@
 	endforeach;
 
 	$dbh = null;
+
+
+/*	function get_stats($sql){
+
+		$db = new Database();
+
+    	$categories = array();
+    	$count = 0;
+
+    	$stmt = $db->query($sql);
+
+    	while ($row = $stmt->fetch_assoc()) {
+
+				$query = 'SELECT category_id FROM catmap WHERE story_id = ' . $row['id'];
+
+		        $sth = $db->query($query);
+
+		        $this_cat = $sth->fetch_assoc();
+
+		        if(isset($categories[$this_cat['category_id']])){
+	        		$categories[$this_cat['category_id']] += 1;
+		        } else {
+		        	$categories[$this_cat['category_id']] = 1;
+		        }	
+
+		    	$count += 1;
+		}
+
+
+
+		arsort($categories);
+
+		$cat_names = array("","","","");
+		$cat_vals = array(0,0,0,0);
+
+		$n = 0;
+
+		while($n < 4){
+			$cur_cat = current($categories);
+			$cat_names[$n] = key($categories);
+			$cat_vals = $cur_cat;
+			next($categories);
+			$n++;
+		}
+
+		return array(
+			'count' => $count, 
+			'cat_1' => $cat_names[0],
+			'cat_1_val' => $cat_vals[0],
+			'cat_2' => $cat_names[1],
+			'cat_2_val' => $cat_vals[1],
+			'cat_3' => $cat_names[2],
+			'cat_3_val' => $cat_vals[2],
+			'cat_4' => $cat_names[3],
+			'cat_4_val' => $cat_vals[3],
+			);
+	}
+
+	$day_stats = get_stats('SELECT * FROM stories WHERE date >= now() - INTERVAL 1 DAY');
+	$month_stats = get_stats('SELECT * FROM stories WHERE MONTH(date) = MONTH(CURDATE())');
+
+	$dbh = new Database;
+
+	$stmt = $dbh->prepare('INSERT INTO stats (month, cat_1, cat_1_val, cat_2, cat_2_val) VALUES (?, ?, ?, ?, ?)');
+	$stmt->bind_param('isisi', 
+		$month_stats['count'], 
+		$month_stats['cat_1'], 
+		$month_stats['cat_1_val'], 
+		$month_stats['cat_2'], 
+		$month_stats['cat_2_val']);
+	$stmt->execute(); 
+	$stmt->close();*/
+
 ?>

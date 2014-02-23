@@ -2,6 +2,8 @@
 
 class Controller {
 
+	public $user;
+
 	public $model;
 	public $name;
 	public $title;
@@ -10,10 +12,18 @@ class Controller {
 
 	public function __construct($model){
 		$this->model = $model;
+
+		$this->user = new User();
+
 	}
 
 	public function bindData($key, $value){
 		$this->data[$key] = $value;
+	}
+
+	public function redirect($dest){
+		header('Location: http://localhost:8888/CopperResistance/' . $dest);
+		exit;
 	}
 
 	public function render(){

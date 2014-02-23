@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>X-editable starter template</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- bootstrap -->
+    <link href="http://localhost:8888/CopperResistance/assets/bs/css/bootstrap.css" rel="stylesheet">
+    <script src="http://code.jquery.com/jquery-2.0.3.min.js"></script> 
+
+    <script src="http://localhost:8888/CopperResistance/assets/bs/js/bootstrap.min.js"></script>
+
+    <!-- x-editable (bootstrap version) -->
+    <link href="http://localhost:8888/CopperResistance/assets/css/bootstrap-editable.css" rel="stylesheet"/>
+    <script src="http://localhost:8888/CopperResistance/assets/js/bootstrap-editable.min.js"></script>
+    
+    <!-- main.js -->
+    <script>
+    $(document).ready(function() {
+      //toggle `popup` / `inline` mode
+      $.fn.editable.defaults.mode = 'popup';     
+      
+      //make username editable
+      $('.username').editable();
+      
+      //make status editable
+      $('#status').editable({
+          type: 'select',
+          title: 'Select status',
+          placement: 'right',
+          value: 2,
+          source: [
+              {value: 1, text: 'status 1'},
+              {value: 2, text: 'status 2'},
+              {value: 3, text: 'status 3'}
+          ]
+          /*
+          //uncomment these lines to send data on server
+          ,pk: 1
+          ,url: '/post'
+          */
+      });
+    });
+    </script>
+  </head>
+
+  <body>
+
+    <div class="container">
+
+      <h1>X-editable starter template</h1>
+
+      <div>
+        <span>Username:</span>
+        <table>
+          <tr><td><a href="#" class="username" data-type="text" data-placement="right" data-title="Enter username">superuser</a></td></tr>
+        </table>
+      </div>
+      
+      <div>
+        <span>Status:</span>
+        <a href="#" id="status"></a>
+      </div>
+
+      
+    </div>
+
+  </body>
+</html>
