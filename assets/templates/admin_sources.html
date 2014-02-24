@@ -6,19 +6,18 @@
     $.fn.editable.defaults.mode = 'popup';     
 
     //make username editable
-    $('.name').editable({url: 'http://localhost:8888/CopperResistance/source/update/name'});
-
-    //make status editable
-    $('#status').editable({
-        type: 'select',
-        title: 'Select status',
-        placement: 'right',
-        value: 2,
+    $('.name').editable({url: '{{site_root}}source/update/name'});
+    $('.city').editable({url: '{{site_root}}source/update/city'});
+    $('.region').editable({
+        url: '{{site_root}}source/update/region',
         source: [
-            {value: 1, text: 'status 1'},
-            {value: 2, text: 'status 2'},
-            {value: 3, text: 'status 3'}
-        ]});
+        {% for id, value in regions %}
+              {value: {{ id }}, text: '{{ value}}' },
+        {% endfor %}
+           ]
+    });
+    $('.url').editable({url: '{{site_root}}source/update/url'});
+
   });
 </script>
 {% endblock %}
@@ -43,9 +42,9 @@
 {% for source in sources %}
 	<tr>
 		<td><a href="#" class="name" data-type="text" data-placement="right" data-pk="{{ source.id }}">{{ source.name }}</a></td>
-		<td>{{ source.city }}</td>
-		<td>{{ source.region }}</td>
-		<td>{{ source.url }}</td>
+		<td><a href="#" class="city" data-type="text" data-placement="right" data-pk="{{ source.id }}">{{ source.city }}</a></td>
+		<td><a href="#" class="region" data-type="select" data-placement="right" data-pk="{{ source.id }}" data-value="{{ source.region }}">{{ regions[source.region] }}</a></td>
+		<td><a href="#" class="url" data-type="text" data-placement="right" data-pk="{{ source.id }}">{{ source.url }}</a></td>
 	</tr>
 {% endfor %}
 	</tbody>
@@ -59,29 +58,29 @@
         <h4 class="modal-title">New Source</h4>
       </div>
       <div class="modal-body" style="">
-        <form role="form">
+        <form action="{{site_root}}source/new" method="post" role="form">
             <div class="form-group">
                 <div class="input-group">
                   <span class="input-group-addon"><span class="glyphicon glyphicon-info-sign"></span></span>
-                  <input type="text" class="form-control" id="inputName" placeholder="Name">
+                  <input name="name" type="text" class="form-control" id="inputName" placeholder="Name">
                 </div>
             </div>
             <div class="form-group">
                 <div class="input-group">
                   <span class="input-group-addon"><span class="glyphicon glyphicon-home"></span></span>
-                  <input type="text" class="form-control" id="inputCity" placeholder="City">
+                  <input name="city" type="text" class="form-control" id="inputCity" placeholder="City">
                 </div>
             </div>
              <div class="form-group">
               <div class="input-group">
                 <span class="input-group-addon"><span class="glyphicon glyphicon-globe"></span></span>
-                <input type="text" class="form-control" id="inputRegion" placeholder="Region">
+                <input name="region" type="text" class="form-control" id="inputRegion" placeholder="Region">
               </div>
             </div>
              <div class="form-group">
               <div class="input-group">
                 <span class="input-group-addon"><span class="glyphicon glyphicon-link"></span></span>
-                <input type="text" class="form-control" id="inputWebsite" placeholder="Website">
+                <input name="website" type="text" class="form-control" id="inputWebsite" placeholder="Website">
               </div>
             </div>
       </div>

@@ -1,6 +1,27 @@
-<form action="http://localhost:8888/CopperResistance/login?dest={{ dest }}" method="post">
-	<input name="username" id="username" type="text" />
-	<input name="password" id="password" type="password" />
-	<button type="submit" class="btn btn-default"></button>
-<form>
-{{ message }}
+<!DOCTYPE html>
+<html>
+<head>
+
+	<link href="{{site_root}}assets/bs/css/bootstrap.css" rel="stylesheet">
+   	<link href="{{site_root}}assets/css/main.css" rel="stylesheet">
+   	<link href="{{site_root}}assets/css/login.css" rel="stylesheet">
+
+</head>
+<body class="home">
+	<div class="container">
+      <form class="form-signin" role="form" action="{{site_root}}login?dest={{ dest }}" method="post">
+        <h2 class="form-signin-heading" style="color: rgb(179, 179, 179);">nuwire</h2>
+        <input name="username" type="text" class="form-control login" placeholder="Username" required autofocus>
+        <input name="password" type="password" class="form-control login" placeholder="Password" required>
+        <button class="btn btn-lg btn-primary btn-block" type="submit">Sign in</button>
+        <br/>
+        {% if message %}
+        <div class="alert alert-danger fade in">
+      		{{ message }}
+      	</div>
+      	{% endif %}
+      </form>
+    </div>
+</body>
+</html>
+

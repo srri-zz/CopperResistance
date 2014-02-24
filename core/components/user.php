@@ -18,7 +18,7 @@ class User {
 
 	public function authenticate($dest = 'wire', $rank = 0){
 		if (!$this->loggedIn() || $this->get_rank() < $rank){
-			header('Location: http://localhost:8888/CopperResistance/login?dest=' . $dest);
+			header('Location: ' . SITE_ROOT . 'login?dest=' . $dest);
 			exit;
 		}
 	}
@@ -140,7 +140,6 @@ class User {
 
 	public function logout(){
 		session_destroy(); 
-		echo "You have been logged out!";
 	}
 
 	public function get_rank(){

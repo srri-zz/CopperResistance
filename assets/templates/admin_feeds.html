@@ -1,0 +1,106 @@
+{% extends "admin.html" %}
+{% block scripts %}
+  <script>
+    $(document).ready(function() {
+    //toggle `popup` / `inline` mode
+    $.fn.editable.defaults.mode = 'popup';     
+
+    //make username editable
+    $('.title').editable({url: '{{site_root}}feed/update/title'});
+    $('.source').editable({
+        url: '{{site_root}}feed/update/source',
+        source: [
+        {% for id, value in sources %}
+              {value: {{ id }}, text: '{{ value}}' },
+        {% endfor %}
+           ]
+    });
+    $('.category').editable({
+        url: '{{site_root}}feed/update/category',
+        source: [
+        {% for id, value in categories %}
+              {value: {{ id }}, text: '{{ value|capitalize}}' },
+        {% endfor %}
+           ]
+    });
+    $('.url').editable({url: '{{site_root}}feed/update/url'});
+
+  });
+</script>
+{% endblock %}
+{% block content %}
+<div id="current-bar">
+  <div style="padding: 13px 15px;">
+      <button class="btn btn-default btn-sm" data-toggle="modal" data-target=".bs-modal-lg" type="button">
+        <span class="glyphicon glyphicon-edit"></span> New Feed
+      </button>
+  </div>
+</div>
+<table id="sources" class="table table-striped">
+	<thead>
+		<tr>
+			<th>Title</th>
+			<th>Source</th>
+			<th>Category</th>
+			<th>URL</th>
+		</tr>
+	</thead>
+	<tbody>
+{% for source in feeds %}
+	<tr>
+		<td><a href="#" class="title" data-type="text" data-placement="right" data-pk="{{ source.id }}">{{ source.title }}</a></td>
+		<td><a href="#" class="source" data-type="select" data-placement="right" data-pk="{{ source.id }}" data-value="{{ source.source }}">{{ sources[source.source] }}</a></td>
+		<td><a href="#" class="category" data-type="select" data-placement="right" data-pk="{{ source.id }}" data-value="{{ source.category }}">{{ categories[source.category]|capitalize }}</a></td>
+		<td><a href="#" class="url" data-type="text" data-placement="right" data-pk="{{ source.id }}">{{ source.url }}</a></td>
+	</tr>
+{% endfor %}
+	</tbody>
+</table>
+
+<div class="modal fade bs-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria=hidden="true">
+  <div class="modal-dialog modal-lg">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+        <h4 class="modal-title">New Feed</h4>
+      </div>
+      <div class="modal-body" style="">
+        <form action="{{site_root}}feed/new" method="post" role="form">
+            <div class="form-group">
+              <label for="current-story-title-form">Title</label>
+              <input name="title" type="text" class="form-control" id="inputTitle" placeholder="Title">
+            </div>
+            <div class="form-group">
+              <label for="inputSource">Source</label>
+              <select name="source" id="inputSource" class="form-control">
+                    <option value="" selected disabled>Select a Source</option>
+                  {% for id, value in sources %}
+                    <option value="{{ id }}">{{ value }}</option>
+                  {% endfor %}
+              </select>
+            </div>
+             <div class="form-group">
+                <label for="inputCategory">Category</label>
+                <select name="category" id="inputCategory" class="form-control">
+                    <option value="" selected disabled>Select a Category</option>
+                  {% for id, value in categories %}
+                    <option value="{{ id }}">{{ value|capitalize }}</option>
+                  {% endfor %}
+                </select>
+            </div>
+             <div class="form-group">
+                <label for="inputUrl">URL</label>
+                <input name="url" type="text" class="form-control" id="inputUrl" placeholder="URL">
+            </div>
+      </div>
+      <div class="modal-footer">
+          <button type="submit" class="btn btn-success">Submit</button>
+          <button class="btn btn-default" data-dismiss="modal" aria-hidden="true">Cancel</button>
+        </form>
+      </div>
+      </div>
+
+    </div>
+  </div>
+</div>
+{% endblock %}

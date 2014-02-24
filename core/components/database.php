@@ -33,7 +33,8 @@ class Database extends mysqli {
 	}
 
 	public function update($table, $field, $value, $id){
-		$stmt = $this->prepare('UPDATE sources SET ' . $field . ' = ? WHERE id = ?');
+		$query = 'UPDATE ' . $table . ' SET ' . $field . ' = ? WHERE id = ?';
+		$stmt = $this->prepare($query);
 		$stmt->bind_param('si', $value, $id);
 		$stmt->execute(); 
 		$stmt->close();
@@ -56,6 +57,45 @@ class Model {
 
 	public function get_template(){
 		return $this->info['template'];
+	}
+
+	public function get_categories(){
+
+        $stmt = $this->dbh->query('SELECT id, name FROM categories');
+
+		$result = array();
+
+        while ($row = $stmt->fetch_assoc()) {
+    		$result[$row['id']] = $row['name'];
+		}
+
+		return $result;
+	}
+
+	public function get_sources(){
+
+        $stmt = $this->dbh->query('SELECT id, name FROM sources');
+
+		$result = array();
+
+        while ($row = $stmt->fetch_assoc()) {
+    		$result[$row['id']] = $row['name'];
+		}
+
+		return $result;
+	}
+
+	public function get_regions(){
+
+        $stmt = $this->dbh->query('SELECT id, longname FROM regions');
+
+		$result = array();
+
+        while ($row = $stmt->fetch_assoc()) {
+    		$result[$row['id']] = $row['longname'];
+		}
+
+		return $result;
 	}
 
 

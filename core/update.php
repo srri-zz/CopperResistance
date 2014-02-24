@@ -48,13 +48,14 @@
 
 	$dbh = new PDO('mysql:host=nuwire.petersiemens.com;dbname=nuwire', $user, $pass);
 	$db = new Database();
-	$sources2 = $db->get_all('SELECT * FROM feeds');
+	$feeds = $db->get_all('SELECT * FROM feeds');
 
   	$feed = new SimplePie();
 
-  	foreach($sources2 as $source):
+  	foreach($feeds as $source):
 
-  		$source_name = $source['source'];
+		$source_name = $db->get_row('sources', 'id', $source['source'])['name'];
+
   		$source_id = $source['id'];
 
 	  	$feed->set_feed_url($source['url']);

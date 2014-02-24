@@ -9,21 +9,27 @@
 
     	<title>{{ title }}</title>		
 
-    	<link href="http://localhost:8888/CopperResistance/assets/bs/css/bootstrap.css" rel="stylesheet">
-    	<link href="http://localhost:8888/CopperResistance/assets/css/main.css" rel="stylesheet">
+    	<link href="{{site_root}}assets/bs/css/bootstrap.css" rel="stylesheet">
+    	<link href="{{site_root}}assets/css/main.css" rel="stylesheet">
 
     	<script src="https://code.jquery.com/jquery-1.10.2.min.js"></script>
     	<!-- Bootstrap core JavaScript -->
-    	<script src="http://localhost:8888/CopperResistance/assets/bs/js/bootstrap.min.js"></script>
+    	<script src="{{site_root}}assets/bs/js/bootstrap.min.js"></script>
 
-    	<link href="http://localhost:8888/CopperResistance/assets/css/bootstrap-editable.css" rel="stylesheet"/>
-    	<script src="http://localhost:8888/CopperResistance/assets/js/bootstrap-editable.min.js"></script>
+    	<link href="{{site_root}}assets/css/bootstrap-editable.css" rel="stylesheet"/>
+    	<script src="{{site_root}}assets/js/bootstrap-editable.min.js"></script>
+    	<script src="{{site_root}}assets/js/chart/Chart.js"></script>
 
 	    <!--[if lt IE 9]>
     		<script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
     		<script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
     	<![endif]-->
     	{% block scripts %}{% endblock %}
+    	<script>
+    		$(function(){
+				stats_init();
+    		});
+    	</script>
 
 	</head>
 	
@@ -37,32 +43,172 @@
 		    		<span class="icon-bar"></span>
 		    		<span class="icon-bar"></span>
 		    	</button>
-		    	<a class="navbar-brand" href="http://localhost:8888/CopperResistance/admin">nuwire admin</a>
+		    	<a class="navbar-brand" href="{{site_root}}">nuwire</a>
 		    </div>
 		
 		    <!-- Collect the nav links, forms, and other content for toggling -->
 		    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 		    	<ul class="nav navbar-nav">
-		    		
-		    		<li><a href="http://localhost:8888/CopperResistance/admin/feeds">Feeds</a></li>
-		    		<li><a href="http://localhost:8888/CopperResistance/admin/sources">Sources</a></li>
-		    		<li><a href="http://localhost:8888/CopperResistance/admin/users">Users</a></li>
-		    		
+		    		{% for section in ['Dashboard', 'Feeds', 'Sources'] %}
+		    			{% if section == current %}
+		    			<li class="active">
+		    			{% else %}
+		    			<li>
+		    			{% endif %}
+		    			<a href="{{site_root}}admin/{{section|lower}}">{{section}}</a></li>
+		    		{% endfor %}    
 		    	</ul>
 		    </div>
 	    </nav>
 
 	    <div class="main-content row">
 	    	{% block content %}
-	    	<div class="col-sm-4">
-	    	test
-	    	</div>
-	    	<div class="col-sm-4">
-	    	test
-	    	</div>
-	    	<div class="col-sm-4">
-	    	test
-	    	</div>
+	    		<div id="wire-stats" style="padding: 15px; max-width: 800px;">
+						<h4><span class="glyphicon glyphicon-fire"></span> &nbsp;New Stories</h4>
+						<div style="width: 100%; overflow: auto;">
+							<div class="text-center" style="width: 33%; float: left;">
+								<a id="load-24hr" class="stats-cat current" href="#">
+									<span style="line-height: 0.9em; font-size: 72px;">{{ new_stories_day }}</span><br/>
+									<span style="line-height: 180%; font-size: 17px; font-weight: bold;">LAST 24 HRS</span>
+								</a>
+							</div>
+							<div class="text-center" style="width: 33%; float: left;">
+								<a id="load-week" class="stats-cat" href="#">
+									<span style="line-height: 0.9em; font-size: 72px; font-weight: bold;">{{ new_stories_week }}</span><br/>
+									<span style="line-height: 180%; font-size: 17px; font-weight: bold;">&nbsp; PAST WEEK</span>
+								</a>
+							</div>
+							<div class="text-center" style="width: 33%; float: left; color: rgb(165, 165, 165);">
+								<a id="load-month" class="stats-cat" href="#">
+									<span style="line-height: 0.9em; font-size: 72px; font-weight: bold;">{{ new_stories_month }}</span><br/>
+									<span style="line-height: 180%; font-size: 17px; font-weight: bold;">THIS MONTH</span>
+								</a>
+							</div>
+						</div>
+						<hr/>
+						<div id="stats-24hr">
+							<div style="overflow: none; white-space: nowrap;">
+								<div style="display: inline-block; width: 50%;">
+									<h4><span class="glyphicon glyphicon-th-list"></span> &nbsp;Categories</h4>
+									<div style="overflow: none; white-space: nowrap;">
+										<div style="display: inline-block; vertical-align: middle;">
+											<canvas id="myChart" width="150" height="150" ></canvas>
+										</div>
+										<div style="display: inline-block; vertical-align: middle; padding: 0 15px;">
+											<ul class="list-unstyled" style="font-size: 18px; font-weight: bold; color: grey;">
+												<li>30 <span style="color: #5351D2;">Sports</span></li>
+												<li>50 <span style="color: #3ACF93;">Culture</span></li>
+												<li>70 <span style="color: #FFB147;">Politics</span></li>
+												<li>70 <span style="color: #FFB147;">Politics</span></li>
+												<li style="color: grey;">30 Other</li>
+											</ul>
+										</div>
+									</div>
+								</div>
+								<div style="display: inline-block;">
+									<h4><span class="glyphicon glyphicon-link"></span> &nbsp;Top Contributors</h4>
+									<div style="overflow: none; white-space: nowrap;">
+										<div style="display: inline-block; vertical-align: middle; padding-right: 5px;">
+											<ul class="list-unstyled" style="font-size: 18px; font-weight: bold; color: grey;">
+												<li>The Ubyssey</li>
+												<li>The Varsity</li>
+												<li>The Martlet</li>
+												<li>Dalhouise Gazette</li>
+												<li>The McGill Daily</li>
+											</ul>
+										</div>
+										<div style="display: inline-block; vertical-align: middle;">
+											<canvas id="myChart2" width="140" height="160" ></canvas>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div id="stats-week">
+							<div style="overflow: none; white-space: nowrap;">
+								<div style="display: inline-block; width: 50%;">
+									<h4><span class="glyphicon glyphicon-th-list"></span> &nbsp;Categories</h4>
+									<div style="overflow: none; white-space: nowrap;">
+										<div style="display: inline-block; vertical-align: middle;">
+											<canvas id="myChart3" width="150" height="150" ></canvas>
+										</div>
+										<div style="display: inline-block; vertical-align: middle; padding: 0 15px;">
+											<ul class="list-unstyled" style="font-size: 18px; font-weight: bold; color: grey;">
+												<li>30 <span style="color: #5351D2;">Sports</span></li>
+												<li>50 <span style="color: #3ACF93;">Culture</span></li>
+												<li>70 <span style="color: #FFB147;">Politics</span></li>
+												<li>70 <span style="color: #FFB147;">Politics</span></li>
+												<li style="color: grey;">30 Other</li>
+											</ul>
+										</div>
+									</div>
+								</div>
+								<div style="display: inline-block;">
+									<h4><span class="glyphicon glyphicon-link"></span> &nbsp;Top Contributors</h4>
+									<div style="overflow: none; white-space: nowrap;">
+										<div style="display: inline-block; vertical-align: middle; padding-right: 5px;">
+											<ul class="list-unstyled" style="font-size: 18px; font-weight: bold; color: grey;">
+												<li>The Ubyssey</li>
+												<li>The Varsity</li>
+												<li>The Martlet</li>
+												<li>Dalhouise Gazette</li>
+												<li>The McGill Daily</li>
+											</ul>
+										</div>
+										<div style="display: inline-block; vertical-align: middle;">
+											<canvas id="myChart4" width="140" height="160" ></canvas>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div id="stats-month">
+							<div style="overflow: none; white-space: nowrap;">
+								<div style="display: inline-block; width: 50%;">
+									<h4><span class="glyphicon glyphicon-th-list"></span> &nbsp;Categories</h4>
+									<div style="overflow: none; white-space: nowrap;">
+										<div style="display: inline-block; vertical-align: middle;">
+											<canvas id="myChart5" width="150" height="150" ></canvas>
+										</div>
+										<div style="display: inline-block; vertical-align: middle; padding: 0 15px;">
+											<ul class="list-unstyled" style="font-size: 18px; font-weight: bold; color: grey;">
+												<li>30 <span style="color: #5351D2;">Sports</span></li>
+												<li>50 <span style="color: #3ACF93;">Culture</span></li>
+												<li>70 <span style="color: #FFB147;">Politics</span></li>
+												<li>70 <span style="color: #FFB147;">Politics</span></li>
+												<li style="color: grey;">30 Other</li>
+											</ul>
+										</div>
+									</div>
+								</div>
+								<div style="display: inline-block;">
+									<h4><span class="glyphicon glyphicon-link"></span> &nbsp;Top Contributors</h4>
+									<div style="overflow: none; white-space: nowrap;">
+										<div style="display: inline-block; vertical-align: middle; padding-right: 5px;">
+											<ul class="list-unstyled" style="font-size: 18px; font-weight: bold; color: grey;">
+												<li>The Ubyssey</li>
+												<li>The Varsity</li>
+												<li>The Martlet</li>
+												<li>Dalhouise Gazette</li>
+												<li>The McGill Daily</li>
+											</ul>
+										</div>
+										<div style="display: inline-block; vertical-align: middle;">
+											<canvas id="myChart6" width="140" height="160" ></canvas>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<hr/>
+							<h4><span class="glyphicon glyphicon-star"></span> Recently Starred</h4>	
+							<ul class="list-unstyled">
+								<li><strong>Letting the cat out of the bag</strong> - The Martlet - Feb 20 2014</li>
+								<li><strong>Letting the cat out of the bag</strong> - The Martlet - Feb 20 2014</li>
+								<li><strong>Letting the cat out of the bag</strong> - The Martlet - Feb 20 2014</li>
+								<li><strong>Letting the cat out of the bag</strong> - The Martlet - Feb 20 2014</li>
+							</ul>
+					</div>
 	    	{% endblock %}
 	    </div>
 			
@@ -77,5 +223,158 @@
 				</span> 
 			</div>
 		</div>
+
+		<script>
+
+		var data = [
+			{
+				value: 30,
+				color:"#5351D2"
+			},
+			{
+				value : 50,
+				color : "#3ACF93"
+			},
+			{
+				value : 70,
+				color : "#FFB147"
+			},
+			{
+				value : 30,
+				color : "rgb(165, 165, 165)"
+			}				
+		];
+
+		var data2 = {
+			labels : ["","","","",""],
+			datasets : [
+				{
+					fillColor : "rgba(220,220,220,0.5)",
+					strokeColor : "rgba(220,220,220,1)",
+					data : [20,35,50,68,80]
+				}
+			]
+		};
+
+		var options2 = {
+				
+
+			//String - Colour of the scale line	
+			scaleLineColor : "#FFF",
+			
+			//Number - Pixel width of the scale line	
+			scaleLineWidth : 1,
+
+			scaleShowLabels : false,
+			
+			scaleLabel : "",
+			
+			//String - Scale label font declaration for the scale label
+			scaleFontFamily : "'Arial'",
+			
+			//Number - Scale label font size in pixels	
+			scaleFontSize : 12,
+			
+			//String - Scale label font weight style	
+			scaleFontStyle : "normal",
+			
+			//String - Scale label font colour	
+			scaleFontColor : "#666",	
+			
+			///Boolean - Whether grid lines are shown across the chart
+			scaleShowGridLines : false,
+			
+			//String - Colour of the grid lines
+			scaleGridLineColor : "rgba(0,0,0,.05)",
+			
+			//Number - Width of the grid lines
+			scaleGridLineWidth : 0,	
+
+			//Boolean - If there is a stroke on each bar	
+			barShowStroke : false,			
+			barValueSpacing : 1,
+			barDatasetSpacing : 0,
+			
+			//Boolean - Whether to animate the chart
+			animation : true,
+
+			//Number - Number of animation steps
+			animationSteps : 60,
+			
+			//String - Animation easing effect
+			animationEasing : "easeOutQuart",
+
+			//Function - Fires when the animation is complete
+			onAnimationComplete : null,
+
+			align: 'h'
+			
+		}
+
+		$( "#load-24hr" ).click(function() {
+
+			stats_init();
+
+		});
+
+		var stats_init = function(){
+			$("#stats-24hr").show();
+
+			$("#load-24hr").addClass("current");
+			$("#load-week").removeClass("current");
+			$("#load-month").removeClass("current");
+
+			$("#stats-week").hide();
+			$("#stats-month").hide();
+
+			var ctx = $("#myChart").get(0).getContext("2d");
+			var myNewChart = new Chart(ctx).Pie(data);
+
+			var ctx2 = $("#myChart2").get(0).getContext("2d");
+			var myNewChart2 = new Chart(ctx2).Bar(data2, options2);
+		}
+
+		$( "#load-week" ).click(function() {
+
+			var ctx = $("#myChart3").get(0).getContext("2d");
+			var myNewChart = new Chart(ctx).Pie(data);
+
+			var ctx2 = $("#myChart4").get(0).getContext("2d");
+			var myNewChart2 = new Chart(ctx2).Bar(data2, options2);
+
+			$("#stats-week").show();
+
+			$("#load-24hr").removeClass("current");
+			$("#load-week").addClass("current");
+			$("#load-month").removeClass("current");
+
+			$("#stats-24hr").hide();
+			$("#stats-month").hide();
+			console.log('test');
+		});
+
+		$( "#load-month" ).click(function() {
+
+			var ctx = $("#myChart5").get(0).getContext("2d");
+			var myNewChart = new Chart(ctx).Pie(data);
+
+			var ctx2 = $("#myChart6").get(0).getContext("2d");
+			var myNewChart2 = new Chart(ctx2).Bar(data2, options2);
+
+			$("#stats-month").show();
+
+			$("#load-24hr").removeClass("current");
+			$("#load-week").removeClass("current");
+			$("#load-month").addClass("current");
+
+			$("#stats-week").hide();
+			$("#stats-24hr").hide();
+		});
+
+		$('.main-nav > li').click(function (e) {
+            $('ul.nav > li').removeClass('active');
+            $(this).addClass('active');                
+        });     
+	</script>
   </body>
 </html>

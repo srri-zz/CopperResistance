@@ -200,14 +200,20 @@ footer {
 	padding-left: 15px;
 }
 
-.search-bar {
+.search-bar, input.login  {
 	color: #757575;
 	background-color: #333333;
 	border: 1px solid #2B2B2B;
 	border-radius: 0;
 }
 
-.search-bar:focus{
+input.login::-webkit-input-placeholder { color: rgb(83, 83, 83); }
+
+input.login {
+	color: rgb(179, 179, 179);
+}
+
+.search-bar:focus, input.login:focus{
 	border: 1px solid #2B2B2B;
 	box-shadow: none;
 	outline: 0 none;
@@ -263,3 +269,10 @@ ainput {
 #stats-week, #stats-month {
 	display: none;
 }
+
+.home .alert-danger {
+	color: #581C1C;
+	background-color: rgba(194, 64, 64, 1);
+	border: none;
+}
+

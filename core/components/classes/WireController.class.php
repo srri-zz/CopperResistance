@@ -30,14 +30,20 @@ class WireController extends Controller {
 
     public function loadStream($cat_name, $start){
 
+        $orderby = isset($_GET['orderby']) ? $_GET['orderby'] : 'date';
+        $dir = isset($_GET['dir']) ? $_GET['dir'] : 'desc';
+
         $this->set_category($this->model->get_category_id($cat_name));
         $this->template = 'wire_stream.html';
-        $this->bindData('stories',$this->model->get_stories($start, $this->category));
+        $this->bindData('stories',$this->model->get_stories($start, $this->category, $orderby, $dir));
         $this->render();
 
     }
 
     public function display($cat = 'all'){
+
+        $orderby = isset($_GET['orderby']) ? $_GET['orderby'] : 'date';
+        $dir = isset($_GET['dir']) ? $_GET['dir'] : 'desc';
 
         $this->user->authenticate('wire');
 
@@ -48,6 +54,8 @@ class WireController extends Controller {
         //$this->bindData('new_stories_week', $this->model->get_stats_week());
         //$this->bindData('new_stories_month', $this->model->get_stats_month());
         $this->bindData('user_rank', $this->user->get_rank());
+        $this->bindData('orderby', $orderby);
+        $this->bindData('dir', $dir);
 
         $this->render();
         

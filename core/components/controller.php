@@ -15,6 +15,8 @@ class Controller {
 
 		$this->user = new User();
 
+		$this->bindData('site_root', SITE_ROOT);
+
 	}
 
 	public function bindData($key, $value){
@@ -22,7 +24,7 @@ class Controller {
 	}
 
 	public function redirect($dest){
-		header('Location: http://localhost:8888/CopperResistance/' . $dest);
+		header('Location: '. SITE_ROOT . $dest);
 		exit;
 	}
 

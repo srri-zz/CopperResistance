@@ -4,6 +4,8 @@ class HomeController extends Controller {
 	
 	public function login(){
 
+		$this->bindData('title', 'Login');
+
 		if(isset($_GET['dest'])){
 			$dest = $_GET['dest'];
 			$message = 'You must be logged in to view that page.';
@@ -28,6 +30,10 @@ class HomeController extends Controller {
 				}
 			}
 		} else {
+			if($this->user->loggedIn()){
+				$this->redirect('wire');
+				exit;
+			}
 			if(isset($message)){ $this->bindData('message', $message);}
 		}
 
@@ -39,12 +45,20 @@ class HomeController extends Controller {
 
 		$this->user->logout();
 
+		$this->bindData('message', 'You have been logged out.');
+
 		$this->template = 'login.html';
 		$this->render();
 
 	}
 
 	public function welcome(){
+
+		if($this->user->loggedIn()){
+			$this->redirect('wire');
+		}
+
+		$this->bindData('title', 'Home');
 
 		$this->template = 'home.html';
 		$this->render();
