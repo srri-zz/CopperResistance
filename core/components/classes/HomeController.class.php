@@ -18,7 +18,9 @@ class HomeController extends Controller {
 					
 		if(isset($_POST['username']) && isset($_POST['password'])){
 			if($this->user->loggedIn()){
-			$this->redirect($dest);
+				$this->redirect($dest);
+				echo 'test';
+				exit;
 			} else {
 				$login = $this->user->login();
 

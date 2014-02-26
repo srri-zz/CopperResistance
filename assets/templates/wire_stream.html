@@ -1,6 +1,6 @@
 {% for story in stories %}
-<div class="list-story">
-<div style="background-color: rgb(252, 252, 252); border-bottom: 1px solid rgb(216, 216, 216);">
+<div id="story-con-{{ story.id }}" class="list-story">
+<div style="background-color: #FFF; border-bottom: 1px solid rgb(216, 216, 216);">
 	<div id="story-{{ story.id }}" class="list-story-content" onclick="wire.changeStory('{{ story.id }}');"style="">
 		<div class="media">
 			{% if story.image %}
@@ -13,9 +13,13 @@
 		  	<div class="media-body">
 		   		<h4 id="story-title-{{ story.id }}"class="media-heading">{{ story.title }}</h4>
 		    	<p id="story-info-{{ story.id }}" class="text-muted">
-		    		{{ story.date|date("M d Y | h:i A") }} - {{ story.source }}
+		    		
 		    	</p>
 		  		<p class="list-group-item-text">{{ story.description }}</p>
+		  		<div class="text-muted" style="font-size: 14px; margin-bottom: 0; margin-top: 10px;">
+		  			{{ story.date|date("M d Y | h:i a") }}&nbsp; · &nbsp;{{ story.source }}
+		  			<!-- &nbsp; · &nbsp;Culture&nbsp; · &nbsp;<i class="fa fa-comments"></i> 6&nbsp; · &nbsp;<i class="fa fa-star"></i> 8 -->
+		  		</div>
 		 	</div>
 		</div>
 		<!-- <span class="label label-default">Default</span>
@@ -24,6 +28,7 @@
 		<span class="label label-success">Success</span>
 			-->	
 		</div>
+
 		<div id="story-link-{{ story.id }}" style="display: none">
 			{{ story.link }}
 		</div>

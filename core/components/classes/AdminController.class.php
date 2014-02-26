@@ -4,7 +4,7 @@ class AdminController extends Controller {
 
 	public function home(){
 
-		$this->user->authenticate('admin');
+		$this->user->authenticate('admin', 1);
 
 		//$this->bindData('new_stories_day', $this->model->get_stats_24hr());
         //$this->bindData('new_stories_week', $this->model->get_stats_week());

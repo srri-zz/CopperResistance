@@ -54,7 +54,8 @@
 
   	foreach($feeds as $source):
 
-		$source_name = $db->get_row('sources', 'id', $source['source'])['name'];
+		$source_name = $db->get_row('sources', 'id', $source['source']);
+		$source_name = $source_name['name'];
 
   		$source_id = $source['id'];
 
@@ -127,6 +128,11 @@
 		endforeach;
 
 	endforeach;
+
+	echo 'The wire has been updated.';
+
+	$stmt = $dbh->prepare("INSERT INTO updates (timestamp) VALUES (NOW())");  
+	$stmt->execute($data); 
 
 	$dbh = null;
 

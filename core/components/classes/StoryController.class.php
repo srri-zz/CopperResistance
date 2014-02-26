@@ -39,4 +39,8 @@ class StoryController extends Controller {
         $stmt->execute(); 
         $stmt->close();
     }
+
+    public function delete($id){
+        $this->model->dbh->update('stories', 'active', 0, $id);
+    }
 }

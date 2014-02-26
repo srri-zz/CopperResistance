@@ -5,13 +5,13 @@ require 'core/components/controller.php';
 require 'core/components/database.php';
 require 'core/components/user.php';
 
-define("SITE_ROOT", "http://petersiemens.com/projects/cur/");
-//define("SITE_ROOT", "http://localhost:8888/CopperResistance/");
+//define("SITE_ROOT", "http://nuwire.ca/");
+define("SITE_ROOT", "http://localhost:8888/CopperResistance/");
 
 
 $router = new AltoRouter();
-$router->setBasePath('/projects/cur');
-//$router->setBasePath('/CopperResistance');
+//$router->setBasePath('/');
+$router->setBasePath('/CopperResistance');
 
 $router->map('GET|POST','/', array('c' => 'Home', 'a' => 'welcome'));
 
@@ -24,6 +24,7 @@ $router->map('GET','/wire/region/[:region]', array('c' => 'Wire', 'a' => 'loadRe
 
 
 $router->map('GET','/story/[i:id]', array('c' => 'Story', 'a' => 'display'));
+$router->map('GET|POST','/story/delete/[i:id]', array('c' => 'Story', 'a' => 'delete'));
 $router->map('GET|POST','/story/update/[i:id]', array('c' => 'Story', 'a' => 'update'));
 $router->map('GET|POST','/story/update/category/[i:id]/[i:category]', array('c' => 'Story', 'a' => 'updateCategory'));
 $router->map('GET','/story/favourite/[i:id]', array('c' => 'Story', 'a' => 'favourite'));

@@ -48,6 +48,13 @@ Wire.prototype.updateStory = function(){
 
 }
 
+Wire.prototype.deleteStory = function(){
+
+  		this.active.delete();
+
+}
+
+
 Wire.prototype.updateStoryCategory = function(id, cat_name){
 
 	this.active.updateCategory(id);
@@ -103,7 +110,7 @@ Story.prototype.load = function(target){
 
 	if($("#current-story-con").is(':hidden')){
 
-		window.location.href = $("#story-link-"+this.id).text();
+		window.open($("#story-link-"+this.id).text(), '_blank');
 
 	} else {
 
@@ -147,4 +154,12 @@ Story.prototype.updateCategory = function(cat_id){
 
 	$.post( site_root+"story/update/category/"+this.id+'/'+cat_id);
 
+}
+
+Story.prototype.delete = function(){
+
+	var url = site_root+"story/delete/"+this.id;
+	$.post(url);
+	$("#story-con-"+this.id).fadeOut();
+	
 }

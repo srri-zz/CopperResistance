@@ -17,8 +17,11 @@ class User {
 	}
 
 	public function authenticate($dest = 'wire', $rank = 0){
-		if (!$this->loggedIn() || $this->get_rank() < $rank){
+		if (!$this->loggedIn()){
 			header('Location: ' . SITE_ROOT . 'login?dest=' . $dest);
+			exit;
+		} elseif($this->get_rank() < $rank) {
+			echo "You do not have permission to view that page.";
 			exit;
 		}
 	}
@@ -97,7 +100,7 @@ class User {
 		    {
 		     
 		        /*** prepare the select statement ***/
-		        $stmt = $this->dbh->prepare("SELECT id, username, password, rank FROM users 
+		        $stmt = $this->dbh->prepare("SELECT id, username, password, name, rank FROM users 
 		                    WHERE username = ? AND password = ?");
 
 		        /*** bind the parameters ***/
@@ -106,7 +109,7 @@ class User {
 		        /*** execute the prepared statement ***/
 		        $stmt->execute();
 
-		        $stmt->bind_result($user_id, $user_username, $user_password, $user_rank);
+		        $stmt->bind_result($user_id, $user_username, $user_password, $user_name, $user_rank);
 
     			/* fetch value */
     			$stmt->fetch();
@@ -122,6 +125,7 @@ class User {
 		                /*** set the session user_id variable ***/
 		                $_SESSION['user_id'] = $user_id;
 		                $_SESSION['user_rank'] = $user_rank;
+		                $_SESSION['user_name'] = $user_name;
 
 		                $success = true;
 		                $message = 'You have been logged in successfully.';
@@ -144,5 +148,9 @@ class User {
 
 	public function get_rank(){
 		return isset($_SESSION['user_rank']) ? $_SESSION['user_rank'] : 0;
+	}
+
+	public function get_name(){
+		return isset($_SESSION['user_name']) ? $_SESSION['user_name'] : "no name";
 	}
 }

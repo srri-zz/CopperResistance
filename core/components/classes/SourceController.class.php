@@ -6,7 +6,7 @@ class SourceController extends Controller {
 
 		$this->bindData('current', 'Sources');
 
-		$this->user->authenticate('admin/sources');
+		$this->user->authenticate('admin/sources', 1);
 
 		$this->template = 'admin_sources.html';
 		$this->bindData('sources', $this->model->getSources());

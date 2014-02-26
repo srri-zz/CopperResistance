@@ -6,7 +6,7 @@ class FeedController extends Controller {
 
         $this->bindData('current', 'Feeds');
 
-		$this->user->authenticate('admin/feeds');
+		$this->user->authenticate('admin/feeds', 1);
 
 		$this->template = 'admin_feeds.html';
 		$this->bindData('feeds', $this->model->getFeeds());

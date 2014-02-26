@@ -43,6 +43,11 @@ footer {
   	box-shadow:         0px 0px 1px 0px #383838;
 }
 
+.navbar-default
+.navbar-text {
+	color: #999999;
+}
+
 .navbar-default .navbar-nav > li > a {
 	color: #C9C7C7;
 }
@@ -108,7 +113,7 @@ footer {
 	padding: 20px;
 }
 
-.list-story-content:hover, #load-more:hover{
+.list-story-content:hover {
 	background-color: #D6E3EE;
 	cursor: pointer;
 }
@@ -167,17 +172,24 @@ footer {
 }
 
 ::-webkit-scrollbar {
-    width: 12px;
-    border-left: 1px solid rgb(216, 216, 216);
-}
- 
-::-webkit-scrollbar-track {
-	background: rgb(221, 221, 221);
+    width: 15px;
+    border: 1px solid rgb(216, 216, 216);
 }
  
 ::-webkit-scrollbar-thumb {
+	background: rgb(225, 225, 225);
+	border: 1px solid rgb(180, 180, 180);
+}
+
+::-webkit-scrollbar-thumb:hover{
+	background: rgb(213, 213, 213);
+}
+
+::-webkit-scrollbar-track {
 	background: rgb(240, 240, 240);
-	border: 1px solid rgb(210, 210, 210);
+	border-style: solid;
+	border-color: rgb(190, 190, 190);
+	border-width: 0 1px;
 }
 
 #current-bar {
@@ -238,7 +250,15 @@ input.login {
 #load-more {
 	width: 100%; 
 	padding: 15px 0; 
-	background: rgb(233, 233, 233);
+	background-color: #F5F5F5;
+	color: rgb(143, 143, 143);
+	font-weight: bold;
+}
+
+#load-more:hover {
+	background-color: #F5F5F5;
+	color: rgb(100, 100, 100);
+	cursor: pointer;
 }
 
 ainput {
@@ -276,3 +296,6 @@ ainput {
 	border: none;
 }
 
+.media > .pull-left {
+	margin-right: 15px;
+}

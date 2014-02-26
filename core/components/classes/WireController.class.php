@@ -46,13 +46,12 @@ class WireController extends Controller {
         $dir = isset($_GET['dir']) ? $_GET['dir'] : 'desc';
 
         $this->user->authenticate('wire');
+        
+        $this->bindData('user_name', $this->user->get_name());
 
         $this->bindData('cur_category', $cat);
         $this->bindData('action', 'load');
         $this->bindData('categories', $this->model->get_categories());
-        //$this->bindData('new_stories_day', $this->model->get_stats_24hr());
-        //$this->bindData('new_stories_week', $this->model->get_stats_week());
-        //$this->bindData('new_stories_month', $this->model->get_stats_month());
         $this->bindData('user_rank', $this->user->get_rank());
         $this->bindData('orderby', $orderby);
         $this->bindData('dir', $dir);

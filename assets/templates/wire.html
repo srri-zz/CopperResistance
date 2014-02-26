@@ -11,6 +11,7 @@
 
     	<link href="{{site_root}}assets/bs/css/bootstrap.css" rel="stylesheet">
     	<link href="{{site_root}}assets/css/main.css" rel="stylesheet">
+    	<link href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
 
 	    <!--[if lt IE 9]>
     		<script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
@@ -20,7 +21,10 @@
 
     	<script>var site_root = '{{site_root}}';</script>
 
+    	<script src="{{site_root}}assets/bs/js/bootstrap.min.js"></script>
+
 		<script src="{{site_root}}assets/js/wire.js"></script>
+		<script src="{{site_root}}assets/js/bootbox.min.js"></script>
 
 		<script>
 
@@ -30,7 +34,6 @@
 
 				wire = new Wire("#stream", "#current-story", "{{ action }}", "{{ cur_category }}", "{{ query }}", "{{ orderby }}", "{{ dir }}");
 				wire.load();
-				stats_init();
 
 			});
 
@@ -74,15 +77,26 @@
 		    			</ul>
 		    		</li>
 		    	</ul>
+		    	<ul class="nav navbar-nav navbar-right hidden-sm hidden-xs" style="margin-right: 12px;">
+		    		<li class="dropdown">
+		    			<a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-user"></i> &nbsp;{{user_name}} </a>
+		    			<ul class="dropdown-menu">
+		    				<li class="disabled"><a href="{{site_root}}admin"><i class="fa fa-gears"></i> &nbsp; Admin Panel</a></li>
+		    				<li class="disabled"><a href="#"><i class="fa fa-cog"></i></span> &nbsp; Account Settings</a></li>
+		    				<li class="divider"></li>
+		    				<li><a href="{{site_root}}logout"><i class="fa fa-sign-out"></i></span> &nbsp; Logout</a></li>
+		    			</ul>
+		    		</li>
+		    	</ul>
 		    	<form class="navbar-form navbar-right hidden-sm hidden-xs" role="search" action="{{site_root}}wire/search" method="get">
 			    		<div class="input-group" style="padding-left: 10px; width: 300px;">
 			    			<input name="q" type="text" class="search-bar form-control" value="{{ query }}" />
 			    			<span class="input-group-btn">
 			    				<button type="submit" class="btn btn-default search-button"><span class="glyphicon glyphicon-search"></span></button>
 			    			</span>
-			    	</div>
+			    		</div>
 		    	</form>
-		    	<ul class="nav navbar-nav navbar-right hidden-sm hidden-xs">
+		    	<ul class="nav navbar-nav navbar-right hidden-md hidden-sm hidden-xs">
 		    		<li class="dropdown">
 		    			<a href="#" class="dropdown-toggle" data-toggle="dropdown">Order by <b class="caret"></b></a>
 		    			<ul class="dropdown-menu">
@@ -132,7 +146,7 @@
 							{% endfor %}
 					</div>
 					<div id="load-more" class="text-center">
-							  	Load More
+						Load More
 					</div>
 
 				</div>
@@ -155,6 +169,9 @@
 		    							{% endfor %}
 					    			</ul>
 					    		</div>
+					    		<button id="delete-story" class="btn btn-default btn-sm" type="button">
+							  		<span class="glyphicon glyphicon-trash"></span> Delete
+							  	</button>
 							  	{% endif %}
 							  	<a href="{{ story.id }}" class="btn btn-default btn-sm" disabled>
 							  		<span class="glyphicon glyphicon-star"></span> Star
@@ -235,164 +252,28 @@
 
 	<script>
 
-		var data = [
-			{
-				value: 30,
-				color:"#5351D2"
-			},
-			{
-				value : 50,
-				color : "#3ACF93"
-			},
-			{
-				value : 70,
-				color : "#FFB147"
-			},
-			{
-				value : 30,
-				color : "rgb(165, 165, 165)"
-			}				
-		];
-
-		var data2 = {
-			labels : ["","","","",""],
-			datasets : [
-				{
-					fillColor : "rgba(220,220,220,0.5)",
-					strokeColor : "rgba(220,220,220,1)",
-					data : [20,35,50,68,80]
+		$('#delete-story').click(function(){
+			bootbox.confirm("Are you sure?", function(result) {
+				if(result){
+					wire.deleteStory();
 				}
-			]
-		};
-
-		var options2 = {
-				
-
-			//String - Colour of the scale line	
-			scaleLineColor : "#FFF",
-			
-			//Number - Pixel width of the scale line	
-			scaleLineWidth : 1,
-
-			scaleShowLabels : false,
-			
-			scaleLabel : "",
-			
-			//String - Scale label font declaration for the scale label
-			scaleFontFamily : "'Arial'",
-			
-			//Number - Scale label font size in pixels	
-			scaleFontSize : 12,
-			
-			//String - Scale label font weight style	
-			scaleFontStyle : "normal",
-			
-			//String - Scale label font colour	
-			scaleFontColor : "#666",	
-			
-			///Boolean - Whether grid lines are shown across the chart
-			scaleShowGridLines : false,
-			
-			//String - Colour of the grid lines
-			scaleGridLineColor : "rgba(0,0,0,.05)",
-			
-			//Number - Width of the grid lines
-			scaleGridLineWidth : 0,	
-
-			//Boolean - If there is a stroke on each bar	
-			barShowStroke : false,			
-			barValueSpacing : 1,
-			barDatasetSpacing : 0,
-			
-			//Boolean - Whether to animate the chart
-			animation : true,
-
-			//Number - Number of animation steps
-			animationSteps : 60,
-			
-			//String - Animation easing effect
-			animationEasing : "easeOutQuart",
-
-			//Function - Fires when the animation is complete
-			onAnimationComplete : null,
-
-			align: 'h'
-			
-		}
-
-		
+			}); 
+		})
 
 		$( "#load-more" ).click(function() {
 			wire.loadMore();
 		});
 
-		$( "#load-24hr" ).click(function() {
-
-			stats_init();
-
-		});
-
-		var stats_init = function(){
-			$("#stats-24hr").show();
-
-			$("#load-24hr").addClass("current");
-			$("#load-week").removeClass("current");
-			$("#load-month").removeClass("current");
-
-			$("#stats-week").hide();
-			$("#stats-month").hide();
-
-			var ctx = $("#myChart").get(0).getContext("2d");
-			var myNewChart = new Chart(ctx).Pie(data);
-
-			var ctx2 = $("#myChart2").get(0).getContext("2d");
-			var myNewChart2 = new Chart(ctx2).Bar(data2, options2);
-		}
-
-		$( "#load-week" ).click(function() {
-
-			var ctx = $("#myChart3").get(0).getContext("2d");
-			var myNewChart = new Chart(ctx).Pie(data);
-
-			var ctx2 = $("#myChart4").get(0).getContext("2d");
-			var myNewChart2 = new Chart(ctx2).Bar(data2, options2);
-
-			$("#stats-week").show();
-
-			$("#load-24hr").removeClass("current");
-			$("#load-week").addClass("current");
-			$("#load-month").removeClass("current");
-
-			$("#stats-24hr").hide();
-			$("#stats-month").hide();
-			console.log('test');
-		});
-
-		$( "#load-month" ).click(function() {
-
-			var ctx = $("#myChart5").get(0).getContext("2d");
-			var myNewChart = new Chart(ctx).Pie(data);
-
-			var ctx2 = $("#myChart6").get(0).getContext("2d");
-			var myNewChart2 = new Chart(ctx2).Bar(data2, options2);
-
-			$("#stats-month").show();
-
-			$("#load-24hr").removeClass("current");
-			$("#load-week").removeClass("current");
-			$("#load-month").addClass("current");
-
-			$("#stats-week").hide();
-			$("#stats-24hr").hide();
-		});
 
 		$('.main-nav > li').click(function (e) {
             $('ul.nav > li').removeClass('active');
             $(this).addClass('active');                
-        });     
+        });    
+
 	</script>
 
+	<div class='notifications top-left'></div>
+
     <!-- Bootstrap core JavaScript -->
-    <script src="{{site_root}}assets/bs/js/bootstrap.min.js"></script>
   </body>
 </html>
